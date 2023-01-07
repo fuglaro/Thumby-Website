@@ -1,0 +1,1614 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../The-Basics/">
+      
+      
+        <link rel="next" href="../Making-Sprites/">
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
+    
+    
+      
+        <title>The Simplest Game - by TinyCircuits</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f79797b0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-118275183-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-simplest-game" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://thumby.us" title="by TinyCircuits" class="md-header__button md-logo" aria-label="by TinyCircuits" data-md-component="logo">
+      
+  <img src="../../images/Thumby_Logo_Wte.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            by TinyCircuits
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Simplest Game
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://code.thumby.us/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1zM3.75 2A1.75 1.75 0 0 0 2 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 12.25v-3.5a.75.75 0 0 0-1.5 0v3.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-8.5a.25.25 0 0 1 .25-.25h3.5a.75.75 0 0 0 0-1.5h-3.5z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Thumby Code Editor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Code-Editor/Get-Started/" class="md-tabs__link">
+        Code Editor Docs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../API/Get-Started/" class="md-tabs__link">
+        MicroPython API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Education/Get-Started/" class="md-tabs__link">
+        MicroPython Examples
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../The-Basics/" class="md-tabs__link md-tabs__link--active">
+        Blockly Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../CCPP/Environment-Setup/" class="md-tabs__link">
+        Thumby Arduino C/C++
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../FAQ/" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../About/" class="md-tabs__link">
+      About/Contact
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://thumby.us" title="by TinyCircuits" class="md-nav__button md-logo" aria-label="by TinyCircuits" data-md-component="logo">
+      
+  <img src="../../images/Thumby_Logo_Wte.png" alt="logo">
+
+    </a>
+    by TinyCircuits
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://code.thumby.us/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1zM3.75 2A1.75 1.75 0 0 0 2 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 12.25v-3.5a.75.75 0 0 0-1.5 0v3.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-8.5a.25.25 0 0 1 .25-.25h3.5a.75.75 0 0 0 0-1.5h-3.5z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Thumby Code Editor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Code Editor Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Code Editor Docs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Code Editor Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code-Editor/Get-Started/" class="md-nav__link">
+        Getting Started - First Program
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code-Editor/Widget-panels/" class="md-nav__link">
+        Widgets / Panels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code-Editor/Arcade-games/" class="md-nav__link">
+        Adding Arcade Games to Thumby
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code-Editor/Spritesheet/" class="md-nav__link">
+        Import Sprite(sheet)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code-Editor/Making-a-game/" class="md-nav__link">
+        Making a Game
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code-Editor/Submit-Game/" class="md-nav__link">
+        Submitting a Game to the Arcade
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          MicroPython API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MicroPython API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          MicroPython API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Get-Started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Graphics/" class="md-nav__link">
+        Display Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Hardware/" class="md-nav__link">
+        Reset Game
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Text-and-Font/" class="md-nav__link">
+        Text & Font
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Pixels/" class="md-nav__link">
+        Get & Set Pixels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Lines/" class="md-nav__link">
+        Draw Lines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Rectangles/" class="md-nav__link">
+        Draw Rectangles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Sprites/" class="md-nav__link">
+        Sprites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Buttons/" class="md-nav__link">
+        Button Input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Audio/" class="md-nav__link">
+        Audio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Link/" class="md-nav__link">
+        Multiplayer Link
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Blit-Draw/" class="md-nav__link">
+        Blit & Draw Sprite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API/Save-Files/" class="md-nav__link">
+        Save Game Data
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          MicroPython Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MicroPython Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          MicroPython Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Get-Started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Move-Sprite/" class="md-nav__link">
+        Move Sprite Using D-pad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Jump/" class="md-nav__link">
+        Sprite Jump
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Moving-Walk/" class="md-nav__link">
+        Walk Animation & Scrolling Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Shoot-Target-Keep-Score/" class="md-nav__link">
+        Blast Target & Keep Score
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Bounded-ball/" class="md-nav__link">
+        Bounded Sprite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Change-Thumby-Start-Logo/" class="md-nav__link">
+        Customize Thumby Logos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Education/Play-Video/" class="md-nav__link">
+        Video Animation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Blockly Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Blockly Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Blockly Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The-Basics/" class="md-nav__link">
+        The Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          The Simplest Game
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        The Simplest Game
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-game-loop" class="md-nav__link">
+    The Game Loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-and-then-updating-the-display" class="md-nav__link">
+    Drawing and then Updating the Display
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-things-around" class="md-nav__link">
+    Moving Things Around
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-more-things" class="md-nav__link">
+    Adding More Things
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-numbers" class="md-nav__link">
+    Random Numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button-actions" class="md-nav__link">
+    Button Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-challenge" class="md-nav__link">
+    Making a Challenge!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-sounds" class="md-nav__link">
+    Adding Sounds
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Making-Sprites/" class="md-nav__link">
+        Making Sprites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Drawing-And-Dynamics/" class="md-nav__link">
+        Drawing and Dynamics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Publish-Your-Game/" class="md-nav__link">
+        Publish Your Game
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Thumby Arduino C/C++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Thumby Arduino C/C++" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Thumby Arduino C/C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCPP/Environment-Setup/" class="md-nav__link">
+        Setting up environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCPP/Uploading-Sketches/" class="md-nav__link">
+        Uploading sketches
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCPP/API-Reference/" class="md-nav__link">
+        API Reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCPP/Examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/" class="md-nav__link">
+        About/Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-game-loop" class="md-nav__link">
+    The Game Loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-and-then-updating-the-display" class="md-nav__link">
+    Drawing and then Updating the Display
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-things-around" class="md-nav__link">
+    Moving Things Around
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-more-things" class="md-nav__link">
+    Adding More Things
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-numbers" class="md-nav__link">
+    Random Numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button-actions" class="md-nav__link">
+    Button Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-challenge" class="md-nav__link">
+    Making a Challenge!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-sounds" class="md-nav__link">
+    Adding Sounds
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-simplest-game">The Simplest Game</h1>
+<p>It's time to make your first game!</p>
+<p>This tutorial will walk you through creating a very simple (but quite fun) little game. In the process it will teach you a few basics about game development on the Thumby, and get you comfortable placing and arranging all kinds of blocks.</p>
+<p>Let's get started!</p>
+<ul>
+<li>Clean your workspace so you are starting fresh. You can open a new workspace in a new Blockly editor tab with <strong>FILE</strong> -&gt; <strong>NEW BLOCKLY TAB</strong>.</li>
+<li>Make sure your workspace is set to run in the emulator by checking both <strong>EMULATION: ✅ ✅</strong> checkboxes.</li>
+</ul>
+<h2 id="the-game-loop">The Game Loop</h2>
+<p>Most games are built with a set of repeating instructions which keep repeating continously until the game ends. These repeating instructions follow these main steps:</p>
+<ul>
+<li>Move things around.</li>
+<li>Draw a picture of the moved things.</li>
+<li>Show the picture on the display.</li>
+<li>Repeat these steps again.</li>
+</ul>
+<p>These repeating sets of instructions are sometimes called the <em>main game loop</em>. It's called a loop because it "loops" over and over again continuously. Each new drawn picture that is sent to the display is called a <em>frame</em>. That's where the term <em>frames per second</em> (or <em>FPS</em>) comes from. Games that run at 60fps will move things around and then send a new drawn frame to the display 60 times every second.</p>
+<p><strong>⚠ Note</strong>: <em>The display won't actually show what is drawn on a frame until you send the frame to the display. Any block that ends with ".. to display" will do that for you.</em></p>
+<p>Let's start making our own game loop.</p>
+<ul>
+<li>Place a <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block from the <strong>Loops</strong> category into your workspace.</li>
+</ul>
+<p>We want the loop to keep running forever, and this <em>repeat</em> block only loops while a condition is true. That condition gets put into the little plug after where it says "while". There are all sorts of conditions you can make from blocks in the <em>Logic</em> category, but we are going to use the simplest one.</p>
+<ul>
+<li>Take a <img src="/images/editor-blockly-true-block.png" alt="[true]" style="height:1.6em"> block from the <strong>Logic</strong> category, and plug it into the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block in your workspace. It should now look like this:</li>
+</ul>
+<p><img alt="Thumby blockly speed buzzer stage1" src="/images/editor-blockly-sb1.png" /></p>
+<p>This sets up a game loop that will keep repeating forever (or until you click <strong>STOP</strong>, or turn off the Thumby). This loop now needs some blocks inside, so that it has something to do each time it loops.</p>
+<p>We are going to want to makes some things, move them around, and then draw and display each frame. First, lets draw and show something, and then worry about moving it around afterwards. Let's show a character of text on screen.</p>
+<h2 id="drawing-and-then-updating-the-display">Drawing and then Updating the Display</h2>
+<ul>
+<li>Take a <img src="/images/editor-blockly-draw-text-block.png" alt="[draw text]" style="height:3.6em"> block from the <strong>Graphics</strong> category, and place it inside that mouth part of your <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block.</li>
+<li>Now change the "Hello World" text in that block to "^".</li>
+<li>Now grab a new <img src="/images/editor-blockly-send-drawn-combo-block.png" alt="[send drawn frame to display] and [draw fill]" style="height:2.8em"> combo block from the <strong>Graphics</strong> category, and connect it underneath the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block, but still inside the mouth of the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block.</li>
+<li>Now see what it does by clicking <strong>START</strong>.</li>
+</ul>
+<p>It should all look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage2" src="/images/editor-blockly-sb2.png" /></p>
+<p>All this is doing, is repeatedly drawing the "^" character to the top left position of the frame, then actually showing the frame on the display, and then clearing the next frame to get ready to repeat the whole process again. It may look like that little hat symbol is just sitting there doing nothing, but its being redrawn many times per second, and it's ready to be moved!</p>
+<h2 id="moving-things-around">Moving Things Around</h2>
+<p>Let's try to make it move down.</p>
+<ul>
+<li>Change the "0" in the "y" value of the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block to "17".</li>
+<li>Now run the this again.</li>
+</ul>
+<p><img alt="Thumby blockly speed buzzer stage2-1" src="/images/editor-blockly-sb2-1.png" /></p>
+<p>Sadly, that just moved its initial position downwards. We really want to animate it. For that we need to change a position value on the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block on each cycle of the repeat loop. We need to increase one of those numbers every frame. Let's see if we can make it animate moving horisontally by changing that x position value. We want to replace that unchanging "0" with something that <em>varies</em> every frame. Fortunately, we can use a <strong>Variable</strong> for that. <em>Variables</em> act like numbers or text, but they can be changed!</p>
+<p>First, we need to create a variable and give it a name.</p>
+<ul>
+<li>Open the <strong>Variables</strong> category and click on the <strong>Create variable...</strong> button at the top.</li>
+</ul>
+<p>It should ask you to give the variable a name.</p>
+<ul>
+<li>Call it "<strong>counter</strong>" and click <strong>OK</strong>.</li>
+</ul>
+<p>Some new blocks should have automatically appeared in the <em>Variables</em> category of the toolbox! These are all the blocks for your new variable called "counter".</p>
+<p>This counter variable doesn't have any value in the workspace at all... yet! Lets give it a value that increases each frame. The <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block can increase the value of the variable by 1 on each frame, and will start it's value at 0 if it hasn't already been set.</p>
+<ul>
+<li>Grab a <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block from the <strong>Variables</strong> category and place it inside the mouth of the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block, but this time place it at the top of the mouth, just above all the others that are already inside.</li>
+</ul>
+<p>It should now look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage3" src="/images/editor-blockly-sb3.png" /></p>
+<p>The value of this variable should now be increasing by 1 every frame, but we aren't using it for anything yet! We want to retrieve the value out of "counter" on every frame, and use it for the x position of the text. The <img src="/images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <em>Variables</em> category, allows you to retrieve the current value out of the variable, and use it anywhere you can put a normal number block.</p>
+<ul>
+<li>Take a <img src="/images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <strong>Variables</strong> category, and place it into the x position over the "0" block.</li>
+</ul>
+<p>It should now look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage4" src="/images/editor-blockly-sb4.png" /></p>
+<p>If you run this now, and if you watch very closely, you might briefly see that hat character speed along and disappear off screen to the right. That's just going to keep going, further and further offscreen as the "counter" variable increases to infinity.</p>
+<p>Let's try slowing things down so we can see it clearly.</p>
+<p>Previously, I talked about games running at different <em>frames per second</em>, but what is our current game running at? Well, we haven't set it, so its running as fast as the frames can display! This is just too fast! Let's set a frame rate with the <img src="/images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block. Let's slow it waaaaaay down by setting it to run a only 1 frame every second.</p>
+<ul>
+<li>Grab a new <img src="/images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block from inside the <strong>Graphics</strong> category, and place it above the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block (not inside).</li>
+<li>Change the FPS value from "30" to "1".</li>
+</ul>
+<p>It should now look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage5" src="/images/editor-blockly-sb5.png" /></p>
+<ul>
+<li>Run that and you will see the "^"symbol very slowly move across the screen:</li>
+</ul>
+<p><img src="/images/editor-blockly-speed-buzzer-stage5-gif.gif" alt="[Thumby blockly speed buzzer stage5 gif]" style="width:50%"></p>
+<p>Now things are moving!</p>
+<p>We've got all the basics for a decent little game loop! We've got some setup logic, a main game loop, with things being moved, frames being drawn, and then the drawn frame being sent to the display! It's just a shame that the "^" symbol eventually disappears permanently offscreen. Let's make it loop back around to the other side, but first let's speed things back up. We could increase the FPS value, but lets try making the "^" symbol move in larger steps instead.</p>
+<ul>
+<li>Change the increment value from "1" to "5" in your <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block.</li>
+</ul>
+<p>If we ran this now, the "^" symbol would keep stepping forwards 5 pixels at a time, but it would still disappear offscreen. Let's make it wrap around.</p>
+<p>Ideally, when the "counter" gets to the end of the screen, we want to reset it back to 0. The Thumby screen is 72 pixels wide, so when "counter" gets to 70 the "^" symbol will be half off screen. So, if the "counter" value is equal to 70, we want to set it to 0.</p>
+<p>The <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block allows you to <em>do something</em> (like set "counter" to "0") on a <em>condition</em> (like when "counter" equals 70).</p>
+<ul>
+<li>
+<p>Grab a new <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block from the <strong>Logic</strong> category and place it in an empty area of your workspace. We will move it into position after we have worked on it.</p>
+</li>
+<li>
+<p>Grab a new <img src="/images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block from the <strong>Logic</strong> category and place it into the plug next to the "if" on the <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block.</p>
+</li>
+<li>
+<p>Grab another <img src="/images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <strong>Variables</strong> category, and place it in the the first hole of the <img src="/images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.</p>
+</li>
+<li>
+<p>Grab a new <img src="/images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the <strong>Math</strong> category and place it in the second hole of the <img src="/images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.</p>
+</li>
+<li>
+<p>Change the "123" to "70".</p>
+</li>
+</ul>
+<p>It should now look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage5-1" src="/images/editor-blockly-sb5-1.png" /></p>
+<ul>
+<li>
+<p>Grab a new <img src="/images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block from the <strong>Variables</strong> category, and place it inside the mouth next to where it says "do".</p>
+</li>
+<li>
+<p>Grab another <img src="/images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the <strong>Math</strong> category and plug it into the end of the <img src="/images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block.</p>
+</li>
+<li>
+<p>Change the "123" to "0".</p>
+</li>
+</ul>
+<p>It should now look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage5-2" src="/images/editor-blockly-sb5-2.png" /></p>
+<p>This collection of blocks will reset the "counter" back to 0 whenever the "counter" gets to 70! Now it just needs to go into our main game loop so that it runs every frame.</p>
+<ul>
+<li>Place the newly made collection of blocks into the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> main game loop, between the <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block and the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block. You can drag all the blocks together by moving the <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block, which holds them all together.</li>
+</ul>
+<p>It should now look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage6" src="/images/editor-blockly-sb6.png" /></p>
+<ul>
+<li>Run that and see it wrap around!:</li>
+</ul>
+<p><img src="/images/editor-blockly-speed-buzzer-stage6-gif.gif" alt="[Thumby blockly speed buzzer stage6 gif]" style="width:50%"></p>
+<p>Nice!</p>
+<h2 id="adding-more-things">Adding More Things</h2>
+<p>You can add lots of different things to your game. As an example, let's add an "X" character and put it at the far right of the screen just above where the "^" symbol wraps around.</p>
+<ul>
+<li>Create the following highlighted block and add it to your loop. It should be easy enough with everything you have learned so far!:</li>
+</ul>
+<p><img alt="Thumby blockly speed buzzer stage7" src="/images/editor-blockly-sb7.png" />
+<img src="/images/editor-blockly-speed-buzzer-stage7-gif.gif" alt="[Thumby blockly speed buzzer stage7 gif]" style="width:50%"></p>
+<h2 id="random-numbers">Random Numbers</h2>
+<p>Some games take advantage of random numbers to make things different each time you play them. Some games are different each time because of how the player chooses different options each time they play, like in chess, but sometimes its nice to add a little bit of chance! You can also use random numbers to draw things in more interesting ways.</p>
+<p>That "X" symbol is looking a little bit dull. Let's make it dance! It currently sits there at x position 65, but it would be nice if it randomly moved about across positions 64 to 66.</p>
+<ul>
+<li>Take a <img src="/images/editor-blockly-random-num-block.png" alt="random integer (from to)" style="height:1.6em"> block from the <strong>Maths</strong> category, and plug it into the x position plug on the block that draws the "X", replacing the "65".</li>
+<li>Change the "1" to "10" values and make them "64" to "66".</li>
+<li>Run it and watch the "X" jump around a little!</li>
+</ul>
+<p><img alt="Thumby blockly speed buzzer stage8" src="/images/editor-blockly-sb8.png" />
+<img src="/images/editor-blockly-speed-buzzer-stage8-gif.gif" alt="[Thumby blockly speed buzzer stage8 gif]" style="width:50%"></p>
+<h2 id="button-actions">Button Actions</h2>
+<p>We've made a fun little animation, but there isn't any player interaction. It would be really nice if pressing a button does something! Let's try to make the game speed up every time the player presses one of the red 🔴 buttons.</p>
+<p>Take a look in the <strong>Buttons</strong> category of the toolbox. In it, you can see two collections of blocks, with each collection of blocks having a block for each button. Each button has a "held" block (<img src="/images/editor-blockly-buttonA-held-block.png" alt="buttonA held" style="height:1.2em">) and also a "hit block" (<img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">). Both of these blocks act as <em>condition</em> blocks, and give a value of <strong>true</strong> whenever something happens with the buttons.</p>
+<p>The <em>condition</em> behaviour of the <em>held</em> blocks are slightly different to the <em>hit</em> blocks:</p>
+<ul>
+<li><strong>held</strong> button blocks are true <strong>for the entire time</strong> a button is held down.</li>
+<li><strong>hit</strong> button blocks are true <strong>only once</strong> each time a button is pressed, even if the button is held down for a long time.</li>
+</ul>
+<p>The difference is important because a button can be held down while multiple game loops cycle through. Actually, when games run at high frame rates, that is normally always the case!</p>
+<p>Let's make the game speed up each time one of the 🔴 buttons is pressed, so lets use a (<img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">) "hit block"!</p>
+<p>Once again, we want to <em>do something</em> if a <em>condition</em> is true, so:</p>
+<ul>
+<li>Grab another <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the bottom of your game loop.</li>
+<li>Grab a new <img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.6em"> block from the <strong>Buttons</strong> category and place it into the "if" plug.</li>
+<li>Grab another <img src="/images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block, and place it inside the "do" mouth.</li>
+</ul>
+<p>Each button block can have it's trigger button changed by using the dropdown inside the button. In there, you can find some additional options like "dpad", which will activate when <em>any</em> direction button is pressed. We can change this dropdown so that our button block activates when <em>either</em> button A or button B is pressed.</p>
+<ul>
+<li>Change the dropdown in the <img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.6em"> block from "button A" to "button A or B".</li>
+<li>Run it and then press one of the buttons and watch it speed up!</li>
+</ul>
+<p><img alt="Thumby blockly speed buzzer stage9" src="/images/editor-blockly-sb9.png" />
+<img src="/images/editor-blockly-speed-buzzer-stage9-gif.gif" alt="[Thumby blockly speed buzzer stage9 gif]" style="width:50%"></p>
+<p>Wow, that's fast!</p>
+<p>Let's change it so that the game speeds up <em>gradually</em> every time the button is pressed. We want to increase the FPS value by 1 every time the button is pressed, similarly to how we incresed the "counter". Unfortunately, there is no increment block for the FPS, so we are going to have to do the maths ourselves.</p>
+<p>We want to retrieve the current FPS value, add 1 to it, then set that as the new FPS value. The <img src="/images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block retrieves the current FPS value, and can be used anywhere where a number block is allowed to be placed, and the <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block allow you to do basic maths like addition, subtraction, and multiplication. We can also place a <img src="/images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block inside a <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, giving a value of 1 more than the current FPS value!</p>
+<ul>
+<li>Grab a new <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block from the <strong>Maths</strong> category, and place it in the value plug of the <img src="/images/editor-blockly-setFPS-block.png" alt="set FPS" style="height:2.0em"> block, replacing the "30".</li>
+<li>Grab a new <img src="/images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block from the <strong>Graphics</strong> category, and place it into the first value plug if the <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, replacing the first "1".</li>
+</ul>
+<p><img alt="Thumby blockly speed buzzer stage10" src="/images/editor-blockly-sb10.png" />
+<img src="/images/editor-blockly-speed-buzzer-stage10-gif.gif" alt="[Thumby blockly speed buzzer stage10 gif]" style="width:50%"></p>
+<p>Sweet!</p>
+<h2 id="making-a-challenge">Making a Challenge!</h2>
+<p>This looks pretty cool, but it could be a lot more <strong>fun</strong>. Games are most fun where there is some kind of challenge! Games usually have some kind of <em>goal</em> that takes effort or skill to achieve.</p>
+<p>Let's make the <em>goal</em> be making the "^" symbol move as fast as possible, but let's make the <em>challange</em> that it only goes faster when the button is hit exactly when the "^" symbol is underneath the "X" symbol, and if the button is hit at any other time, it goes back to its original slow speed!</p>
+<p>To do this, we can leave it always increasing the speed when the button is hit, but if the button is hit when it is in the wrong position, we reset the FPS back to 1 frame per second:</p>
+<ul>
+<li>Grab another <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the "do" mouth that activates when a button is hit, just below where you increase the FPS.</li>
+</ul>
+<p>Notice that you can put <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> blocks inside of each other!</p>
+<p>This runs when the button is hit, and is where we are going to reset the FPS if the "^" is in the wrong position.</p>
+<p>You already have a combination of blocks that checks the position of the "counter" where it wraps around to the left when it goes of screen. That is in the "if" plug up at the top of your game loop.</p>
+<ul>
+<li>Copy (<strong>Ctrl+c</strong>) the condition out of the "if" plug at the top of your game loop, then paste (<strong>Ctrl+v</strong>) and move it into the new "if" plug.</li>
+</ul>
+<p>We want this condition to activate when the "^" symbol is underneath the "X" symbol instead of when it has gone off screen so we need to change the position where it activates:</p>
+<ul>
+<li>Change the "70" in the newly made condition to "65".</li>
+</ul>
+<p>We actually want it to activate when it is in any <em>other</em> position than at position 65:</p>
+<ul>
+<li>Change the "=" in the dropdown of the condition to "≠".</li>
+</ul>
+<p>Now we want to reset the FPS back to 1 whenever that activates:</p>
+<ul>
+<li>Copy the block where you initially set the FPS to 1 just above your game loop, then paste and move it into the new "do" mouth.</li>
+</ul>
+<p><img alt="Thumby blockly speed buzzer stage11" src="/images/editor-blockly-sb11.png" />
+<img src="/images/editor-blockly-speed-buzzer-stage11-gif.gif" alt="[Thumby blockly speed buzzer stage11 gif]" style="width:50%"></p>
+<p>Have a play and try to get the "^" symbol to go as fast as you can without missing the "X"!</p>
+<h2 id="adding-sounds">Adding Sounds</h2>
+<p>Sounds are a great way to make your game have a more intersting experience. Little beeps can go a long way! They can also be a part of how the game works.</p>
+<p>It would be really nice to have a quick little beep every time the "^" symbol moves, and have the beeping go faster as it moves faster. That could help players get into the rhythm of this game!</p>
+<p>It's would also be nicer if you immediately knew when you missed the "X", rather than only knowing after seeing the "^" slow down. A long beep that stops the game for a bit would help with that.</p>
+<p>Take a quick look in the <em>Audio</em> category of the toolbox. There are two main blocks that make sounds. One will trigger a sound playing in the background while continuing the game loop, and the other will pause the game loop until the sound finishes playing.</p>
+<p>Both sound blocks take two values. The first is the tone. Higher tone numbers have a high pitch, while lower ones have a low hum. People can only hear between about 20 Hz and 20,000 Hz. The second value is the duration, which is how long the sound should play for. This duration number is in milliseconds, so if you want to have a sounds play for a second, you would put the duration to 1000. In most games, playing a beep for a full second is very long time, and you will often have duration values that are much lower than 1000.</p>
+<p>Let's start by making the quick little beep every time the "^" symbol moves:</p>
+<ul>
+<li>Grab a new <img src="/images/editor-blockly-sound-block.png" alt="[sound]" style="height:2.0em"> block from the <strong>Audio</strong> category and place it inside the very bottom of your game loop.</li>
+<li>Change the duration value from "1000" ms to "10" ms so that the beep is nice and quick.</li>
+</ul>
+<p>Make sure you haven't accidentally used the sound block that waits until the sound finishes. We don't want to pause the game loop for this sound.</p>
+<p>Next, we can add the long low beep that briefly pauses the game when you miss the "X":</p>
+<ul>
+<li>Grab the <img src="/images/editor-blockly-sound-wait-block.png" alt="[sound wait]" style="height:2.0em"> block from the <strong>Audio</strong> category, which is the other type of sound block that pauses the game loop. Place that inside the "do" mouth where you reset the FPS back to 1 when the player hits a button and when the "counter" isn't at 65.</li>
+<li>Change the tone from "2000" Hz to "400" Hz.</li>
+</ul>
+<p>It should now all look like this:</p>
+<p><img alt="Thumby blockly speed buzzer stage12" src="/images/editor-blockly-sb12.png" /></p>
+<p>If you run that now, you should hear little beeps as the "^" moves, and a punishingly long low beep when you miss the "X". The whole thing should feel much more <em>fun</em> too!</p>
+<p><strong>⚠ Note</strong>: <em>If you test this on a real Thumby, you might have to put the Thumby to your ear, especially if you are in a loud room. The Thumby is a tiny thing, and sometimes its volume is on the smaller side too!</em></p>
+<p>When you are ready, head on over to the next tutorial to learn how to make Sprites, and to make a Title Screen for this game!</p>
+<p><a href="/Blockly/Making-Sprites">Next Tutorial: Making Sprites</a></p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 TinyCircuits
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/TinyCircuits" target="_blank" rel="noopener" title="TinyCircuits on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://discord.gg/nkwR3WBBXD" target="_blank" rel="noopener" title="TinyCircuits on Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://twitter.com/TinyCircuits" target="_blank" rel="noopener" title="TinyCircuits on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.instagram.com/tinycircuits/" target="_blank" rel="noopener" title="TinyCircuits on Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.facebook.com/TinyCircuits/" target="_blank" rel="noopener" title="TinyCircuits on Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.youtube.com/channel/UCc4SQjmFcgsbvQFuYNgHuVg" target="_blank" rel="noopener" title="TinyCircuits on YouTube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.linkedin.com/company/tinycircuits-com/" target="_blank" rel="noopener" title="TinyCircuits on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.tiktok.com/@tinycircuits" target="_blank" rel="noopener" title="TinyCircuits on TikTok" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>
