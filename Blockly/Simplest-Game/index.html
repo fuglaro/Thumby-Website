@@ -1296,33 +1296,33 @@
 <p><strong>⚠ Note</strong>: <em>The display won't actually show what is drawn on a frame until you send the frame to the display. Any block that ends with ".. to display" will do that for you.</em></p>
 <p>Let's start making our own game loop.</p>
 <ul>
-<li>Place a <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block from the <strong>Loops</strong> category into your workspace.</li>
+<li>Place a <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block from the <strong>Loops</strong> category into your workspace.</li>
 </ul>
 <p>We want the loop to keep running forever, and this <em>repeat</em> block only loops while a condition is true. That condition gets put into the little plug after where it says "while". There are all sorts of conditions you can make from blocks in the <em>Logic</em> category, but we are going to use the simplest one.</p>
 <ul>
-<li>Take a <img src="/images/editor-blockly-true-block.png" alt="[true]" style="height:1.6em"> block from the <strong>Logic</strong> category, and plug it into the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block in your workspace. It should now look like this:</li>
+<li>Take a <img src="../../images/editor-blockly-true-block.png" alt="[true]" style="height:1.6em"> block from the <strong>Logic</strong> category, and plug it into the <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block in your workspace. It should now look like this:</li>
 </ul>
-<p><img alt="Thumby blockly speed buzzer stage1" src="/images/editor-blockly-sb1.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage1" src="../../images/editor-blockly-sb1.png" /></p>
 <p>This sets up a game loop that will keep repeating forever (or until you click <strong>STOP</strong>, or turn off the Thumby). This loop now needs some blocks inside, so that it has something to do each time it loops.</p>
 <p>We are going to want to makes some things, move them around, and then draw and display each frame. First, lets draw and show something, and then worry about moving it around afterwards. Let's show a character of text on screen.</p>
 <h2 id="drawing-and-then-updating-the-display">Drawing and then Updating the Display</h2>
 <ul>
-<li>Take a <img src="/images/editor-blockly-draw-text-block.png" alt="[draw text]" style="height:3.6em"> block from the <strong>Graphics</strong> category, and place it inside that mouth part of your <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block.</li>
+<li>Take a <img src="../../images/editor-blockly-draw-text-block.png" alt="[draw text]" style="height:3.6em"> block from the <strong>Graphics</strong> category, and place it inside that mouth part of your <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block.</li>
 <li>Now change the "Hello World" text in that block to "^".</li>
-<li>Now grab a new <img src="/images/editor-blockly-send-drawn-combo-block.png" alt="[send drawn frame to display] and [draw fill]" style="height:2.8em"> combo block from the <strong>Graphics</strong> category, and connect it underneath the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block, but still inside the mouth of the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block.</li>
+<li>Now grab a new <img src="../../images/editor-blockly-send-drawn-combo-block.png" alt="[send drawn frame to display] and [draw fill]" style="height:2.8em"> combo block from the <strong>Graphics</strong> category, and connect it underneath the <img src="../../images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block, but still inside the mouth of the <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block.</li>
 <li>Now see what it does by clicking <strong>START</strong>.</li>
 </ul>
 <p>It should all look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage2" src="/images/editor-blockly-sb2.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage2" src="../../images/editor-blockly-sb2.png" /></p>
 <p>All this is doing, is repeatedly drawing the "^" character to the top left position of the frame, then actually showing the frame on the display, and then clearing the next frame to get ready to repeat the whole process again. It may look like that little hat symbol is just sitting there doing nothing, but its being redrawn many times per second, and it's ready to be moved!</p>
 <h2 id="moving-things-around">Moving Things Around</h2>
 <p>Let's try to make it move down.</p>
 <ul>
-<li>Change the "0" in the "y" value of the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block to "17".</li>
+<li>Change the "0" in the "y" value of the <img src="../../images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block to "17".</li>
 <li>Now run the this again.</li>
 </ul>
-<p><img alt="Thumby blockly speed buzzer stage2-1" src="/images/editor-blockly-sb2-1.png" /></p>
-<p>Sadly, that just moved its initial position downwards. We really want to animate it. For that we need to change a position value on the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block on each cycle of the repeat loop. We need to increase one of those numbers every frame. Let's see if we can make it animate moving horisontally by changing that x position value. We want to replace that unchanging "0" with something that <em>varies</em> every frame. Fortunately, we can use a <strong>Variable</strong> for that. <em>Variables</em> act like numbers or text, but they can be changed!</p>
+<p><img alt="Thumby blockly speed buzzer stage2-1" src="../../images/editor-blockly-sb2-1.png" /></p>
+<p>Sadly, that just moved its initial position downwards. We really want to animate it. For that we need to change a position value on the <img src="../../images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block on each cycle of the repeat loop. We need to increase one of those numbers every frame. Let's see if we can make it animate moving horisontally by changing that x position value. We want to replace that unchanging "0" with something that <em>varies</em> every frame. Fortunately, we can use a <strong>Variable</strong> for that. <em>Variables</em> act like numbers or text, but they can be changed!</p>
 <p>First, we need to create a variable and give it a name.</p>
 <ul>
 <li>Open the <strong>Variables</strong> category and click on the <strong>Create variable...</strong> button at the top.</li>
@@ -1332,140 +1332,140 @@
 <li>Call it "<strong>counter</strong>" and click <strong>OK</strong>.</li>
 </ul>
 <p>Some new blocks should have automatically appeared in the <em>Variables</em> category of the toolbox! These are all the blocks for your new variable called "counter".</p>
-<p>This counter variable doesn't have any value in the workspace at all... yet! Lets give it a value that increases each frame. The <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block can increase the value of the variable by 1 on each frame, and will start it's value at 0 if it hasn't already been set.</p>
+<p>This counter variable doesn't have any value in the workspace at all... yet! Lets give it a value that increases each frame. The <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block can increase the value of the variable by 1 on each frame, and will start it's value at 0 if it hasn't already been set.</p>
 <ul>
-<li>Grab a <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block from the <strong>Variables</strong> category and place it inside the mouth of the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block, but this time place it at the top of the mouth, just above all the others that are already inside.</li>
+<li>Grab a <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block from the <strong>Variables</strong> category and place it inside the mouth of the <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block, but this time place it at the top of the mouth, just above all the others that are already inside.</li>
 </ul>
 <p>It should now look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage3" src="/images/editor-blockly-sb3.png" /></p>
-<p>The value of this variable should now be increasing by 1 every frame, but we aren't using it for anything yet! We want to retrieve the value out of "counter" on every frame, and use it for the x position of the text. The <img src="/images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <em>Variables</em> category, allows you to retrieve the current value out of the variable, and use it anywhere you can put a normal number block.</p>
+<p><img alt="Thumby blockly speed buzzer stage3" src="../../images/editor-blockly-sb3.png" /></p>
+<p>The value of this variable should now be increasing by 1 every frame, but we aren't using it for anything yet! We want to retrieve the value out of "counter" on every frame, and use it for the x position of the text. The <img src="../../images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <em>Variables</em> category, allows you to retrieve the current value out of the variable, and use it anywhere you can put a normal number block.</p>
 <ul>
-<li>Take a <img src="/images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <strong>Variables</strong> category, and place it into the x position over the "0" block.</li>
+<li>Take a <img src="../../images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <strong>Variables</strong> category, and place it into the x position over the "0" block.</li>
 </ul>
 <p>It should now look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage4" src="/images/editor-blockly-sb4.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage4" src="../../images/editor-blockly-sb4.png" /></p>
 <p>If you run this now, and if you watch very closely, you might briefly see that hat character speed along and disappear off screen to the right. That's just going to keep going, further and further offscreen as the "counter" variable increases to infinity.</p>
 <p>Let's try slowing things down so we can see it clearly.</p>
-<p>Previously, I talked about games running at different <em>frames per second</em>, but what is our current game running at? Well, we haven't set it, so its running as fast as the frames can display! This is just too fast! Let's set a frame rate with the <img src="/images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block. Let's slow it waaaaaay down by setting it to run a only 1 frame every second.</p>
+<p>Previously, I talked about games running at different <em>frames per second</em>, but what is our current game running at? Well, we haven't set it, so its running as fast as the frames can display! This is just too fast! Let's set a frame rate with the <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block. Let's slow it waaaaaay down by setting it to run a only 1 frame every second.</p>
 <ul>
-<li>Grab a new <img src="/images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block from inside the <strong>Graphics</strong> category, and place it above the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block (not inside).</li>
+<li>Grab a new <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block from inside the <strong>Graphics</strong> category, and place it above the <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block (not inside).</li>
 <li>Change the FPS value from "30" to "1".</li>
 </ul>
 <p>It should now look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage5" src="/images/editor-blockly-sb5.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage5" src="../../images/editor-blockly-sb5.png" /></p>
 <ul>
 <li>Run that and you will see the "^"symbol very slowly move across the screen:</li>
 </ul>
-<p><img src="/images/editor-blockly-speed-buzzer-stage5-gif.gif" alt="[Thumby blockly speed buzzer stage5 gif]" style="width:50%"></p>
+<p><img src="../../images/editor-blockly-speed-buzzer-stage5-gif.gif" alt="[Thumby blockly speed buzzer stage5 gif]" style="width:50%"></p>
 <p>Now things are moving!</p>
 <p>We've got all the basics for a decent little game loop! We've got some setup logic, a main game loop, with things being moved, frames being drawn, and then the drawn frame being sent to the display! It's just a shame that the "^" symbol eventually disappears permanently offscreen. Let's make it loop back around to the other side, but first let's speed things back up. We could increase the FPS value, but lets try making the "^" symbol move in larger steps instead.</p>
 <ul>
-<li>Change the increment value from "1" to "5" in your <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block.</li>
+<li>Change the increment value from "1" to "5" in your <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block.</li>
 </ul>
 <p>If we ran this now, the "^" symbol would keep stepping forwards 5 pixels at a time, but it would still disappear offscreen. Let's make it wrap around.</p>
 <p>Ideally, when the "counter" gets to the end of the screen, we want to reset it back to 0. The Thumby screen is 72 pixels wide, so when "counter" gets to 70 the "^" symbol will be half off screen. So, if the "counter" value is equal to 70, we want to set it to 0.</p>
-<p>The <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block allows you to <em>do something</em> (like set "counter" to "0") on a <em>condition</em> (like when "counter" equals 70).</p>
+<p>The <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block allows you to <em>do something</em> (like set "counter" to "0") on a <em>condition</em> (like when "counter" equals 70).</p>
 <ul>
 <li>
-<p>Grab a new <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block from the <strong>Logic</strong> category and place it in an empty area of your workspace. We will move it into position after we have worked on it.</p>
+<p>Grab a new <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block from the <strong>Logic</strong> category and place it in an empty area of your workspace. We will move it into position after we have worked on it.</p>
 </li>
 <li>
-<p>Grab a new <img src="/images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block from the <strong>Logic</strong> category and place it into the plug next to the "if" on the <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block.</p>
+<p>Grab a new <img src="../../images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block from the <strong>Logic</strong> category and place it into the plug next to the "if" on the <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block.</p>
 </li>
 <li>
-<p>Grab another <img src="/images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <strong>Variables</strong> category, and place it in the the first hole of the <img src="/images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.</p>
+<p>Grab another <img src="../../images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <strong>Variables</strong> category, and place it in the the first hole of the <img src="../../images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.</p>
 </li>
 <li>
-<p>Grab a new <img src="/images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the <strong>Math</strong> category and place it in the second hole of the <img src="/images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.</p>
+<p>Grab a new <img src="../../images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the <strong>Math</strong> category and place it in the second hole of the <img src="../../images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.</p>
 </li>
 <li>
 <p>Change the "123" to "70".</p>
 </li>
 </ul>
 <p>It should now look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage5-1" src="/images/editor-blockly-sb5-1.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage5-1" src="../../images/editor-blockly-sb5-1.png" /></p>
 <ul>
 <li>
-<p>Grab a new <img src="/images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block from the <strong>Variables</strong> category, and place it inside the mouth next to where it says "do".</p>
+<p>Grab a new <img src="../../images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block from the <strong>Variables</strong> category, and place it inside the mouth next to where it says "do".</p>
 </li>
 <li>
-<p>Grab another <img src="/images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the <strong>Math</strong> category and plug it into the end of the <img src="/images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block.</p>
+<p>Grab another <img src="../../images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the <strong>Math</strong> category and plug it into the end of the <img src="../../images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block.</p>
 </li>
 <li>
 <p>Change the "123" to "0".</p>
 </li>
 </ul>
 <p>It should now look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage5-2" src="/images/editor-blockly-sb5-2.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage5-2" src="../../images/editor-blockly-sb5-2.png" /></p>
 <p>This collection of blocks will reset the "counter" back to 0 whenever the "counter" gets to 70! Now it just needs to go into our main game loop so that it runs every frame.</p>
 <ul>
-<li>Place the newly made collection of blocks into the <img src="/images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> main game loop, between the <img src="/images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block and the <img src="/images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block. You can drag all the blocks together by moving the <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block, which holds them all together.</li>
+<li>Place the newly made collection of blocks into the <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> main game loop, between the <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block and the <img src="../../images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block. You can drag all the blocks together by moving the <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block, which holds them all together.</li>
 </ul>
 <p>It should now look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage6" src="/images/editor-blockly-sb6.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage6" src="../../images/editor-blockly-sb6.png" /></p>
 <ul>
 <li>Run that and see it wrap around!:</li>
 </ul>
-<p><img src="/images/editor-blockly-speed-buzzer-stage6-gif.gif" alt="[Thumby blockly speed buzzer stage6 gif]" style="width:50%"></p>
+<p><img src="../../images/editor-blockly-speed-buzzer-stage6-gif.gif" alt="[Thumby blockly speed buzzer stage6 gif]" style="width:50%"></p>
 <p>Nice!</p>
 <h2 id="adding-more-things">Adding More Things</h2>
 <p>You can add lots of different things to your game. As an example, let's add an "X" character and put it at the far right of the screen just above where the "^" symbol wraps around.</p>
 <ul>
 <li>Create the following highlighted block and add it to your loop. It should be easy enough with everything you have learned so far!:</li>
 </ul>
-<p><img alt="Thumby blockly speed buzzer stage7" src="/images/editor-blockly-sb7.png" />
-<img src="/images/editor-blockly-speed-buzzer-stage7-gif.gif" alt="[Thumby blockly speed buzzer stage7 gif]" style="width:50%"></p>
+<p><img alt="Thumby blockly speed buzzer stage7" src="../../images/editor-blockly-sb7.png" />
+<img src="../../images/editor-blockly-speed-buzzer-stage7-gif.gif" alt="[Thumby blockly speed buzzer stage7 gif]" style="width:50%"></p>
 <h2 id="random-numbers">Random Numbers</h2>
 <p>Some games take advantage of random numbers to make things different each time you play them. Some games are different each time because of how the player chooses different options each time they play, like in chess, but sometimes its nice to add a little bit of chance! You can also use random numbers to draw things in more interesting ways.</p>
 <p>That "X" symbol is looking a little bit dull. Let's make it dance! It currently sits there at x position 65, but it would be nice if it randomly moved about across positions 64 to 66.</p>
 <ul>
-<li>Take a <img src="/images/editor-blockly-random-num-block.png" alt="random integer (from to)" style="height:1.6em"> block from the <strong>Maths</strong> category, and plug it into the x position plug on the block that draws the "X", replacing the "65".</li>
+<li>Take a <img src="../../images/editor-blockly-random-num-block.png" alt="random integer (from to)" style="height:1.6em"> block from the <strong>Maths</strong> category, and plug it into the x position plug on the block that draws the "X", replacing the "65".</li>
 <li>Change the "1" to "10" values and make them "64" to "66".</li>
 <li>Run it and watch the "X" jump around a little!</li>
 </ul>
-<p><img alt="Thumby blockly speed buzzer stage8" src="/images/editor-blockly-sb8.png" />
-<img src="/images/editor-blockly-speed-buzzer-stage8-gif.gif" alt="[Thumby blockly speed buzzer stage8 gif]" style="width:50%"></p>
+<p><img alt="Thumby blockly speed buzzer stage8" src="../../images/editor-blockly-sb8.png" />
+<img src="../../images/editor-blockly-speed-buzzer-stage8-gif.gif" alt="[Thumby blockly speed buzzer stage8 gif]" style="width:50%"></p>
 <h2 id="button-actions">Button Actions</h2>
 <p>We've made a fun little animation, but there isn't any player interaction. It would be really nice if pressing a button does something! Let's try to make the game speed up every time the player presses one of the red 🔴 buttons.</p>
-<p>Take a look in the <strong>Buttons</strong> category of the toolbox. In it, you can see two collections of blocks, with each collection of blocks having a block for each button. Each button has a "held" block (<img src="/images/editor-blockly-buttonA-held-block.png" alt="buttonA held" style="height:1.2em">) and also a "hit block" (<img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">). Both of these blocks act as <em>condition</em> blocks, and give a value of <strong>true</strong> whenever something happens with the buttons.</p>
+<p>Take a look in the <strong>Buttons</strong> category of the toolbox. In it, you can see two collections of blocks, with each collection of blocks having a block for each button. Each button has a "held" block (<img src="../../images/editor-blockly-buttonA-held-block.png" alt="buttonA held" style="height:1.2em">) and also a "hit block" (<img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">). Both of these blocks act as <em>condition</em> blocks, and give a value of <strong>true</strong> whenever something happens with the buttons.</p>
 <p>The <em>condition</em> behaviour of the <em>held</em> blocks are slightly different to the <em>hit</em> blocks:</p>
 <ul>
 <li><strong>held</strong> button blocks are true <strong>for the entire time</strong> a button is held down.</li>
 <li><strong>hit</strong> button blocks are true <strong>only once</strong> each time a button is pressed, even if the button is held down for a long time.</li>
 </ul>
 <p>The difference is important because a button can be held down while multiple game loops cycle through. Actually, when games run at high frame rates, that is normally always the case!</p>
-<p>Let's make the game speed up each time one of the 🔴 buttons is pressed, so lets use a (<img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">) "hit block"!</p>
+<p>Let's make the game speed up each time one of the 🔴 buttons is pressed, so lets use a (<img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">) "hit block"!</p>
 <p>Once again, we want to <em>do something</em> if a <em>condition</em> is true, so:</p>
 <ul>
-<li>Grab another <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the bottom of your game loop.</li>
-<li>Grab a new <img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.6em"> block from the <strong>Buttons</strong> category and place it into the "if" plug.</li>
-<li>Grab another <img src="/images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block, and place it inside the "do" mouth.</li>
+<li>Grab another <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the bottom of your game loop.</li>
+<li>Grab a new <img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.6em"> block from the <strong>Buttons</strong> category and place it into the "if" plug.</li>
+<li>Grab another <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block, and place it inside the "do" mouth.</li>
 </ul>
 <p>Each button block can have it's trigger button changed by using the dropdown inside the button. In there, you can find some additional options like "dpad", which will activate when <em>any</em> direction button is pressed. We can change this dropdown so that our button block activates when <em>either</em> button A or button B is pressed.</p>
 <ul>
-<li>Change the dropdown in the <img src="/images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.6em"> block from "button A" to "button A or B".</li>
+<li>Change the dropdown in the <img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.6em"> block from "button A" to "button A or B".</li>
 <li>Run it and then press one of the buttons and watch it speed up!</li>
 </ul>
-<p><img alt="Thumby blockly speed buzzer stage9" src="/images/editor-blockly-sb9.png" />
-<img src="/images/editor-blockly-speed-buzzer-stage9-gif.gif" alt="[Thumby blockly speed buzzer stage9 gif]" style="width:50%"></p>
+<p><img alt="Thumby blockly speed buzzer stage9" src="../../images/editor-blockly-sb9.png" />
+<img src="../../images/editor-blockly-speed-buzzer-stage9-gif.gif" alt="[Thumby blockly speed buzzer stage9 gif]" style="width:50%"></p>
 <p>Wow, that's fast!</p>
 <p>Let's change it so that the game speeds up <em>gradually</em> every time the button is pressed. We want to increase the FPS value by 1 every time the button is pressed, similarly to how we incresed the "counter". Unfortunately, there is no increment block for the FPS, so we are going to have to do the maths ourselves.</p>
-<p>We want to retrieve the current FPS value, add 1 to it, then set that as the new FPS value. The <img src="/images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block retrieves the current FPS value, and can be used anywhere where a number block is allowed to be placed, and the <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block allow you to do basic maths like addition, subtraction, and multiplication. We can also place a <img src="/images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block inside a <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, giving a value of 1 more than the current FPS value!</p>
+<p>We want to retrieve the current FPS value, add 1 to it, then set that as the new FPS value. The <img src="../../images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block retrieves the current FPS value, and can be used anywhere where a number block is allowed to be placed, and the <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block allow you to do basic maths like addition, subtraction, and multiplication. We can also place a <img src="../../images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block inside a <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, giving a value of 1 more than the current FPS value!</p>
 <ul>
-<li>Grab a new <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block from the <strong>Maths</strong> category, and place it in the value plug of the <img src="/images/editor-blockly-setFPS-block.png" alt="set FPS" style="height:2.0em"> block, replacing the "30".</li>
-<li>Grab a new <img src="/images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block from the <strong>Graphics</strong> category, and place it into the first value plug if the <img src="/images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, replacing the first "1".</li>
+<li>Grab a new <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block from the <strong>Maths</strong> category, and place it in the value plug of the <img src="../../images/editor-blockly-setFPS-block.png" alt="set FPS" style="height:2.0em"> block, replacing the "30".</li>
+<li>Grab a new <img src="../../images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block from the <strong>Graphics</strong> category, and place it into the first value plug if the <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, replacing the first "1".</li>
 </ul>
-<p><img alt="Thumby blockly speed buzzer stage10" src="/images/editor-blockly-sb10.png" />
-<img src="/images/editor-blockly-speed-buzzer-stage10-gif.gif" alt="[Thumby blockly speed buzzer stage10 gif]" style="width:50%"></p>
+<p><img alt="Thumby blockly speed buzzer stage10" src="../../images/editor-blockly-sb10.png" />
+<img src="../../images/editor-blockly-speed-buzzer-stage10-gif.gif" alt="[Thumby blockly speed buzzer stage10 gif]" style="width:50%"></p>
 <p>Sweet!</p>
 <h2 id="making-a-challenge">Making a Challenge!</h2>
 <p>This looks pretty cool, but it could be a lot more <strong>fun</strong>. Games are most fun where there is some kind of challenge! Games usually have some kind of <em>goal</em> that takes effort or skill to achieve.</p>
 <p>Let's make the <em>goal</em> be making the "^" symbol move as fast as possible, but let's make the <em>challange</em> that it only goes faster when the button is hit exactly when the "^" symbol is underneath the "X" symbol, and if the button is hit at any other time, it goes back to its original slow speed!</p>
 <p>To do this, we can leave it always increasing the speed when the button is hit, but if the button is hit when it is in the wrong position, we reset the FPS back to 1 frame per second:</p>
 <ul>
-<li>Grab another <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the "do" mouth that activates when a button is hit, just below where you increase the FPS.</li>
+<li>Grab another <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the "do" mouth that activates when a button is hit, just below where you increase the FPS.</li>
 </ul>
-<p>Notice that you can put <img src="/images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> blocks inside of each other!</p>
+<p>Notice that you can put <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> blocks inside of each other!</p>
 <p>This runs when the button is hit, and is where we are going to reset the FPS if the "^" is in the wrong position.</p>
 <p>You already have a combination of blocks that checks the position of the "counter" where it wraps around to the left when it goes of screen. That is in the "if" plug up at the top of your game loop.</p>
 <ul>
@@ -1483,8 +1483,8 @@
 <ul>
 <li>Copy the block where you initially set the FPS to 1 just above your game loop, then paste and move it into the new "do" mouth.</li>
 </ul>
-<p><img alt="Thumby blockly speed buzzer stage11" src="/images/editor-blockly-sb11.png" />
-<img src="/images/editor-blockly-speed-buzzer-stage11-gif.gif" alt="[Thumby blockly speed buzzer stage11 gif]" style="width:50%"></p>
+<p><img alt="Thumby blockly speed buzzer stage11" src="../../images/editor-blockly-sb11.png" />
+<img src="../../images/editor-blockly-speed-buzzer-stage11-gif.gif" alt="[Thumby blockly speed buzzer stage11 gif]" style="width:50%"></p>
 <p>Have a play and try to get the "^" symbol to go as fast as you can without missing the "X"!</p>
 <h2 id="adding-sounds">Adding Sounds</h2>
 <p>Sounds are a great way to make your game have a more intersting experience. Little beeps can go a long way! They can also be a part of how the game works.</p>
@@ -1494,17 +1494,17 @@
 <p>Both sound blocks take two values. The first is the tone. Higher tone numbers have a high pitch, while lower ones have a low hum. People can only hear between about 20 Hz and 20,000 Hz. The second value is the duration, which is how long the sound should play for. This duration number is in milliseconds, so if you want to have a sounds play for a second, you would put the duration to 1000. In most games, playing a beep for a full second is very long time, and you will often have duration values that are much lower than 1000.</p>
 <p>Let's start by making the quick little beep every time the "^" symbol moves:</p>
 <ul>
-<li>Grab a new <img src="/images/editor-blockly-sound-block.png" alt="[sound]" style="height:2.0em"> block from the <strong>Audio</strong> category and place it inside the very bottom of your game loop.</li>
+<li>Grab a new <img src="../../images/editor-blockly-sound-block.png" alt="[sound]" style="height:2.0em"> block from the <strong>Audio</strong> category and place it inside the very bottom of your game loop.</li>
 <li>Change the duration value from "1000" ms to "10" ms so that the beep is nice and quick.</li>
 </ul>
 <p>Make sure you haven't accidentally used the sound block that waits until the sound finishes. We don't want to pause the game loop for this sound.</p>
 <p>Next, we can add the long low beep that briefly pauses the game when you miss the "X":</p>
 <ul>
-<li>Grab the <img src="/images/editor-blockly-sound-wait-block.png" alt="[sound wait]" style="height:2.0em"> block from the <strong>Audio</strong> category, which is the other type of sound block that pauses the game loop. Place that inside the "do" mouth where you reset the FPS back to 1 when the player hits a button and when the "counter" isn't at 65.</li>
+<li>Grab the <img src="../../images/editor-blockly-sound-wait-block.png" alt="[sound wait]" style="height:2.0em"> block from the <strong>Audio</strong> category, which is the other type of sound block that pauses the game loop. Place that inside the "do" mouth where you reset the FPS back to 1 when the player hits a button and when the "counter" isn't at 65.</li>
 <li>Change the tone from "2000" Hz to "400" Hz.</li>
 </ul>
 <p>It should now all look like this:</p>
-<p><img alt="Thumby blockly speed buzzer stage12" src="/images/editor-blockly-sb12.png" /></p>
+<p><img alt="Thumby blockly speed buzzer stage12" src="../../images/editor-blockly-sb12.png" /></p>
 <p>If you run that now, you should hear little beeps as the "^" moves, and a punishingly long low beep when you miss the "X". The whole thing should feel much more <em>fun</em> too!</p>
 <p><strong>⚠ Note</strong>: <em>If you test this on a real Thumby, you might have to put the Thumby to your ear, especially if you are in a loud room. The Thumby is a tiny thing, and sometimes its volume is on the smaller side too!</em></p>
 <p>When you are ready, head on over to the next tutorial to learn how to make Sprites, and to make a Title Screen for this game!</p>
