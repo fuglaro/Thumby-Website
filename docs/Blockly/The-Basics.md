@@ -256,7 +256,7 @@ You can load it again later from the same menu by opening a new Blockly tab with
 
 ## Further Learning
 
-Most of the Code Editor interface works the same for MicroPython and Blockly, so you can learn more about it all here: [Code Editor Docs: Getting Started - First Program](../Code-Editor/Get-Started/).
+Most of the Code Editor interface works the same for MicroPython and Blockly, so you can learn more about it all here: [Code Editor Docs: Getting Started - First Program](../../Code-Editor/Get-Started/).
 
 **⚠ Note**: *The* **'IMPORT SPRITE'** *button at the top of the Code Editor isn't usable for Blockly. We will show the way to make Sprites for Blockly in the next tutorial.*
 
@@ -264,4 +264,4 @@ If you get stuck, you can always ask for some help from the Thumby Discord commu
 
 When you are ready, head on over to the next tutorial to start with the basics for making games!
 
-[Next Tutorial: The Simplest Game](Simplest-Game)
+[Next Tutorial: The Simplest Game](../Simplest-Game)
