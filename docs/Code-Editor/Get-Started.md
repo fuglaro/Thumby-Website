@@ -31,7 +31,7 @@ Any code written in the Code Editor is saved to your local web storage, so refre
 
 Open Google Chrome or Microsoft Edge, then open the [**online Thumby Code Editor**](https://code.thumby.us/ "Thumby Code Editor") and select **MicroPython** from the choice below:
 
-![Thumby web browser Code Editor dark mode screenshot](/images/Blockly-choice.png)
+![Thumby web browser Code Editor dark mode screenshot](..//images/Blockly-choice.png)
 <center>*Figure 0: Selection between MicroPython or Blockly*</center>
 
 The below screen will appear:

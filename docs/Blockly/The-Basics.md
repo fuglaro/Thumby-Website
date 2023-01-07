@@ -8,29 +8,29 @@ This tutorial will get you stared with visual block programming in the Thumby Co
 * You may be shown the Code Editor Changelog popup. Don't worry about that. Just close it!
 * Next, you will get an option to select between MicroPython and Blockly editors. Select Blockly.
 
-![Thumby blockly selection screenshot](/images/editor-blockly-selection-dark.jpg)
+![Thumby blockly selection screenshot](../images/editor-blockly-selection-dark.jpg)
 
 * You should now have an editor with some example blocks shown. Don't wory if you missed this, you can still open a new one with UTILITIES -> WIDGETS -> + BLOCKLY EDITOR:
 
-![Thumby hello blockly screenshot](/images/editor-hello-blockly-dark.jpg)
+![Thumby hello blockly screenshot](../images/editor-hello-blockly-dark.jpg)
 
 ### Running in the Emulator
 
 Now that you have the example program open, lets try running it in the Emulator! The emulator is the picture of a Thumby in the corner. That can actually run the Thumby games!
 
-![Thumby emulator dark screenshot](/images/editor-emulator-dark.jpg)
+![Thumby emulator dark screenshot](../images/editor-emulator-dark.jpg)
 
 * First, we need to make sure that the program is selected to be emulated. Make sure checkboxes next to **EMULATION: ✅ ✅** (found at the top of the editor) are both selected. The red one (on the right) is the important one, which actually activates both!
 
-![Thumby emulation selected dark screenshot](/images/editor-emulation-selected-dark.jpg)
+![Thumby emulation selected dark screenshot](../images/editor-emulation-selected-dark.jpg)
 
 * Now you can launch the Emulator by clicking the **START** button on the bottom of the Emulator window:
 
-![Thumby emulator start dark screenshot](/images/editor-emulator-start-dark.jpg)
+![Thumby emulator start dark screenshot](../images/editor-emulator-start-dark.jpg)
 
 * Give it a moment, and it should load up a lovely *Hello Thumby* message, with a Thumby image moving back and forth!
 
-![Thumby hello thumby gif](/images/editor-hello-thumby-gif.gif)
+![Thumby hello thumby gif](../images/editor-hello-thumby-gif.gif)
 
 This will just keep playing forever.
 
@@ -50,7 +50,7 @@ The example program has some basic button actions. Make sure the Emulator is sel
 
 Go ahead and tap away and see it wiggle about!
 
-![Thumby hello thumby wiggle gif](/images/editor-hello-thumby-wiggle-gif.gif)
+![Thumby hello thumby wiggle gif](../images/editor-hello-thumby-wiggle-gif.gif)
 
 
 #### Stopping the Emulator
@@ -59,7 +59,7 @@ If you have a game running in the Emulator, you can stop the emulation with the 
 
 * Press **STOP**:
 
-![Thumby emulator stop dark screenshot](/images/editor-emulator-stop-dark.jpg)
+![Thumby emulator stop dark screenshot](../images/editor-emulator-stop-dark.jpg)
 
 ---
 
@@ -74,15 +74,15 @@ In Blockly, you piece togther logic using blocks. There are a bunch of different
 This area where all the blocks are located and able to be dragged around and connected together is called the *workspace* and is the area which makes the logic for your game.
 
 **Workspace:**
-![Thumby blockly workspace dark screenshot](/images/editor-messy-blockly-workspace-dark.jpg)
+![Thumby blockly workspace dark screenshot](../images/editor-messy-blockly-workspace-dark.jpg)
 
 * Clear the workspace and start fresh. You can simply select each blocks, one by one, and press the backspace key, or you can right-click on the workspace background and select *Delete 33 Blocks* (the number might be different:
 
-![Thumby blockly delete all screenshot](/images/editor-blockly-delete-all-dark.jpg)
+![Thumby blockly delete all screenshot](../images/editor-blockly-delete-all-dark.jpg)
 
 You should now have a nice clear workspace without any blocks:
 
-![Thumby blockly empty workspace screenshot](/images/editor-blockly-empty-workspace-dark.jpg)
+![Thumby blockly empty workspace screenshot](../images/editor-blockly-empty-workspace-dark.jpg)
 
 Nice! Now we are ready to start adding our own blocks!
 
@@ -91,33 +91,33 @@ Nice! Now we are ready to start adding our own blocks!
 To add blocks to the workspace, we need to get the blocks from somewhere! In Blockly, all the blocks are neatly organised inside the *toolbox*. You can see the toolbox here:
 
 **Toolbox**
-![Thumby blockly toolbox screenshot](/images/editor-blockly-toolbox-dark.jpg)
+![Thumby blockly toolbox screenshot](../images/editor-blockly-toolbox-dark.jpg)
 
 All the blocks in the toolbox are organised into categories. Each category contains blocks that do similar kinds of things. You can click on each category to see all the different blocks they contain!
 
 * Try cliking on the **Text** category in the *toolbox*:
 
-![Thumby blockly toolbox text category screenshot](/images/editor-blockly-toolbox-text-dark.jpg)
+![Thumby blockly toolbox text category screenshot](../images/editor-blockly-toolbox-text-dark.jpg)
 
 You can see that it has opened out a toolbox panel showing all the blocks about *text* that you can use. Each block has a tooltip that helps describe what the block does.
 
-* Leave your mouse pointer over the <img src="/images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block until the tooltop shows up:
+* Leave your mouse pointer over the <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block until the tooltop shows up:
 
-![Thumby blockly toolbox tooltip screenshot](/images/editor-blockly-toolbox-tooltip-dark.jpg)
+![Thumby blockly toolbox tooltip screenshot](../images/editor-blockly-toolbox-tooltip-dark.jpg)
 
 * Now try using that block! To use a block from the toolbox, simply drag it into the workspace area:
 
-![Thumby blockly toolbox use block screenshot](/images/editor-blockly-toolbox-use-block-dark.jpg)
+![Thumby blockly toolbox use block screenshot](../images/editor-blockly-toolbox-use-block-dark.jpg)
 
 Now you have a block in your workspace! There is an unlimited number of each block in the toolbox. You can keep dragging them into your workspace to make new blocks.
 
 ### Building with Blocks
 
-The <img src="/images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block needs something to print.
+The <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block needs something to print.
 
-* Grab the <img src="/images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block from the *Text* toolbox and plug it into the <img src="/images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block in your workspace:
+* Grab the <img src="../../images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block from the *Text* toolbox and plug it into the <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block in your workspace:
 
-![Thumby blockly abc plugging screenshot](/images/editor-blockly-abc-plugging-dark.jpg)
+![Thumby blockly abc plugging screenshot](../images/editor-blockly-abc-plugging-dark.jpg)
 
 Now lets run your program and see what it does!
 
@@ -125,13 +125,13 @@ Now lets run your program and see what it does!
 
 Unfortunately, nothing is going to show up on the Thumby emulator itself (that's coming later), but we can see the program did something because it output that "*abc*" text in the debug Shell:
 
-![Thumby blockly abc debug screenshot](/images/editor-blockly-abc-debug-dark.jpg)
+![Thumby blockly abc debug screenshot](../images/editor-blockly-abc-debug-dark.jpg)
 
 These two blocks are now working together to show text in the debug Shell! This kind of block connection adds a block that *is something* to a block that *does something*. Here, we have connected a block that *is abc text* to a block that *does a print of something to the debug shell*, so both blocks together *does a print of the abc text to the debug shell*.
 
 These debug prints can be really helpful for helping figure out what your program is doing. Its not really making the Thumby do anything, but we will get to that soon. For now, lets make it print something better than "abc".
 
-Some blocks in blockly can have their details changed! The <img src="/images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block can be changed to any text! "abc" is just the example value.
+Some blocks in blockly can have their details changed! The <img src="../../images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block can be changed to any text! "abc" is just the example value.
 
 * Click on the "abc" text and type in something new like "blocks are running!".
 
@@ -139,29 +139,29 @@ Some blocks in blockly can have their details changed! The <img src="/images/edi
 
 You should see that it is now showing the new text you entered:
 
-![Thumby blockly new text debug screenshot](/images/editor-blockly-new-text-debug-dark.jpg)
+![Thumby blockly new text debug screenshot](../images/editor-blockly-new-text-debug-dark.jpg)
 
 Nice! Now you know how to place blocks, connect them together, and change their details. Next, let's make the Thumby actually do something! We can also learn how to snap blocks together in another way.
 
 * Open the *Graphics* category of the toolbox, which is lower down than the *Text* category you just had open.
 
-You should see a <img src="/images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em"> block. This is similar to the <img src="/images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block we just used, but will display text to the Thumby screen instead of the debug Shell:
+You should see a <img src="../../images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em"> block. This is similar to the <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block we just used, but will display text to the Thumby screen instead of the debug Shell:
 
-![Thumby blockly toolbox print to display screenshot](/images/editor-blockly-toolbox-print-display-dark.jpg)
+![Thumby blockly toolbox print to display screenshot](../images/editor-blockly-toolbox-print-display-dark.jpg)
 
-* Go ahead and drag it out of the toolbox and connect it underneath the <img src="/images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block so that it looks like this:
+* Go ahead and drag it out of the toolbox and connect it underneath the <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block so that it looks like this:
 
-![Thumby blockly both prints screenshot](/images/editor-blockly-both-prints-display-dark.jpg)
+![Thumby blockly both prints screenshot](../images/editor-blockly-both-prints-display-dark.jpg)
 
-Once again, we need to connect a block that *is something* so that the <img src="/images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em"> block knows what to display.
+Once again, we need to connect a block that *is something* so that the <img src="../../images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em"> block knows what to display.
 
-* Grab another <img src="/images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block like before, connect it in, and change the text to something like "Thumby says: Hello Blockly", so it looks like this:
+* Grab another <img src="../../images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block like before, connect it in, and change the text to something like "Thumby says: Hello Blockly", so it looks like this:
 
-![Thumby blockly both prints ready screenshot](/images/editor-blockly-both-prints-ready-display-dark.jpg)
+![Thumby blockly both prints ready screenshot](../images/editor-blockly-both-prints-ready-display-dark.jpg)
 
 * See what that does now by clicking **START**:
 
-![Thumby blockly both prints running screenshot](/images/editor-blockly-both-prints-running-dark.jpg)
+![Thumby blockly both prints running screenshot](../images/editor-blockly-both-prints-running-dark.jpg)
 
 We finally made the Thumby do something! Nice!
 
@@ -208,15 +208,15 @@ The emulator is super helpful for quickly testing your programs but it is even m
 
 * Click **'CONNECT THUMBY'** at the top:
 
-![Connecting thumby on web browser Code Editor](/images/editor-blockly-connect-thumby.jpg)
+![Connecting thumby on web browser Code Editor](../images/editor-blockly-connect-thumby.jpg)
 
 * Select the device in the pop-up menu, and then click 'Connect':
 
-![Selecting thumby device using the web browser Code Editor](/images/editor-blockly-connect-thumby-serial.jpg)
+![Selecting thumby device using the web browser Code Editor](../images/editor-blockly-connect-thumby-serial.jpg)
 
 If connection is successful, a green 'Connected' message will be printed to the debug Shell. You should also see all the files from the Thumby device load in the *Filesystem* tab:
 
-![Thumby Connected Screen](/images/editor-blockly-connected-shell.jpg)
+![Thumby Connected Screen](../images/editor-blockly-connected-shell.jpg)
 
 Your Thumby is now connected! The  Thumby should be paired to the webpage so that it will auto-connect next time it is plugged in.
 
@@ -224,17 +224,17 @@ We can now test the program on it!
 
 * Click the **'↻ FAST EXECUTE'** button just above the Blockly workspace:
 
-![Thumby Fast Execute Screengrab](/images/editor-blockly-fast-execute-shell.jpg)
+![Thumby Fast Execute Screengrab](../images/editor-blockly-fast-execute-shell.jpg)
 
 If all goes well, you should very briefly see the "Thumby says: Hello Blockly!" message showing on the display! Your Thumby automatically resets at the end of your program.
 
-![Thumby Says Screen](/images/editor-blockly-thumby-says-screen-shell.jpg)
+![Thumby Says Screen](../images/editor-blockly-thumby-says-screen-shell.jpg)
 
 Wonderful!
 
-If you would like to see the message for longer, try snapping a <img src="/images/editor-blockly-wait-block.png" alt="[wait 1 seconds]" style="height:2.0em"> block from the *Flow* category underneath <img src="/images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em">.
+If you would like to see the message for longer, try snapping a <img src="../../images/editor-blockly-wait-block.png" alt="[wait 1 seconds]" style="height:2.0em"> block from the *Flow* category underneath <img src="../../images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em">.
 
-![Thumby Print And Wait With Screen](/images/editor-blockly-print-and-wait-wscreen.jpg)
+![Thumby Print And Wait With Screen](../images/editor-blockly-print-and-wait-wscreen.jpg)
 
 ---
 
@@ -250,7 +250,7 @@ Any code written in the Code Editor is saved to your local web storage, so refre
 
 You can save your work by saving blockly files to your PC. Use **FILE -> EXPORT TO PC** to download a save file with all your work!
 
-![Thumby export to pc dark mode screenshot](/images/editor-export-to-pc-blockly-dark.jpg)
+![Thumby export to pc dark mode screenshot](../images/editor-export-to-pc-blockly-dark.jpg)
 
 You can load it again later from the same menu by opening a new Blockly tab with **'NEW BLOCKLY TAB'**, and then clicking **'IMPORT FROM PC'**
 
