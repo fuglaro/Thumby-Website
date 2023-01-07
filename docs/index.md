@@ -113,7 +113,7 @@ If you are new to programming and want to get started without touching a line of
 
 </section>
 
-Navigate to the [**Thumby Blockly tutorials**](/Blockly/The-Basics/) to learn more.
+Navigate to the [**Thumby Blockly tutorials**](Blockly/The-Basics/) to learn more.
 
 ---
 
