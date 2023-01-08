@@ -134,7 +134,6 @@ These debug prints can be really helpful for helping figure out what your progra
 Some blocks in blockly can have their details changed! The <img src="../../images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block can be changed to any text! "abc" is just the example value.
 
 * Click on the "abc" text and type in something new like "blocks are running!".
-
 * Now you can run this again by clicking **START**.
 
 You should see that it is now showing the new text you entered:

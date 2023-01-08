@@ -116,13 +116,9 @@ Ideally, when the "counter" gets to the end of the screen, we want to reset it b
 The <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block allows you to *do something* (like set "counter" to "0") on a *condition* (like when "counter" equals 70).
 
 * Grab a new <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block from the **Logic** category and place it in an empty area of your workspace. We will move it into position after we have worked on it.
-
 * Grab a new <img src="../../images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block from the **Logic** category and place it into the plug next to the "if" on the <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block.
-
 * Grab another <img src="../../images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the **Variables** category, and place it in the the first hole of the <img src="../../images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.
-
 * Grab a new <img src="../../images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the **Math** category and place it in the second hole of the <img src="../../images/editor-blockly-comparison-block.png" alt="[comparison]" style="height:1.6em"> block.
-
 * Change the "123" to "70".
 
 It should now look like this:
@@ -130,9 +126,7 @@ It should now look like this:
 ![Thumby blockly speed buzzer stage5-1](../images/editor-blockly-sb5-1.png)
 
 * Grab a new <img src="../../images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block from the **Variables** category, and place it inside the mouth next to where it says "do".
-
 * Grab another <img src="../../images/editor-blockly-num-block.png" alt="[123]" style="height:1.6em"> block from the **Math** category and plug it into the end of the <img src="../../images/editor-blockly-set-block.png" alt="[set counter]" style="height:2.0em"> block.
-
 * Change the "123" to "0".
 
 It should now look like this:
@@ -263,7 +257,7 @@ It's would also be nicer if you immediately knew when you missed the "X", rather
 
 Take a quick look in the *Audio* category of the toolbox. There are two main blocks that make sounds. One will trigger a sound playing in the background while continuing the game loop, and the other will pause the game loop until the sound finishes playing.
 
-Both sound blocks take two values. The first is the tone. Higher tone numbers have a high pitch, while lower ones have a low hum. People can only hear between about 20 Hz and 20,000 Hz. The second value is the duration, which is how long the sound should play for. This duration number is in milliseconds, so if you want to have a sounds play for a second, you would put the duration to 1000. In most games, playing a beep for a full second is very long time, and you will often have duration values that are much lower than 1000.
+Both sound blocks take two values. The first is the tone. Higher tone numbers have a high pitch, while lower ones have a low hum. People can only hear between about 20 Hz and 20,000 Hz. The second value is the duration, which is how long the sound should play for. This duration number is in milliseconds, so if you want to have a sound play for a second, you would put the duration to 1000. In most games, playing a beep for a full second is very long time, and you will often have duration values that are much lower than 1000.
 
 Let's start by making the quick little beep every time the "^" symbol moves:
 
@@ -274,7 +268,7 @@ Make sure you haven't accidentally used the sound block that waits until the sou
 
 Next, we can add the long low beep that briefly pauses the game when you miss the "X":
 
-* Grab the <img src="../../images/editor-blockly-sound-wait-block.png" alt="[sound wait]" style="height:2.0em"> block from the **Audio** category, which is the other type of sound block that pauses the game loop. Place that inside the "do" mouth where you reset the FPS back to 1 when the player hits a button and when the "counter" isn't at 65.
+* Grab the <img src="../../images/editor-blockly-sound-wait-block.png" alt="[sound wait]" style="height:2.0em"> block from the **Audio** category, which is the other type of sound block, and the one that pauses the game loop. Place that inside the "do" mouth where you reset the FPS back to 1 when the player hits a button and when the "counter" isn't at 65.
 * Change the tone from "2000" Hz to "400" Hz.
 
 It should now all look like this:
