@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#making-sprites" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -927,10 +932,104 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Making Sprites
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Making Sprites
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-sprites" class="md-nav__link">
+    Drawing Sprites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bitmap-builder" class="md-nav__link">
+    The Bitmap Builder
+  </a>
+  
+    <nav class="md-nav" aria-label="The Bitmap Builder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading-sprites-to-the-bitmap-builder" class="md-nav__link">
+    Loading Sprites To The Bitmap Builder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-sprites-on-the-workspace" class="md-nav__link">
+    Updating Sprites on the Workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-bitmap-builder-to-paint" class="md-nav__link">
+    Using the Bitmap Builder to Paint
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Bitmap Builder to Paint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resizing-sprites" class="md-nav__link">
+    Resizing Sprites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing" class="md-nav__link">
+    Drawing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opening-image-files-from-your-computer" class="md-nav__link">
+    Opening Image Files From Your Computer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1108,6 +1207,84 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-sprites" class="md-nav__link">
+    Drawing Sprites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bitmap-builder" class="md-nav__link">
+    The Bitmap Builder
+  </a>
+  
+    <nav class="md-nav" aria-label="The Bitmap Builder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading-sprites-to-the-bitmap-builder" class="md-nav__link">
+    Loading Sprites To The Bitmap Builder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-sprites-on-the-workspace" class="md-nav__link">
+    Updating Sprites on the Workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-bitmap-builder-to-paint" class="md-nav__link">
+    Using the Bitmap Builder to Paint
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Bitmap Builder to Paint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resizing-sprites" class="md-nav__link">
+    Resizing Sprites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing" class="md-nav__link">
+    Drawing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opening-image-files-from-your-computer" class="md-nav__link">
+    Opening Image Files From Your Computer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1123,7 +1300,92 @@
 
 
 
-
+<h1 id="making-sprites">Making Sprites</h1>
+<p>It's time to paint some pictures, and load them in your game!</p>
+<p>This tutorial will introduce you to Sprites in the Thumby Code Editor, and how to load them in your Blockly workspace. It will then show you how to display them in your game, but it won't yet show you how to move them around in your game.</p>
+<p>Let's get started!</p>
+<p>Games sometimes have title screens that display the name of the game, and maybe a picture, just before the game loads. It can be nice way to make the game more pretty, and have more character.</p>
+<p>We are going to make a title screen for a game (actually for the one we made in the previous tutorial), and show it on screen briefly, by making and display a Sprite.</p>
+<p>Sprites are pictures that you can hand draw, or load from a picture file, which you can put in your game, move about, flip, mirror, and even make animations with! For this tutorial, we are just going to make a Sprite that fills the whole screen and display it for a few seconds.</p>
+<h2 id="drawing-sprites">Drawing Sprites</h2>
+<p>First let's make a Sprite!</p>
+<ul>
+<li>Grab a <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block from the <strong>Sprites</strong> category, and place it into an empty part of your workspace above any other blocks you might have in your workspace.</li>
+</ul>
+<p>Putting it higher up makes it run first.</p>
+<p>We now have a Sprite in our workspace that has been given a default name. Let's change it to something better.</p>
+<ul>
+<li>Right click on the dropdown at the end of your <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block and click on "<strong>Rename Sprite</strong>".</li>
+<li>Give it the name "<strong>title</strong>".</li>
+</ul>
+<p>Now let's display it on screen. First, we need to draw it to the next frame, then we need to send the frame to the display.</p>
+<ul>
+<li>Grab a <img src="../../images/editor-blockly-draw-sprite-title-block.png" alt="[draw title]" style="height:2.0em"> block from the <strong>Sprites</strong> category and add it underneath your load sprite block.</li>
+<li>Now add a <img src="../../images/editor-blockly-send-drawn-combo-block.png" alt="[send drawn frame to display] and [draw fill]" style="height:2.8em"> combo block underneath that.</li>
+<li>After that, add a <img src="../../images/editor-blockly-wait-block.png" alt="[wait]" style="height:2.0em"> block from the <strong>Flow</strong> category to make sure the Sprite shows on the display for a while. Change the value from "1" to "3" so the Sprite shows on the display for 3 seconds.</li>
+<li>Run it:</li>
+</ul>
+<p><img alt="Thumby blockly title stage1" src="../../images/editor-blockly-title1.png" /></p>
+<p>Sweet!... Wait... Where did that picture come from? All Sprites come with a default pciture already loaded. That is what you are seeing there.</p>
+<p>Our next step is to change the picture!</p>
+<h2 id="the-bitmap-builder">The Bitmap Builder</h2>
+<p>Sprites can have their pictures changed using the <a href="../../Code-Editor/Widget-panels/#bitmap-builder">Bitmap Builder Widget</a>.</p>
+<p>Let's try to find the Bitmap Builder. It might be next to the Filesystem tab:</p>
+<p><img alt="Thumby blockly bitmap builder tab dark" src="../../images/editor-blockly-bitmap-tab-dark.jpg" /></p>
+<p>Or it might be in the hidden-tab dropdown:</p>
+<p><img alt="Thumby blockly bitmap builder hidden tab dark" src="../../images/editor-blockly-bitmap-hidden-tab-dark.jpg" /></p>
+<p>Or you might need to open it again with <strong>UTILITIES</strong> -&gt; <strong>WIDGETS</strong> -&gt; <strong>+ BITMAP BUILDER</strong>.</p>
+<p>Once you have found it, it should look like this:</p>
+<p><img alt="Thumby bitmap builder dark" src="../../images/editor-bitmap-builder-dark.jpg" /></p>
+<h3 id="loading-sprites-to-the-bitmap-builder">Loading Sprites To The Bitmap Builder</h3>
+<p>To load a sprite from your workspace into the Bitmap Builder, you use the <strong>IMPORT</strong> button, but the Bitmap Builder needs to know which Sprite you want to open (you might have more than one), so you must make sure a <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block is selected in your workspace.</p>
+<ul>
+<li>Select the <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block in your workspace for the "<strong>title</strong>" Sprite.</li>
+<li>Click <strong>IMPORT</strong>.</li>
+</ul>
+<p>You should see the Thumby Sprite loaded:</p>
+<p><img alt="Thumby bitmap builder of thumby dark" src="../../images/editor-bitmap-builder-thumby-dark.jpg" /></p>
+<h3 id="updating-sprites-on-the-workspace">Updating Sprites on the Workspace</h3>
+<p>First, we make some changes to the Sprite picture, then we update the Sprite back on our workspace.</p>
+<ul>
+<li>Click <strong>INVERT</strong> which will swap the colors.</li>
+<li>Make sure the <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block in your workspace is still selected.</li>
+<li>Click <strong>EXPORT</strong>.</li>
+</ul>
+<p>You should see that the pictures in the <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> blocks update:</p>
+<p><img alt="Thumby blockly load sprite block updated" src="../../images/editor-blockly-load-sprite-block-updated.png" /></p>
+<p>Nice!</p>
+<ul>
+<li>Now run it!</li>
+</ul>
+<p><img alt="Thumby blockly sprite inverted running" src="../../images/editor-blockly-sprite-inverted-running.png" /></p>
+<p>Title screens look best when they fill the whole screen and where they have been customised for the game. Let's do both next.</p>
+<h3 id="using-the-bitmap-builder-to-paint">Using the Bitmap Builder to Paint</h3>
+<p>First, let's make the Sprite the same size as the screen. The Thumby screen is 72 pixels wide, and 40 pixels high.</p>
+<h4 id="resizing-sprites">Resizing Sprites</h4>
+<p><strong>⚠ Note</strong>: <em>Resizing your sprite will clear its contents. Don't resize your picture unless you don't mind losing it, or unless you have stored it back in your workspace.</em></p>
+<ul>
+<li>Click <strong>SIZE</strong>.</li>
+<li>Enter <strong>72</strong> for the width and click <strong>OK</strong>.</li>
+<li>Enter <strong>40</strong> for the height and click <strong>OK</strong>.</li>
+</ul>
+<p>You should now have a blank white drawing area with lots more pixels!</p>
+<p><strong>⚠ Note</strong>: <em>The Bitmap Builder has a maximum image size of 144 wide, and 80 tall, which is much larger than the Thumby screen!</em></p>
+<h4 id="drawing">Drawing</h4>
+<p>To draw on the picture, use the mouse <strong>Left Click</strong> to draw black pixels, and use <strong>Right Click</strong> to draw white pixels. You can drag across the screen to scribble.</p>
+<p>If you want to start over, use the <strong>CLEAR</strong> button to reset the whole picture to white.</p>
+<p>To zoom in and out of the picture, use the <strong>⊕</strong> and <strong>⊖</strong> buttons.</p>
+<h3 id="opening-image-files-from-your-computer">Opening Image Files From Your Computer</h3>
+<p>You can use the <strong>IMAGE</strong> button to open files from your computer. They will be automatically converted to black and white. The image file you open must not be larger than 144 wide and 80 high. Most image file formats will work.</p>
+<ul>
+<li>Try downloading the image below to your computer and loading into the Bitmap Builder with the <strong>IMAGE</strong> button:</li>
+</ul>
+<p><img alt="Thumby speed buzzer title screen" src="../../images/speed-buzzer-title-screen.png" /></p>
+<ul>
+<li>Now update the Sprite in your workspace with <strong>EXPORT</strong> and then run it with <strong>START</strong> to see what happens!</li>
+</ul>
+<p><img alt="Thumby blockly sprite title running" src="../../images/editor-blockly-sprite-title.png" /></p>
+<p><a href="../Drawing-and-Dynamics">Next Tutorial: Drawing and Dynamics</a></p>
 
 
   
