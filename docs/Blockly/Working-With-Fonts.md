@@ -58,7 +58,7 @@ See it in action below:
 
 Font Sprites must follow a specific structure. All letters, numbers, and symbols must be put into a tightly packed grid of boxes, with each box being the width of the font letters, and the height of every box always being 8.
 
-Characters, letters and symbols that are less than 8 pixels high are drawn at the very top of each box.
+Fonts that are less than 8 pixels high are drawn at the very top of each box.
 
 Here is an example for a 3x5 Font:
 
