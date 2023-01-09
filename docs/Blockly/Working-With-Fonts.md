@@ -77,7 +77,7 @@ You can actually use fonts to draw pictures or icons! Just make a custom font wi
 
 ### Example Custom Fonts
 
-Here are some example fonts you can open in the Bitmap Builder with the **IMAGE** button, so you can then customise it:
+Here are some example fonts you can download then open in the Bitmap Builder with the **IMAGE** button, so you can then customise it:
 
 ![Thumby Auri 3x3 Font](../images/Auri3x3Font.png)
 (Community member Auri's teeeny tiny 3x3 font)
