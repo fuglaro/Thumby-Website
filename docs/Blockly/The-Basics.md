@@ -228,7 +228,7 @@ We can now test the program on it!
 
 If all goes well, you should very briefly see the "Thumby says: Hello Blockly!" message showing on the display! Your Thumby automatically resets at the end of your program.
 
-![Thumby Says Screen](../images/editor-blockly-thumby-says-screen-shell.jpg)
+![Thumby Says Screen](../images/editor-blockly-thumby-says-screen-shell.png)
 
 Wonderful!
 
