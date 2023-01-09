@@ -2,6 +2,8 @@
 
 In this tutorial, we will show you how to switch fonts when drawing to the display, how to set the font gap spacing, and then introduce you to making your own custom fonts! There is also a fully functional Calculator app example demonstrating switching fonts, and using a custom font.
 
+---
+
 ## Switching the Default Fonts
 
 To switch between the default fonts, you can use the following block from the **Graphics** category:
@@ -16,6 +18,8 @@ See it in action below:
 ![Thumby Font Switch Blocks](../images/editor-blockly-font-switch-blocks.png)
 ![Thumby Font Switch Screen](../images/editor-blockly-font-switch-screen.png)
 </center>
+
+---
 
 ## Font Spacing
 
@@ -32,6 +36,8 @@ See it in action below:
 ![Thumby Font Gap Screen](../images/editor-blockly-font-gap-screen.png)
 </center>
 
+---
+
 ## Making Custom Fonts
 
 You can make your own Fonts using Sprites made in the Bitmap Builder. See the [Making Sprites Tutorial](../Making-Sprites) to see how to make and load Sprites.
@@ -43,6 +49,8 @@ Here is an example of a Font Sprite loaded in the Bitmap Builder:
 <center>
 ![Thumby Bitmap Builder With Font](../images/editor-bitmap-builder-font-dark.jpg)
 </center>
+
+---
 
 To use a Sprite as a Font, first you make sure it is loaded into a <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block using the **EXPORT** button.
 
@@ -61,6 +69,7 @@ See it in action below:
 ![Thumby Font Switch Screen](../images/editor-blockly-custom-font-screen.png)
 </center>
 
+---
 
 ### Font Sprite Structure
 
@@ -83,7 +92,11 @@ The order of the letters, numbers, and symbols is very important. They go from r
 
 You don't need to make all of the letters, numbers, or symbols, but leave the box blank instead of removing it.
 
+---
+
 You can actually use fonts to draw pictures or icons! Just make a custom font with each letter representing an icon or game item! Make the font with pictures instead of letters, numbers, or symbols then draw the corresponding text for those icons that you want! You can always switch back to a real font to draw text again.
+
+---
 
 ### Example Custom Fonts
 
@@ -95,6 +108,8 @@ Here are some example fonts you can download then open in the Bitmap Builder wit
 * ![Thumby ZX 8x8 Font](../images/zx8x8Font.png) (ZX Spectrum 8x8 font by Mike)
 
 Don't forget to load it back onto your <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block that loads the font for your <img src="../../images/editor-blockly-set-font-with-sprite-block.png" alt="[set font with sprite]" style="height:2.0em"> block with the **EXPORT** button! And remember to update the font size details!
+
+---
 
 ## TinyCalc Example
 
@@ -109,6 +124,10 @@ Try this yourself by downloading these [**blocks here**](../TinyCalc-blocks.py) 
 
 As a challenge, try to add wider font spacing gaps between the selectable keypad keys to make them easier to read!
 
+---
+
 **Thanks to:** community member *Auri* for the Auri3x3 font! And also thanks to community member *AyreGuitar* for finding the zx8x8 font!
+
+---
 
 [**Next Tutorial: Saving High Scores**](../Saving-High-Scores/)

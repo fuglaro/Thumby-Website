@@ -2,6 +2,8 @@
 
 This tutorial will get you stared with visual block programming in the Thumby Code Editor, and show you how to get the Thumby to do some fun little things!
 
+---
+
 ## Getting Set Up
 
 * Head on over to the online [**Thumby Code Editor**](https://code.thumby.us).
@@ -17,6 +19,8 @@ This tutorial will get you stared with visual block programming in the Thumby Co
 <center>
 ![Thumby hello blockly screenshot](../images/editor-hello-blockly-dark.jpg)
 </center>
+
+---
 
 ### Running in the Emulator
 
@@ -46,7 +50,9 @@ Now that you have the example program open, lets try running it in the Emulator!
 
 This will just keep playing forever.
 
-#### Playing in the Emulator
+---
+
+#### Controlling the Emulator
 
 You can play games in the Emulator just like on a Thumby! You just use the keyboard to control it instead of the buttons. Use W A S D for **up/left/down/right** and use **,** and **.** for the two buttons!:
 
@@ -66,6 +72,7 @@ Go ahead and tap away and see it wiggle about!
 ![Thumby hello thumby wiggle gif](../images/editor-hello-thumby-wiggle-gif.gif)
 </center>
 
+---
 
 #### Stopping the Emulator
 
@@ -82,6 +89,8 @@ If you have a game running in the Emulator, you can stop the emulation with the 
 ## Getting Started with Blockly
 
 Now that we are set up with the basics, lets get started programming with blocks!
+
+---
 
 ### Blockly Workspace
 
@@ -114,6 +123,8 @@ There are also some useful gray buttons on the bottom right of the workspace are
 * Open recycling bin - where you can recover recently deleted blocks!
 
 Nice! Now we are ready to start adding our own blocks!
+
+---
 
 ### Blockly Toolbox
 
@@ -152,6 +163,8 @@ You can see that it has opened out a toolbox panel showing all the blocks about 
 
 Now you have a block in your workspace! There is an unlimited number of each block in the toolbox. You can keep dragging them into your workspace to make new blocks.
 
+---
+
 ### Building with Blocks
 
 The <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block needs something to print.
@@ -176,6 +189,8 @@ These two blocks are now working together to show text in the debug Shell! This 
 
 These debug prints can be really helpful for helping figure out what your program is doing. Its not really making the Thumby do anything, but we will get to that soon. For now, lets make it print something better than "abc".
 
+---
+
 Some blocks in blockly can have their details changed! The <img src="../../images/editor-blockly-abc-block.png" alt="[abc]" style="height:1.6em"> block can be changed to any text! "abc" is just the example value.
 
 * Click on the "abc" text and type in something new like "blocks are running!".
@@ -186,6 +201,8 @@ You should see that it is now showing the new text you entered:
 <center>
 ![Thumby blockly new text debug screenshot](../images/editor-blockly-new-text-debug-dark.jpg)
 </center>
+
+---
 
 Nice! Now you know how to place blocks, connect them together, and change their details. Next, let's make the Thumby actually do something! We can also learn how to snap blocks together in another way.
 
@@ -221,7 +238,11 @@ We finally made the Thumby do something! Nice!
 
 Connecting blocks like this underneath each other makes a *do semething* block run *after* another *do something* block. In Blockly, blocks run one after another from top to bottom. Both our blocks seemed to run at the same time because they ran so fast! What actually happend is "blocks are running!" was printed to the debug shell, and then, after that, "Thumby says: Hello Blockly!" was printed to the Thumby display.
 
+---
+
 **Hint:** *Blockly supports shortcuts to help make and arrange blocks quickly. Here are some useful ones:*
+
+---
 
 * *Copy selected block:* **Ctrl**+**c**
 * *Paste copied block:* **Ctrl**+**v**
@@ -236,6 +257,8 @@ There are all kinds of blocks in Blockly that do lots of different things. When 
 
 The emulator is super helpful for quickly testing your programs but it is even more fun to try your program on a real Thumby (if you have one). Next, let's connect your Thumby and test this program on it!
 
+---
+
 ### Troubleshooting
 
 **⚠ Note**: *Some Micro USB cables only include power and ground wires to power or charge devices - if you are having trouble connecting your Thumby in the following steps, try using a different USB cable. Test the USB cable you are using is able to transfer data by transferring files, like pictures or text files, from a different USB compatible device.*
@@ -243,6 +266,8 @@ The emulator is super helpful for quickly testing your programs but it is even m
 **⚠ Note**: *Connecting your Thumby works best in Chrome or Edge. If you are having trouble connecting, make sure to try a latest version of one of those browsers.*
 
 **⚠ Note**: *If you're on Linux, your user needs to be added to the `dialout` group. Use this command `sudo adduser $USER dialout` and restart your machine.*
+
+---
 
 ### Connecting
 
@@ -270,6 +295,8 @@ Your Thumby is now connected! The  Thumby should be paired to the webpage so tha
 
 We can now test the program on it!
 
+---
+
 ### Testing
 
 * Click the **'↻ FAST EXECUTE'** button just above the Blockly workspace:
@@ -286,7 +313,9 @@ If all goes well, you should very briefly see the "Thumby says: Hello Blockly!" 
 
 Wonderful!
 
-If you would like to see the message for longer, try snapping a <img src="../../images/editor-blockly-wait-block.png" alt="[wait 1 seconds]" style="height:2.0em"> block from the *Flow* category underneath <img src="../../images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em">.
+---
+
+If you would like to see the message for longer, try snapping a <img src="../../images/editor-blockly-wait-block.png" alt="[wait 1 seconds]" style="height:2.0em"> block from the **Flow** category underneath <img src="../../images/editor-blockly-print-to-display-block.png" alt="[print to display]" style="height:2.0em">.
 
 <center>
 ![Thumby Print And Wait With Screen](../images/editor-blockly-print-and-wait-wscreen.jpg)
@@ -300,11 +329,15 @@ If you would like to see the message for longer, try snapping a <img src="../../
 
 Any code written in the Code Editor is saved to your local web storage, so refreshing or closing the Code Editor webpage won't erase your saved work.
 
+---
+
 **⚠ Note**: *Please avoid the few ways you could lose your work unless you have saved:*
 
 * **DONT**: Hard reset the page (UTILITIES -> HARD RESET PAGE)
 * **DONT**: Clear your local browser storage by deleting the browser cache.
 * **DONT**: Close the Blockly editor tab (instead of the whole browser tab) without saving.
+
+---
 
 You can save your work by saving blockly files to your PC. Use **FILE -> EXPORT TO PC** to download a save file with all your work!
 
@@ -314,13 +347,19 @@ You can save your work by saving blockly files to your PC. Use **FILE -> EXPORT 
 
 You can load it again later from the same menu by opening a new Blockly tab with **'NEW BLOCKLY TAB'**, and then clicking **'IMPORT FROM PC'**
 
+---
+
 ## Further Learning
 
 Most of the Code Editor interface works the same for MicroPython and Blockly, so you can learn more about it all here: [**Code Editor Docs: Getting Started - First Program**](../../Code-Editor/Get-Started/).
 
 **⚠ Note**: *The* **'IMPORT SPRITE'** *button at the top of the Code Editor isn't usable for Blockly. We will show the way to make Sprites for Blockly in the next tutorial.*
 
+---
+
 If you get stuck, you can always ask for some help from the Thumby Discord community channel found here: **[TinyCircuits Discord](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord")**.
+
+---
 
 When you are ready, head on over to the next tutorial to start with the basics for making games!
 

@@ -4,13 +4,19 @@ It's time to paint some pictures, and load them in your game!
 
 This tutorial will introduce you to Sprites in the Thumby Code Editor, and how to load them in your Blockly workspace. It will then show you how to display them in your game, but it won't yet show you how to move them around in your game.
 
+---
+
 Let's get started!
 
 Games sometimes have title screens that display the name of the game, and maybe a picture, just before the game loads. It can be nice way to make the game more pretty, and have more character.
 
 We are going to make a title screen for a game (actually for the one we made in the previous tutorial), and show it on screen briefly, by making and display a Sprite.
 
+---
+
 Sprites are pictures that you can hand draw, or load from a picture file, which you can put in your game, move about, flip, mirror, and even make animations with! For this tutorial, we are just going to make a Sprite that fills the whole screen and display it for a few seconds.
+
+---
 
 ## Drawing Sprites
 
@@ -25,6 +31,8 @@ We now have a Sprite in our workspace that has been given a default name. Let's 
 * Right click on the dropdown at the end of your <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block and click on "**Rename Sprite**".
 * Give it the name "**title**".
 
+---
+
 Now let's display it on screen. First, we need to draw it to the next frame, then we need to send the frame to the display.
 
 * Grab a <img src="../../images/editor-blockly-draw-sprite-title-block.png" alt="[draw title]" style="height:2.0em"> block from the **Sprites** category and add it underneath your load sprite block.
@@ -38,9 +46,13 @@ Now let's display it on screen. First, we need to draw it to the next frame, the
 
 Sweet!... Wait... Where did that picture come from? All Sprites come with a default pciture already loaded. That is what you are seeing there.
 
+---
+
 **⚠ Note**: *Be careful when you delete <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> blocks, as the picture data they contain will be lost! You can keep a copy of them in the corner of your workspace just to be safe!*
 
 Our next step is to change the picture!
+
+---
 
 ## The Bitmap Builder
 
@@ -58,14 +70,17 @@ Or it might be in the hidden-tab dropdown:
 ![Thumby blockly bitmap builder hidden tab dark](../images/editor-blockly-bitmap-hidden-tab-dark.jpg)
 </center>
 
-
 Or you might need to open it again with **UTILITIES** -> **WIDGETS** -> **+ BITMAP BUILDER**.
+
+---
 
 Once you have found it, it should look like this:
 
 <center>
 ![Thumby bitmap builder dark](../images/editor-bitmap-builder-dark.jpg)
 </center>
+
+---
 
 ### Loading Sprites To The Bitmap Builder
 
@@ -79,6 +94,8 @@ You should see the Thumby Sprite loaded:
 <center>
 ![Thumby bitmap builder of thumby dark](../images/editor-bitmap-builder-thumby-dark.jpg)
 </center>
+
+---
 
 ### Updating Sprites on the Workspace
 
@@ -104,9 +121,13 @@ Nice!
 
 Title screens look best when they fill the whole screen and where they have been customised for the game. Let's do both next.
 
+---
+
 ### Using the Bitmap Builder to Paint
 
 First, let's make the Sprite the same size as the screen. The Thumby screen is 72 pixels wide, and 40 pixels high.
+
+---
 
 #### Resizing Sprites
 
@@ -120,6 +141,8 @@ You should now have a blank white drawing area with lots more pixels!
 
 **⚠ Note**: *The Bitmap Builder has a maximum image size of 144 wide, and 80 tall, which is much larger than the Thumby screen!*
 
+---
+
 #### Drawing
 
 To draw on the picture, use the mouse **Left Click** to draw black pixels, and use **Right Click** to draw white pixels. You can drag across the screen to scribble.
@@ -127,6 +150,8 @@ To draw on the picture, use the mouse **Left Click** to draw black pixels, and u
 If you want to start over, use the **CLEAR** button to reset the whole picture to white.
 
 To zoom in and out of the picture, use the **⊕** and **⊖** buttons.
+
+---
 
 ### Opening Image Files From Your Computer
 
@@ -139,5 +164,7 @@ You can use the **IMAGE** button to open files from your computer. They will be 
 <center>
 ![Thumby blockly sprite title running](../images/editor-blockly-sprite-title.png)
 </center>
+
+---
 
 [**Next Tutorial: Drawing and Dynamics**](../Drawing-and-Dynamics/)
