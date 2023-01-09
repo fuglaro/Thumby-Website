@@ -190,6 +190,7 @@ There are also some useful grey buttons on the bottom right of the workspace are
 * Zoom out
 * Open recycling bin - where you can recover recently deleted blocks!
 
+**⚠ Note**: *Be careful when you delete <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> blocks, as the picture data they contain will be lost! You can keep a copy of them in the corner of your workspace just to be safe!*
 
 ---
 
