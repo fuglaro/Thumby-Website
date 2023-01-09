@@ -76,7 +76,7 @@ This area where all the blocks are located and able to be dragged around and con
 **Workspace:**
 ![Thumby blockly workspace dark screenshot](../images/editor-messy-blockly-workspace-dark.jpg)
 
-* Clear the workspace and start fresh. You can simply select each blocks, one by one, and press the backspace key, or you can right-click on the workspace background and select *Delete 33 Blocks* (the number might be different:
+* Clear the workspace and start fresh. You can simply select each blocks, one by one, and press the backspace key, or you can right-click on the workspace background and select *Delete 33 Blocks* (the number might be different):
 
 ![Thumby blockly delete all screenshot](../images/editor-blockly-delete-all-dark.jpg)
 
@@ -84,7 +84,7 @@ You should now have a nice clear workspace without any blocks:
 
 ![Thumby blockly empty workspace screenshot](../images/editor-blockly-empty-workspace-dark.jpg)
 
-There are also some useful grey buttons on the bottom right of the workspace area. From top down are the following buttons:
+There are also some useful gray buttons on the bottom right of the workspace area. From top down are the following buttons:
 
 * Center workspace
 * Zoom in
@@ -95,7 +95,7 @@ Nice! Now we are ready to start adding our own blocks!
 
 ### Blockly Toolbox
 
-To add blocks to the workspace, we need to get the blocks from somewhere! In Blockly, all the blocks are neatly organised inside the *toolbox*.
+To add blocks to the workspace, we need to get the blocks from somewhere! In Blockly, all the blocks are neatly organized inside the *toolbox*.
 
 **Links:** *If you would like to learn more about some of the blocks in Blockly, there is great interactive tutorial here: [Learn Block Coding](https://learnblockcoding.com/) which explains all about the blocks in the toolbox categories Logic, Loops, Maths, Text, Lists, Variables, and Functions. There are also some fun interactive tutorials here: [Blockly Games](https://blockly.games/turtle) which lets you get familiar with connecting blocks together with some different blocks that do some fun things.*
 
@@ -104,7 +104,7 @@ You can see the toolbox here:
 **Toolbox**
 ![Thumby blockly toolbox screenshot](../images/editor-blockly-toolbox-dark.jpg)
 
-All the blocks in the toolbox are organised into categories. Each category contains blocks that do similar kinds of things. You can click on each category to see all the different blocks they contain!
+All the blocks in the toolbox are organized into categories. Each category contains blocks that do similar kinds of things. You can click on each category to see all the different blocks they contain!
 
 * Try cliking on the **Text** category in the *toolbox*:
 
@@ -262,7 +262,7 @@ Most of the Code Editor interface works the same for MicroPython and Blockly, so
 
 **⚠ Note**: *The* **'IMPORT SPRITE'** *button at the top of the Code Editor isn't usable for Blockly. We will show the way to make Sprites for Blockly in the next tutorial.*
 
-If you get stuck, you can always ask for some help from the Thumby Discord community channel found here: **[Tiny Circuits Discord](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord")**.
+If you get stuck, you can always ask for some help from the Thumby Discord community channel found here: **[TinyCircuits Discord](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord")**.
 
 When you are ready, head on over to the next tutorial to start with the basics for making games!
 
