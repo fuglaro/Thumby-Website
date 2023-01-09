@@ -192,13 +192,17 @@ There are all kinds of blocks in Blockly that do lots of different things. When 
 
 The emulator is super helpful for quickly testing your programs but it is even more fun to try your program on a real Thumby (if you have one). Next, let's connect your Thumby and test this program on it!
 
-* Turn your Thumby on (switch the top power switch to the right when looking at the screen), and connect it to your PC using a Micro USB Cable.
+### Troubleshooting
 
 **⚠ Note**: *Some Micro USB cables only include power and ground wires to power or charge devices - if you are having trouble connecting your Thumby in the following steps, try using a different USB cable. Test the USB cable you are using is able to transfer data by transferring files, like pictures or text files, from a different USB compatible device.*
 
 **⚠ Note**: *Connecting your Thumby works best in Chrome or Edge. If you are having trouble connecting, make sure to try a latest version of one of those browsers.*
 
 **⚠ Note**: *If you're on Linux, your user needs to be added to the `dialout` group. Use this command `sudo adduser $USER dialout` and restart your machine.*
+
+### Connecting
+
+* Turn your Thumby on (switch the top power switch to the right when looking at the screen), and connect it to your PC using a Micro USB Cable.
 
 * Click **'CONNECT THUMBY'** at the top:
 
@@ -215,6 +219,8 @@ If connection is successful, a green 'Connected' message will be printed to the 
 Your Thumby is now connected! The  Thumby should be paired to the webpage so that it will auto-connect next time it is plugged in.
 
 We can now test the program on it!
+
+### Testing
 
 * Click the **'↻ FAST EXECUTE'** button just above the Blockly workspace:
 
