@@ -236,6 +236,8 @@ If you would like to see the message for longer, try snapping a <img src="../../
 
 ![Thumby Print And Wait With Screen](../images/editor-blockly-print-and-wait-wscreen.jpg)
 
+**Hint**: *The* **STOP** *button on the emulator works for FAST EXECUTE too!*
+
 ---
 
 ## Saving Your Work
@@ -264,4 +266,4 @@ If you get stuck, you can always ask for some help from the Thumby Discord commu
 
 When you are ready, head on over to the next tutorial to start with the basics for making games!
 
-[Next Tutorial: The Simplest Game](../Simplest-Game)
+[Next Tutorial: The Simplest Game](../Simplest-Game/)

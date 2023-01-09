@@ -30,7 +30,7 @@ See it in action below:
 
 ## Making Custom Fonts
 
-You can make your own Fonts usng Sprites made in the Bitmap Builder. See the [Making Sprites Tutorial](../Making-Sprites) to see how to make and load Sprites.
+You can make your own Fonts using Sprites made in the Bitmap Builder. See the [Making Sprites Tutorial](../Making-Sprites) to see how to make and load Sprites.
 
 Font Sprites are just Sprites that are arranged in a specific way.
 
@@ -89,7 +89,7 @@ Here are some example fonts you can download then open in the Bitmap Builder wit
 (Tiny Circuit's inbuilt 5x7 font)
 
 ![Thumby ZX 8x8 Font](../images/zx8x8Font.png)
-(Community member AyreGuitar's lovely ZX 8x8 font)
+(ZX Spectrum 8x8 font by Mike)
 
 Don't forget to load it back onto your <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block that loads the font for your <img src="../../images/editor-blockly-set-font-with-sprite-block.png" alt="[set font with sprite]" style="height:2.0em"> block with the **EXPORT** button! And remember to update the font size details!
 
@@ -104,6 +104,6 @@ Try this yourself by downloading these [Blocks here](../TinyCalc-blocks.py) and 
 
 As a challenge, try to add wider font spacing gaps between the selectable keypad keys to make them easier to read!
 
-[Next Tutorial: Publish Your Game](../Publish-Your-Game)
+[Next Tutorial: Saving High Scores](../Saving-High-Scores/)
 
-Thanks to the community member *Auri* for the Auri3x3 font! And thanks to the community member *AyreGuitar* for the zx8x8 font!
+**Thanks to:** community member *Auri* for the Auri3x3 font! And also thanks to community member *AyreGuitar* for finding the zx8x8 font!

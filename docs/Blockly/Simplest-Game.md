@@ -281,4 +281,4 @@ If you run that now, you should hear little beeps as the "^" moves, and a punish
 
 When you are ready, head on over to the next tutorial to learn how to make Sprites, and to make a Title Screen for this game!
 
-[Next Tutorial: Making Sprites](../Making-Sprites)
+[Next Tutorial: Making Sprites](../Making-Sprites/)
