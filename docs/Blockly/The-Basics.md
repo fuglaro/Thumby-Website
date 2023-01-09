@@ -84,11 +84,22 @@ You should now have a nice clear workspace without any blocks:
 
 ![Thumby blockly empty workspace screenshot](../images/editor-blockly-empty-workspace-dark.jpg)
 
+There are also some useful grey buttons on the bottom right of the workspace area. From top down are the following buttons:
+
+* Center workspace
+* Zoom in
+* Zoom out
+* Open recycling bin - where you can recover recently deleted blocks!
+
 Nice! Now we are ready to start adding our own blocks!
 
 ### Blockly Toolbox
 
-To add blocks to the workspace, we need to get the blocks from somewhere! In Blockly, all the blocks are neatly organised inside the *toolbox*. You can see the toolbox here:
+To add blocks to the workspace, we need to get the blocks from somewhere! In Blockly, all the blocks are neatly organised inside the *toolbox*.
+
+**Links:** *If you would like to learn more about some of the blocks in Blockly, there is great interactive tutorial here: [Learn Block Coding](https://learnblockcoding.com/) which explains all about the blocks in the toolbox categories Logic, Loops, Maths, Text, Lists, Variables, and Functions. There are also some fun interactive tutorials here: [Blockly Games](https://blockly.games/turtle) which lets you get familiar with connecting blocks together with some different blocks that do some fun things.*
+
+You can see the toolbox here:
 
 **Toolbox**
 ![Thumby blockly toolbox screenshot](../images/editor-blockly-toolbox-dark.jpg)
@@ -166,31 +177,14 @@ We finally made the Thumby do something! Nice!
 
 Connecting blocks like this underneath each other makes a *do semething* block run *after* another *do something* block. In Blockly, blocks run one after another from top to bottom. Both our blocks seemed to run at the same time because they ran so fast! What actually happend is "blocks are running!" was printed to the debug shell, and then, after that, "Thumby says: Hello Blockly!" was printed to the Thumby display.
 
+**Hint:** *Blockly supports shortcuts to help make and arrange blocks quickly. Here are some useful ones:*
+
+* *Copy selected block:* **Ctrl**+**c**
+* *Paste copied block:* **Ctrl**+**v**
+* *Undo last change:* **Ctrl**+**z**
+* *Redo change:* **Ctrl**+**Shift**+**z**
+
 There are all kinds of blocks in Blockly that do lots of different things. When you start connecting them together in interesting ways you can get the Thumby to do lots of cool things!
-
-### Links, Hints and Tricks
-
-If you would like to learn more about some of the blocks in Blockly, there is great interactive tutorial here: [Learn Block Coding](https://learnblockcoding.com/) which explains all about the blocks in the toolbox categories Logic, Loops, Maths, Text, Lists, Variables, and Functions. There are also some fun interactive tutorials here: [Blockly Games](https://blockly.games/turtle) which lets you get familiar with connecting blocks together with some different blocks that do some fun things.
-
----
-
-Blockly supports some shortcuts to help make and arrange blocks quickly. Here are some useful ones:
-
-* Copy selected block: **Ctrl**+**c**
-* Paste copied block: **Ctrl**+**v**
-* Undo last change: **Ctrl**+**z**
-* Redo change: **Ctrl**+**Shift**+**z**
-
----
-
-There are also some useful grey buttons on the bottom right of the workspace area. From top down are the following buttons:
-
-* Center workspace
-* Zoom in
-* Zoom out
-* Open recycling bin - where you can recover recently deleted blocks!
-
-**⚠ Note**: *Be careful when you delete <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> blocks, as the picture data they contain will be lost! You can keep a copy of them in the corner of your workspace just to be safe!*
 
 ---
 

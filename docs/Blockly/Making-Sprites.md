@@ -36,6 +36,8 @@ Now let's display it on screen. First, we need to draw it to the next frame, the
 
 Sweet!... Wait... Where did that picture come from? All Sprites come with a default pciture already loaded. That is what you are seeing there.
 
+**⚠ Note**: *Be careful when you delete <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> blocks, as the picture data they contain will be lost! You can keep a copy of them in the corner of your workspace just to be safe!*
+
 Our next step is to change the picture!
 
 ## The Bitmap Builder
