@@ -89,7 +89,7 @@ Here are some example fonts you can download then open in the Bitmap Builder wit
 (Tiny Circuit's inbuilt 5x7 font)
 
 ![Thumby ZX 8x8 Font](../images/zx8x8Font.png)
-(ZX 8x8 font)
+(Community member AyreGuitar's lovely ZX 8x8 font)
 
 Don't forget to load it back onto your <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block that loads the font for your <img src="../../images/editor-blockly-set-font-with-sprite-block.png" alt="[set font with sprite]" style="height:2.0em"> block with the **EXPORT** button! And remember to update the font size details!
 
