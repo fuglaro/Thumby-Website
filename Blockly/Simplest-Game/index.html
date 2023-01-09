@@ -1307,11 +1307,13 @@
 <h1 id="the-simplest-game">The Simplest Game</h1>
 <p>It's time to make your first game!</p>
 <p>This tutorial will walk you through creating a very simple (but quite fun) little game. In the process it will teach you a few basics about game development on the Thumby, and get you comfortable placing and arranging all kinds of blocks.</p>
+<hr />
 <p>Let's get started!</p>
 <ul>
 <li>Clean your workspace so you are starting fresh. You can open a new workspace in a new Blockly editor tab with <strong>FILE</strong> -&gt; <strong>NEW BLOCKLY TAB</strong>.</li>
 <li>Make sure your workspace is set to run in the emulator by checking both <strong>EMULATION: ✅ ✅</strong> checkboxes.</li>
 </ul>
+<hr />
 <h2 id="the-game-loop">The Game Loop</h2>
 <p>Most games are built with a set of repeating instructions which keep repeating continously until the game ends. These repeating instructions follow these main steps:</p>
 <ul>
@@ -1321,7 +1323,8 @@
 <li>Repeat these steps again.</li>
 </ul>
 <p>These repeating sets of instructions are sometimes called the <em>main game loop</em>. It's called a loop because it "loops" over and over again continuously. Each new drawn picture that is sent to the display is called a <em>frame</em>. That's where the term <em>frames per second</em> (or <em>FPS</em>) comes from. Games that run at 60fps will move things around and then send a new drawn frame to the display 60 times every second.</p>
-<p><strong>⚠ Note</strong>: <em>The display won't actually show what is drawn on a frame until you send the frame to the display. Any block that ends with ".. to display" will do that for you.</em></p>
+<p><strong>⚠ Note</strong>: <em>The display won't actually show what is drawn on a frame until you send the frame to the display. Any block that ends with</em> "<strong>.. to display</strong>" <em>will do that for you.</em></p>
+<hr />
 <p>Let's start making our own game loop.</p>
 <ul>
 <li>Place a <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block from the <strong>Loops</strong> category into your workspace.</li>
@@ -1335,6 +1338,7 @@
 </center></p>
 <p>This sets up a game loop that will keep repeating forever (or until you click <strong>STOP</strong>, or turn off the Thumby). This loop now needs some blocks inside, so that it has something to do each time it loops.</p>
 <p>We are going to want to makes some things, move them around, and then draw and display each frame. First, lets draw and show something, and then worry about moving it around afterwards. Let's show a character of text on screen.</p>
+<hr />
 <h2 id="drawing-and-then-updating-the-display">Drawing and then Updating the Display</h2>
 <ul>
 <li>Take a <img src="../../images/editor-blockly-draw-text-block.png" alt="[draw text]" style="height:3.6em"> block from the <strong>Graphics</strong> category, and place it inside that mouth part of your <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block.</li>
@@ -1347,6 +1351,7 @@
 <img alt="Thumby blockly speed buzzer stage2" src="../../images/editor-blockly-sb2.png" />
 </center></p>
 <p>All this is doing, is repeatedly drawing the "^" character to the top left position of the frame, then actually showing the frame on the display, and then clearing the next frame to get ready to repeat the whole process again. It may look like that little hat symbol is just sitting there doing nothing, but its being redrawn many times per second, and it's ready to be moved!</p>
+<hr />
 <h2 id="moving-things-around">Moving Things Around</h2>
 <p>Let's try to make it move down.</p>
 <ul>
@@ -1357,7 +1362,8 @@
 <img alt="Thumby blockly speed buzzer stage2-1" src="../../images/editor-blockly-sb2-1.png" />
 </center></p>
 <p>Sadly, that just moved its initial position downwards. We really want to animate it. For that we need to change a position value on the <img src="../../images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block on each cycle of the repeat loop. We need to increase one of those numbers every frame. Let's see if we can make it animate moving horisontally by changing that x position value. We want to replace that unchanging "0" with something that <em>varies</em> every frame. Fortunately, we can use a <strong>Variable</strong> for that. <em>Variables</em> act like numbers or text, but they can be changed!</p>
-<p>First, we need to create a variable and give it a name.</p>
+<hr />
+<p>We need to create a variable and give it a name.</p>
 <ul>
 <li>Open the <strong>Variables</strong> category and click on the <strong>Create variable...</strong> button at the top.</li>
 </ul>
@@ -1366,6 +1372,7 @@
 <li>Call it "<strong>counter</strong>" and click <strong>OK</strong>.</li>
 </ul>
 <p>Some new blocks should have automatically appeared in the <em>Variables</em> category of the toolbox! These are all the blocks for your new variable called "counter".</p>
+<hr />
 <p>This counter variable doesn't have any value in the workspace at all... yet! Lets give it a value that increases each frame. The <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block can increase the value of the variable by 1 on each frame, and will start it's value at 0 if it hasn't already been set.</p>
 <ul>
 <li>Grab a <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block from the <strong>Variables</strong> category and place it inside the mouth of the <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block, but this time place it at the top of the mouth, just above all the others that are already inside.</li>
@@ -1374,6 +1381,7 @@
 <p><center>
 <img alt="Thumby blockly speed buzzer stage3" src="../../images/editor-blockly-sb3.png" />
 </center></p>
+<hr />
 <p>The value of this variable should now be increasing by 1 every frame, but we aren't using it for anything yet! We want to retrieve the value out of "counter" on every frame, and use it for the x position of the text. The <img src="../../images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <em>Variables</em> category, allows you to retrieve the current value out of the variable, and use it anywhere you can put a normal number block.</p>
 <ul>
 <li>Take a <img src="../../images/editor-blockly-counter-block.png" alt="[counter]" style="height:1.6em"> block from the <strong>Variables</strong> category, and place it into the x position over the "0" block.</li>
@@ -1383,6 +1391,7 @@
 <img alt="Thumby blockly speed buzzer stage4" src="../../images/editor-blockly-sb4.png" />
 </center></p>
 <p>If you run this now, and if you watch very closely, you might briefly see that hat character speed along and disappear off screen to the right. That's just going to keep going, further and further offscreen as the "counter" variable increases to infinity.</p>
+<hr />
 <p>Let's try slowing things down so we can see it clearly.</p>
 <p>Previously, I talked about games running at different <em>frames per second</em>, but what is our current game running at? Well, we haven't set it, so its running as fast as the frames can display! This is just too fast! Let's set a frame rate with the <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block. Let's slow it waaaaaay down by setting it to run a only 1 frame every second.</p>
 <ul>
@@ -1400,6 +1409,7 @@
 <img src="../../images/editor-blockly-speed-buzzer-stage5-gif.gif" alt="[Thumby blockly speed buzzer stage5 gif]" style="width:50%">
 </center></p>
 <p>Now things are moving!</p>
+<hr />
 <p>We've got all the basics for a decent little game loop! We've got some setup logic, a main game loop, with things being moved, frames being drawn, and then the drawn frame being sent to the display! It's just a shame that the "^" symbol eventually disappears permanently offscreen. Let's make it loop back around to the other side, but first let's speed things back up. We could increase the FPS value, but lets try making the "^" symbol move in larger steps instead.</p>
 <ul>
 <li>Change the increment value from "1" to "5" in your <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block.</li>
@@ -1442,6 +1452,7 @@
 <img src="../../images/editor-blockly-speed-buzzer-stage6-gif.gif" alt="[Thumby blockly speed buzzer stage6 gif]" style="width:50%">
 </center></p>
 <p>Nice!</p>
+<hr />
 <h2 id="adding-more-things">Adding More Things</h2>
 <p>You can add lots of different things to your game. As an example, let's add an "X" character and put it at the far right of the screen just above where the "^" symbol wraps around.</p>
 <ul>
@@ -1451,6 +1462,7 @@
 <img alt="Thumby blockly speed buzzer stage7" src="../../images/editor-blockly-sb7.png" />
 <img src="../../images/editor-blockly-speed-buzzer-stage7-gif.gif" alt="[Thumby blockly speed buzzer stage7 gif]" style="width:50%">
 </center></p>
+<hr />
 <h2 id="random-numbers">Random Numbers</h2>
 <p>Some games take advantage of random numbers to make things different each time you play them. Some games are different each time because of how the player chooses different options each time they play, like in chess, but sometimes its nice to add a little bit of chance! You can also use random numbers to draw things in more interesting ways.</p>
 <p>That "X" symbol is looking a little bit dull. Let's make it dance! It currently sits there at x position 65, but it would be nice if it randomly moved about across positions 64 to 66.</p>
@@ -1463,6 +1475,7 @@
 <img alt="Thumby blockly speed buzzer stage8" src="../../images/editor-blockly-sb8.png" />
 <img src="../../images/editor-blockly-speed-buzzer-stage8-gif.gif" alt="[Thumby blockly speed buzzer stage8 gif]" style="width:50%">
 </center></p>
+<hr />
 <h2 id="button-actions">Button Actions</h2>
 <p>We've made a fun little animation, but there isn't any player interaction. It would be really nice if pressing a button does something! Let's try to make the game speed up every time the player presses one of the red 🔴 buttons.</p>
 <p>Take a look in the <strong>Buttons</strong> category of the toolbox. In it, you can see two collections of blocks, with each collection of blocks having a block for each button. Each button has a "held" block (<img src="../../images/editor-blockly-buttonA-held-block.png" alt="buttonA held" style="height:1.2em">) and also a "hit block" (<img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">). Both of these blocks act as <em>condition</em> blocks, and give a value of <strong>true</strong> whenever something happens with the buttons.</p>
@@ -1489,6 +1502,7 @@
 <img src="../../images/editor-blockly-speed-buzzer-stage9-gif.gif" alt="[Thumby blockly speed buzzer stage9 gif]" style="width:50%">
 </center></p>
 <p>Wow, that's fast!</p>
+<hr />
 <p>Let's change it so that the game speeds up <em>gradually</em> every time the button is pressed. We want to increase the FPS value by 1 every time the button is pressed, similarly to how we incresed the "counter". Unfortunately, there is no increment block for the FPS, so we are going to have to do the maths ourselves.</p>
 <p>We want to retrieve the current FPS value, add 1 to it, then set that as the new FPS value. The <img src="../../images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block retrieves the current FPS value, and can be used anywhere where a number block is allowed to be placed, and the <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block allow you to do basic maths like addition, subtraction, and multiplication. We can also place a <img src="../../images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block inside a <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, giving a value of 1 more than the current FPS value!</p>
 <ul>
@@ -1500,6 +1514,7 @@
 <img src="../../images/editor-blockly-speed-buzzer-stage10-gif.gif" alt="[Thumby blockly speed buzzer stage10 gif]" style="width:50%">
 </center></p>
 <p>Sweet!</p>
+<hr />
 <h2 id="making-a-challenge">Making a Challenge!</h2>
 <p>This looks pretty cool, but it could be a lot more <strong>fun</strong>. Games are most fun where there is some kind of challenge! Games usually have some kind of <em>goal</em> that takes effort or skill to achieve.</p>
 <p>Let's make the <em>goal</em> be making the "^" symbol move as fast as possible, but let's make the <em>challange</em> that it only goes faster when the button is hit exactly when the "^" symbol is underneath the "X" symbol, and if the button is hit at any other time, it goes back to its original slow speed!</p>
@@ -1530,6 +1545,7 @@
 <img src="../../images/editor-blockly-speed-buzzer-stage11-gif.gif" alt="[Thumby blockly speed buzzer stage11 gif]" style="width:50%">
 </center></p>
 <p>Have a play and try to get the "^" symbol to go as fast as you can without missing the "X"!</p>
+<hr />
 <h2 id="adding-sounds">Adding Sounds</h2>
 <p>Sounds are a great way to make your game have a more intersting experience. Little beeps can go a long way! They can also be a part of how the game works.</p>
 <p>It would be really nice to have a quick little beep every time the "^" symbol moves, and have the beeping go faster as it moves faster. That could help players get into the rhythm of this game!</p>
@@ -1553,6 +1569,7 @@
 </center></p>
 <p>If you run that now, you should hear little beeps as the "^" moves, and a punishingly long low beep when you miss the "X". The whole thing should feel much more <em>fun</em> too!</p>
 <p><strong>⚠ Note</strong>: <em>If you test this on a real Thumby, you might have to put the Thumby to your ear, especially if you are in a loud room. The Thumby is a tiny thing, and sometimes its volume is on the smaller side too!</em></p>
+<hr />
 <p>When you are ready, head on over to the next tutorial to learn how to make Sprites, and to make a Title Screen for this game!</p>
 <p><a href="../Making-Sprites/"><strong>Next Tutorial: Making Sprites</strong></a></p>
 
