@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Working-With-Fonts/">
+        <link rel="prev" href="../Saving-High-Scores/">
       
       
         <link rel="next" href="../../CCPP/Environment-Setup/">
@@ -83,6 +83,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#publish-your-game" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -961,6 +966,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Saving-High-Scores/" class="md-nav__link">
+        Saving High Scores
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -969,10 +988,98 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Publish Your Game
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Publish Your Game
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming-your-game" class="md-nav__link">
+    Naming Your Game
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-to-your-thumby" class="md-nav__link">
+    Saving To Your Thumby
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converting-blocks-to-micropython" class="md-nav__link">
+    Converting Blocks To MicroPython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-your-game" class="md-nav__link">
+    Sharing Your Game
+  </a>
+  
+    <nav class="md-nav" aria-label="Sharing Your Game">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-a-demo-video" class="md-nav__link">
+    Making a Demo Video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-with-the-community" class="md-nav__link">
+    Sharing With The Community
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-to-the-arcade" class="md-nav__link">
+    Submitting to the Arcade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playing-your-arcade-game-online" class="md-nav__link">
+    Playing Your Arcade Game Online
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1122,6 +1229,78 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming-your-game" class="md-nav__link">
+    Naming Your Game
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-to-your-thumby" class="md-nav__link">
+    Saving To Your Thumby
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#converting-blocks-to-micropython" class="md-nav__link">
+    Converting Blocks To MicroPython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-your-game" class="md-nav__link">
+    Sharing Your Game
+  </a>
+  
+    <nav class="md-nav" aria-label="Sharing Your Game">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-a-demo-video" class="md-nav__link">
+    Making a Demo Video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-with-the-community" class="md-nav__link">
+    Sharing With The Community
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-to-the-arcade" class="md-nav__link">
+    Submitting to the Arcade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playing-your-arcade-game-online" class="md-nav__link">
+    Playing Your Arcade Game Online
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1137,7 +1316,99 @@
 
 
 
+<h1 id="publish-your-game">Publish Your Game</h1>
+<p>So far, we've only shown you how to test your games in the emulator, or run tests on a connected Thumby. It's about time we showed you how to properly load your games onto the Thumby, and also how you share them with others!</p>
+<p>In this tutorial, you will learn how to load a game onto your Thumby so you can play it when it's disconnected, as well as how to convert all the blocks you make into MicroPython, make demo videos, share your game with others, and how to submit it to the <a href="https://arcade.thumby.us/">Arcade</a> where everyone can find it! If you do submit your game to the <a href="https://arcade.thumby.us/">Arcade</a>, we can even show you how to share it with friends on the playable <a href="https://code.thumby.us/play.html">Online Emulator</a>!</p>
+<p>For this tutorial, we will use the demo program that is loaded by default. If you don't have that open, you can always re-open it with <strong>UTILITIES</strong> -&gt; <strong>WIDGETS</strong> -&gt; <strong>+ BLOCKLY EDITOR</strong>.</p>
+<h2 id="naming-your-game">Naming Your Game</h2>
+<p>To share your game, you have to name it first! Try to think of something catchy!</p>
+<p>Your game can contain uppercase and lowercase letters, numbers, and underscores (<code>_</code>). There are also some symbols you can use such as <code>&amp;</code> and <code>!</code>. Take a look on the <a href="https://arcade.thumby.us/">Arcade</a> for how some other games are named.</p>
+<p><strong>⚠ Note</strong>: <em>Your game name should not have any spaces in it. Please use underscores (<code>_</code>) instead of spaces</em></p>
+<p>As an example, let's use the name "<strong>HelloBlockly</strong>".</p>
+<p>To properly name your game, you must set the path of the Blockly file so that it matches a specific convention.</p>
+<p>The path must follow the convention: <code>/Games/MyGameName/MyGameName.py</code></p>
+<p>Try changing the <strong>Game Name</strong> below to see what you should put for the <strong>Set Path</strong>:</p>
+<p><strong>Game Name:</strong> <input type="text" value="HelloBlockly" style="border:solid" onkeyup="document.getElementById('pathResult').innerHTML = ('/Games/'+this.value+'/'+this.value+'.py').replace(/ /g, '')">
+<br>
+<strong>Set Path:</strong> <code class="md-typeset code" id="pathResult">/Games/HelloBlockly/HelloBlockly.py</code></p>
+<p>If you don't name it correctly, the Thumby menu won't be able to find your game and launch it!</p>
+<p>You can set the path of the Blockly file easily using the menu that is above the Blockly work area. Use <strong>FILE</strong> -&gt; <strong>SET PATH</strong></p>
+<ul>
+<li>Set your Path to match the convention including your game name:</li>
+</ul>
+<p><img alt="Thumby Blockly Set Path Dark Screenshot" src="../../images/editor-blockly-set-path-dark.jpg" /></p>
+<h2 id="saving-to-your-thumby">Saving To Your Thumby</h2>
+<p>Now that you have your game named correctly, you are ready to save it to your Thumby!</p>
+<ul>
+<li>Make sure your Thumby is connected correctly, just like when you run FAST EXECUTE (<a href="../The-Basics/#testing-on-a-connected-thumby">see here</a> for details).</li>
+<li>Save your game to your Thumby from the menu above the Blockly work area: <strong>FILE</strong> -&gt; <strong>SAVE TO THUMBY</strong>.</li>
+</ul>
+<p><img alt="Thumby Blockly Save To Thumby Dark Screenshot" src="../../images/editor-blockly-save-to-thumby-dark.jpg" /></p>
+<ul>
+<li>Now disconnect your Thumby.</li>
+<li>Turn it off, then on again.</li>
+<li>Use the down ⇩ arrow to find your game and select it.</li>
+<li>Press either 🔴 button to launch your game!</li>
+</ul>
+<p><strong>⚠ Note</strong>: <em>It's best if games have a good way to get back to the menu without having to turn off the Thumby and then turn it on again. Try to put some way for that to happen. You can use the</em> <img src="../../images/editor-blockly-reset-block.png" alt="[reset]" style="height:2.0em"> <em>block from the</em> <strong>Hardware</strong> <em>category to reset to the menu.</em></p>
+<p><strong>⚠ Note</strong>: <em>When running via</em> <strong>FAST EXECUTE</strong>, <em>the Thumby will run at a higher performance speed compared to when run from the Thumby start menu screen. If you find that your game runs at a different speed compared to when running via </em>FAST EXECUTE<em>, try setting the Thumby to the faster performance by placing a</em> <img src="../../images/editor-blockly-freq-block.png" alt="[freq]" style="height:2.0em"> <em>block, from the</em> <strong>Hardware</strong> <em>category, at the start of your program. This block defaults to the same speed that</em> <strong>FAST EXECUTE</strong> <em>runs at.</em></p>
+<p><strong>⚠ Note</strong>: <em>The emulator can be slow on some machines, and your code may run much faster on the Thumby hardware compared to on the emulator. If your game runs faster on the Thumby, compared to on the emulator, make sure you set the frame rate with a</em> <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> <em>block. Any value should help them run at the same speed!</em></p>
+<h2 id="converting-blocks-to-micropython">Converting Blocks To MicroPython</h2>
+<p>So far, you've learned all about Block programming on the Thumby. The Thumby can be programmed in other coding languages too, like MicroPython! That is one of the coding languages where you type in <em>text code</em> to make games.</p>
+<p>And behind the scenes... that's exactly what the blocks are doing!</p>
+<p>The Thumby doesn't actually understand the blocks, instead, all the blocks create little snippets of MicroPython code, and combine together to make a full MicroPython program that the Thumby can understand! It's just all been happening automatically!</p>
+<p>You've been programming in MicroPython all along!</p>
+<p>You can see the MicroPython code you have created while you have been block programming, by clicking the <strong>OPEN PYTHON</strong> button at the top of your Blockly work area.</p>
+<p>The <strong>OPEN PYTHON</strong> button will launch a new editor tab with MicroPython text coding mode, and load the MicroPython created from your block programming. You can always get back to your block program by switching back to that editor tab.</p>
+<p><strong>⚠ Note</strong>: <em>If you make changes to the MicroPython code, those changes won't be made back in your blocks. It only goes one way!</em></p>
+<p>Try re-opening the MicroPython code when you make changes to your blocks to see what happenes!</p>
+<h2 id="sharing-your-game">Sharing Your Game</h2>
+<p>If you build a game, what better thing to do than to let someone play it and see what you made!</p>
+<p>There are a number of ways of sharing your work, including recording a demo video, sending friends the code to try themselves, getting feedback from the Thumby (<a href="https://discord.gg/vzf3wQXVvm" title="Link to join the tinycircuits Discord">Tiny Circuits Discord</a>) community, to uploading your game to the Thumby <a href="https://arcade.thumby.us/">Arcade</a>! If you get it on the <a href="https://arcade.thumby.us/">Arcade</a>, you can even share it with friends with the <a href="https://code.thumby.us/play.html">Online Emulator</a>!</p>
+<h3 id="making-a-demo-video">Making a Demo Video</h3>
+<p>When sharing your game, it's <strong>super</strong> nice to include a demo video. Then people can know a bit about what they are going to look at. It's a great way to get people excited to try your game!</p>
+<p>It's really easy to record a demo video for your game, as the emulator comes with a screen recorder!</p>
+<p>To record a video, follow these steps:</p>
+<ul>
+<li>Set the zoom level to 8x or higher with the ⊕ and ⊖ buttons. The bigger the zoom, the bigger your video will be.</li>
+<li>Run your game with <strong>START</strong>.</li>
+<li>Press the 🎥 button to start recording (second down from the top left of the emulator). The button should turn red to show that you are now recording.</li>
+<li>Play the game however you want.</li>
+<li>Press the 🎥 button again to end the recording and automatically start downloading the video.</li>
+<li>Find the video in your downloads, and play it! It should show up in your Downloads folder with a name like <code>emulator_video.webm</code>.</li>
+</ul>
+<p><img alt="Thumby Blockly Screen Record Dark Screenshot" src="../../images/editor-blockly-screen-rec-dark.jpg" /></p>
+<h3 id="sharing-with-the-community">Sharing With The Community</h3>
+<p>Now that you have a  MicroPython file, and a demo video, you might want to head over to the <strong>#thumby</strong> <a href="https://discord.gg/vzf3wQXVvm" title="Link to join the tinycircuits Discord">Tiny Circuits Discord</a> community and post them both! We love seeing what everyone makes!</p>
+<p>To download the MicroPython file just use <strong>FILE</strong> -&gt; <strong>EXPORT TO PC</strong>, found in the menu at the top of the MicroPython text area after you have used the <strong>OPEN PYTHON</strong> button to open the Python.</p>
+<h3 id="submitting-to-the-arcade">Submitting to the Arcade</h3>
+<p>To submit to the Arcade, you will need both the demo video and the MicroPython file (see above for both). Once you have both you can follow the process <a href="../../Code-Editor/Submit-Game/">described here</a>.</p>
+<h3 id="playing-your-arcade-game-online">Playing Your Arcade Game Online</h3>
+<p>There is a playable online Thumby emulator!</p>
+<p><strong>⚠ Note</strong>: <em>The emulator can be really slow on some devices!</em></p>
+<p>Head on over to the <a href="https://code.thumby.us/play.html">Online Emulator</a> which comes pre-loaded with every game on the <a href="https://arcade.thumby.us/">Arcade</a>!</p>
+<p>If you submitted a game to the <a href="https://arcade.thumby.us/">Arcade</a>, yours will be here too!</p>
+<p>You can also send people links directly to Arcade games! See below for all the links. Yours will be here too when it is submitted! (you can share these with friends!):</p>
+<div id="emuLinks"></div>
+<script>
+fetch('https://raw.githubusercontent.com/TinyCircuits/TinyCircuits-Thumby-Games/master/url_list.txt').then((r) => {
+  var i = j = 0;
+  r.text().then((gameList) => {
+    var games = []
+    while((j = gameList.indexOf("NAME=", i)) !== -1){
+      var game = gameList.substring(j+5, gameList.indexOf("\n", j+5));
+      games.push('<a href="https://code.thumby.us/play.html?game=' +
+        encodeURIComponent(game) + '">' + game + "</a>");
+       i = j + 1;
+    }
+    games.sort();
+    console.log(games);
+    document.getElementById('emuLinks').innerHTML = games.join('<br>');
+  });
+});
+</script>
 
+<p><strong>⚠ Note</strong>: <em>Some games do fancy hardware tricks in MicroPython and might not work on the emulator. All Blockly ones should though!</em></p>
 
 
   
