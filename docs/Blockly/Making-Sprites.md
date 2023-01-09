@@ -124,4 +124,4 @@ You can use the **IMAGE** button to open files from your computer. They will be 
 
 ![Thumby blockly sprite title running](../images/editor-blockly-sprite-title.png)
 
-[Next Tutorial: Drawing and Dynamics](../Drawing-and-Dynamics)
+[Next Tutorial: Drawing and Dynamics](../Drawing-and-Dynamics/)

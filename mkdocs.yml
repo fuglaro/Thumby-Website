@@ -37,6 +37,7 @@ nav:
       - The Simplest Game: Blockly/Simplest-Game.md
       - Making Sprites: Blockly/Making-Sprites.md
       - Drawing and Dynamics: Blockly/Drawing-And-Dynamics.md
+      - Working with Fonts: Blockly/Working-With-Fonts.md
       - Publish Your Game: Blockly/Publish-Your-Game.md
   - Thumby Arduino C/C++:
       - Setting up environment: CCPP/Environment-Setup.md
