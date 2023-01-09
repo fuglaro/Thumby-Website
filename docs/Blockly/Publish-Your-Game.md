@@ -2,7 +2,7 @@
 
 So far, we've only shown you how to test your games in the emulator, or run tests on a connected Thumby. It's about time we showed you how to properly load your games onto the Thumby, and also how you share them with others!
 
-In this tutorial, you will learn how to load a game onto your Thumby so you can play it when it's disconnected, as well as how to convert all the blocks you make into MicroPython, make demo videos, share your game with others, and how to submit it to the [Arcade](https://arcade.thumby.us/) where everyone can find it! If you do submit your game to the [Arcade](https://arcade.thumby.us/), we can even show you how to share it with friends on the playable [Online Emulator](https://code.thumby.us/play.html)!
+In this tutorial, you will learn how to load a game onto your Thumby so you can play it when it's disconnected, as well as how to convert all the blocks you make into MicroPython, make demo videos, share your game with others, and how to submit it to the [**Arcade**](https://arcade.thumby.us/) where everyone can find it! If you do submit your game to the [**Arcade**](https://arcade.thumby.us/), we can even show you how to share it with friends on the playable [**Online Emulator**](https://code.thumby.us/play.html)!
 
 For this tutorial, we will use the demo program that is loaded by default. If you don't have that open, you can always re-open it with **UTILITIES** -> **WIDGETS** -> **+ BLOCKLY EDITOR**.
 
@@ -10,7 +10,7 @@ For this tutorial, we will use the demo program that is loaded by default. If yo
 
 To share your game, you have to name it first! Try to think of something catchy!
 
-Your game can contain uppercase and lowercase letters, numbers, and underscores (`_`). There are also some symbols you can use such as `&` and `!`. Take a look on the [Arcade](https://arcade.thumby.us/) for how some other games are named.
+Your game can contain uppercase and lowercase letters, numbers, and underscores (`_`). There are also some symbols you can use such as `&` and `!`. Take a look on the [**Arcade**](https://arcade.thumby.us/) for how some other games are named.
 
 **⚠ Note**: *Your game name should not have any spaces in it. Please use underscores (`_`) instead of spaces*
 
@@ -38,7 +38,7 @@ You can set the path of the Blockly file easily using the menu that is above the
 
 Now that you have your game named correctly, you are ready to save it to your Thumby!
 
-* Make sure your Thumby is connected correctly, just like when you run FAST EXECUTE ([see here](../The-Basics/#testing-on-a-connected-thumby) for details).
+* Make sure your Thumby is connected correctly, just like when you run FAST EXECUTE ([**see here**](../The-Basics/#testing-on-a-connected-thumby) for details).
 * Save your game to your Thumby from the menu above the Blockly work area: **FILE** -> **SAVE TO THUMBY**.
 
 ![Thumby Blockly Save To Thumby Dark Screenshot](../images/editor-blockly-save-to-thumby-dark.jpg)
@@ -77,7 +77,7 @@ Try re-opening the MicroPython code when you make changes to your blocks to see 
 
 If you build a game, what better thing to do than to let someone play it and see what you made!
 
-There are a number of ways of sharing your work, including recording a demo video, sending friends the code to try themselves, getting feedback from the Thumby ([TinyCircuits Discord](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord")) community, to uploading your game to the Thumby [Arcade](https://arcade.thumby.us/)! If you get it on the [Arcade](https://arcade.thumby.us/), you can even share it with friends with the [Online Emulator](https://code.thumby.us/play.html)!
+There are a number of ways of sharing your work, including recording a demo video, sending friends the code to try themselves, getting feedback from the Thumby community ([**TInyCircuits Discord**](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord")), to upload your game to the Thumby [**Arcade**](https://arcade.thumby.us/)! If you get it on the [**Arcade**](https://arcade.thumby.us/), you can even share it with friends with the [**Online Emulator**](https://code.thumby.us/play.html)!
 
 ### Making a Demo Video
 
@@ -98,13 +98,13 @@ To record a video, follow these steps:
 
 ### Sharing With The Community
 
-Now that you have a  MicroPython file, and a demo video, you might want to head over to the **#thumby** [TinyCircuits Discord](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord") community and post them both! We love seeing what everyone makes!
+Now that you have a  MicroPython file, and a demo video, you might want to head over to the **#thumby** [**TInyCircuits Discord**](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord") community and post them both! We love seeing what everyone makes!
 
 To download the MicroPython file just use **FILE** -> **EXPORT TO PC**, found in the menu at the top of the MicroPython text area after you have used the **OPEN PYTHON** button to open the Python.
 
 ### Submitting to the Arcade
 
-To submit to the Arcade, you will need both the demo video and the MicroPython file (see above for both). Once you have both you can follow the process [described here](../../Code-Editor/Submit-Game/).
+To submit to the Arcade, you will need both the demo video and the MicroPython file (see above for both). Once you have both you can follow the process [**described here**](../../Code-Editor/Submit-Game/).
 
 ### Playing Your Arcade Game Online
 
@@ -112,9 +112,9 @@ There is a playable online Thumby emulator!
 
 **⚠ Note**: *The emulator can be really slow on some devices!*
 
-Head on over to the [Online Emulator](https://code.thumby.us/play.html) which comes pre-loaded with every game on the [Arcade](https://arcade.thumby.us/)!
+Head on over to the [**Online Emulator**](https://code.thumby.us/play.html) which comes pre-loaded with every game on the [**Arcade**](https://arcade.thumby.us/)!
 
-If you submitted a game to the [Arcade](https://arcade.thumby.us/), yours will be here too!
+If you submitted a game to the [**Arcade**](https://arcade.thumby.us/), yours will be here too!
 
 You can also send people links directly to Arcade games! See below for all the links. Yours will be here too when it is submitted! (you can share these with friends!):
 <div id="emuLinks"></div>
@@ -126,7 +126,7 @@ fetch('https://raw.githubusercontent.com/TinyCircuits/TinyCircuits-Thumby-Games/
     while((j = gameList.indexOf("NAME=", i)) !== -1){
       var game = gameList.substring(j+5, gameList.indexOf("\n", j+5));
       games.push('<a href="https://code.thumby.us/play.html?game=' +
-        encodeURIComponent(game) + '">' + game + "</a>");
+        encodeURIComponent(game) + '"><b>' + game + "</b></a>");
        i = j + 1;
     }
     games.sort();

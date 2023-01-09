@@ -100,10 +100,10 @@ You can see both switching the default fonts, and working with custom fonts in t
 ![Thumby TinyCalc blocks](../images/editor-blockly-tiny-calc-blocks.png)
 ![Thumby TinyCalc](../images/editor-blockly-tiny-calc.png)
 
-Try this yourself by downloading these [Blocks here](../TinyCalc-blocks.py) and using **IMPORT FROM PC**!
+Try this yourself by downloading these [**blocks here**](../TinyCalc-blocks.py) and using **IMPORT FROM PC**!
 
 As a challenge, try to add wider font spacing gaps between the selectable keypad keys to make them easier to read!
 
-[Next Tutorial: Saving High Scores](../Saving-High-Scores/)
-
 **Thanks to:** community member *Auri* for the Auri3x3 font! And also thanks to community member *AyreGuitar* for finding the zx8x8 font!
+
+[**Next Tutorial: Saving High Scores**](../Saving-High-Scores/)

@@ -4,7 +4,7 @@ This tutorial will get you stared with visual block programming in the Thumby Co
 
 ## Getting Set Up
 
-* Head on over to the online [Thumby Code Editor](https://code.thumby.us).
+* Head on over to the online [**Thumby Code Editor**](https://code.thumby.us).
 * You may be shown the Code Editor Changelog popup. Don't worry about that. Just close it!
 * Next, you will get an option to select between MicroPython and Blockly editors. Select Blockly.
 
@@ -97,7 +97,7 @@ Nice! Now we are ready to start adding our own blocks!
 
 To add blocks to the workspace, we need to get the blocks from somewhere! In Blockly, all the blocks are neatly organized inside the *toolbox*.
 
-**Links:** *If you would like to learn more about some of the blocks in Blockly, there is great interactive tutorial here: [Learn Block Coding](https://learnblockcoding.com/) which explains all about the blocks in the toolbox categories Logic, Loops, Maths, Text, Lists, Variables, and Functions. There are also some fun interactive tutorials here: [Blockly Games](https://blockly.games/turtle) which lets you get familiar with connecting blocks together with some different blocks that do some fun things.*
+**Links:** *If you would like to learn more about some of the blocks in Blockly, there is great interactive tutorial here:* [**Learn Block Coding**](https://learnblockcoding.com/) *which explains all about the blocks in the toolbox categories Logic, Loops, Maths, Text, Lists, Variables, and Functions. There are also some fun interactive tutorials here:* [**Blockly Games**](https://blockly.games/turtle) *which lets you get familiar with connecting blocks together with some different blocks that do some fun things.*
 
 You can see the toolbox here:
 
@@ -258,7 +258,7 @@ You can load it again later from the same menu by opening a new Blockly tab with
 
 ## Further Learning
 
-Most of the Code Editor interface works the same for MicroPython and Blockly, so you can learn more about it all here: [Code Editor Docs: Getting Started - First Program](../../Code-Editor/Get-Started/).
+Most of the Code Editor interface works the same for MicroPython and Blockly, so you can learn more about it all here: [**Code Editor Docs: Getting Started - First Program**](../../Code-Editor/Get-Started/).
 
 **⚠ Note**: *The* **'IMPORT SPRITE'** *button at the top of the Code Editor isn't usable for Blockly. We will show the way to make Sprites for Blockly in the next tutorial.*
 
@@ -266,4 +266,4 @@ If you get stuck, you can always ask for some help from the Thumby Discord commu
 
 When you are ready, head on over to the next tutorial to start with the basics for making games!
 
-[Next Tutorial: The Simplest Game](../Simplest-Game/)
+[**Next Tutorial: The Simplest Game**](../Simplest-Game/)

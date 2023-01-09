@@ -42,7 +42,7 @@ Our next step is to change the picture!
 
 ## The Bitmap Builder
 
-Sprites can have their pictures changed using the [Bitmap Builder Widget](../../Code-Editor/Widget-panels/#bitmap-builder).
+Sprites can have their pictures changed using the [**Bitmap Builder Widget**](../../Code-Editor/Widget-panels/#bitmap-builder).
 
 Let's try to find the Bitmap Builder. It might be next to the Filesystem tab:
 
@@ -126,4 +126,4 @@ You can use the **IMAGE** button to open files from your computer. They will be 
 
 ![Thumby blockly sprite title running](../images/editor-blockly-sprite-title.png)
 
-[Next Tutorial: Drawing and Dynamics](../Drawing-and-Dynamics/)
+[**Next Tutorial: Drawing and Dynamics**](../Drawing-and-Dynamics/)
