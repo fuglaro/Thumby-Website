@@ -32,7 +32,9 @@ Now let's display it on screen. First, we need to draw it to the next frame, the
 * After that, add a <img src="../../images/editor-blockly-wait-block.png" alt="[wait]" style="height:2.0em"> block from the **Flow** category to make sure the Sprite shows on the display for a while. Change the value from "1" to "3" so the Sprite shows on the display for 3 seconds.
 * Run it:
 
+<center>
 ![Thumby blockly title stage1](../images/editor-blockly-title1.png)
+</center>
 
 Sweet!... Wait... Where did that picture come from? All Sprites come with a default pciture already loaded. That is what you are seeing there.
 
@@ -46,18 +48,24 @@ Sprites can have their pictures changed using the [**Bitmap Builder Widget**](..
 
 Let's try to find the Bitmap Builder. It might be next to the Filesystem tab:
 
+<center>
 ![Thumby blockly bitmap builder tab dark](../images/editor-blockly-bitmap-tab-dark.jpg)
+</center>
 
 Or it might be in the hidden-tab dropdown:
 
+<center>
 ![Thumby blockly bitmap builder hidden tab dark](../images/editor-blockly-bitmap-hidden-tab-dark.jpg)
+</center>
 
 
 Or you might need to open it again with **UTILITIES** -> **WIDGETS** -> **+ BITMAP BUILDER**.
 
 Once you have found it, it should look like this:
 
+<center>
 ![Thumby bitmap builder dark](../images/editor-bitmap-builder-dark.jpg)
+</center>
 
 ### Loading Sprites To The Bitmap Builder
 
@@ -68,7 +76,9 @@ To load a sprite from your workspace into the Bitmap Builder, you use the **IMPO
 
 You should see the Thumby Sprite loaded:
 
+<center>
 ![Thumby bitmap builder of thumby dark](../images/editor-bitmap-builder-thumby-dark.jpg)
+</center>
 
 ### Updating Sprites on the Workspace
 
@@ -80,13 +90,17 @@ First, we make some changes to the Sprite picture, then we update the Sprite bac
 
 You should see that the pictures in the <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> blocks update:
 
+<center>
 ![Thumby blockly load sprite block updated](../images/editor-blockly-load-sprite-block-updated.png)
+</center>
 
 Nice!
 
 * Now run it!
 
+<center>
 ![Thumby blockly sprite inverted running](../images/editor-blockly-sprite-inverted-running.png)
+</center>
 
 Title screens look best when they fill the whole screen and where they have been customised for the game. Let's do both next.
 
@@ -118,12 +132,12 @@ To zoom in and out of the picture, use the **⊕** and **⊖** buttons.
 
 You can use the **IMAGE** button to open files from your computer. They will be automatically converted to black and white. The image file you open must not be larger than 144 wide and 80 high. Most image file formats will work.
 
-* Try downloading the image below to your computer and loading into the Bitmap Builder with the **IMAGE** button:
-
-![Thumby speed buzzer title screen](../images/speed-buzzer-title-screen.png)
+* Try downloading the image to your computer and loading into the Bitmap Builder with the **IMAGE** button. Download this image:![Thumby speed buzzer title screen](../images/speed-buzzer-title-screen.png)
 
 * Now update the Sprite in your workspace with **EXPORT** and then run it with **START** to see what happens!
 
+<center>
 ![Thumby blockly sprite title running](../images/editor-blockly-sprite-title.png)
+</center>
 
 [**Next Tutorial: Drawing and Dynamics**](../Drawing-and-Dynamics/)

@@ -12,8 +12,10 @@ Any <img src="../../images/editor-blockly-draw-text-block.png" alt="[draw text]"
 
 See it in action below:
 
+<center>
 ![Thumby Font Switch Blocks](../images/editor-blockly-font-switch-blocks.png)
 ![Thumby Font Switch Screen](../images/editor-blockly-font-switch-screen.png)
+</center>
 
 ## Font Spacing
 
@@ -25,8 +27,10 @@ Just like with the <img src="../../images/editor-blockly-set-font-block.png" alt
 
 See it in action below:
 
+<center>
 ![Thumby Font Gap Blocks](../images/editor-blockly-font-gap-blocks.png)
 ![Thumby Font Gap Screen](../images/editor-blockly-font-gap-screen.png)
+</center>
 
 ## Making Custom Fonts
 
@@ -36,7 +40,9 @@ Font Sprites are just Sprites that are arranged in a specific way.
 
 Here is an example of a Font Sprite loaded in the Bitmap Builder:
 
+<center>
 ![Thumby Bitmap Builder With Font](../images/editor-bitmap-builder-font-dark.jpg)
+</center>
 
 To use a Sprite as a Font, first you make sure it is loaded into a <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block using the **EXPORT** button.
 
@@ -50,8 +56,10 @@ You have to tell that block the width and height of the characters (not of the w
 
 See it in action below:
 
+<center>
 ![Thumby Font Switch Blocks](../images/editor-blockly-custom-font-blocks.png)
 ![Thumby Font Switch Screen](../images/editor-blockly-custom-font-screen.png)
+</center>
 
 
 ### Font Sprite Structure
@@ -62,7 +70,9 @@ Fonts that are less than 8 pixels high are drawn at the very top of each box.
 
 Here is an example for a 3x5 Font:
 
+<center>
 ![Thumby Bitmap Builder With Font](../images/editor-bitmap-builder-font-grid-dark.jpg)
+</center>
 
 The order of the letters, numbers, and symbols is very important. They go from right to left and then wrap around underneath, like reading text on a page. The order must always match the following exactly:
 
@@ -79,17 +89,10 @@ You can actually use fonts to draw pictures or icons! Just make a custom font wi
 
 Here are some example fonts you can download then open in the Bitmap Builder with the **IMAGE** button, so you can then customise it:
 
-![Thumby Auri 3x3 Font](../images/Auri3x3Font.png)
-(Community member Auri's teeeny tiny 3x3 font)
-
-![Thumby Tiny Circuit's 3x5 Font](../images/tc3x5Font.png)
-(Tiny Circuit's inbuilt 3x5 font)
-
-![Thumby Tiny Circuit's 5x7 Font](../images/tc5x7Font.png)
-(Tiny Circuit's inbuilt 5x7 font)
-
-![Thumby ZX 8x8 Font](../images/zx8x8Font.png)
-(ZX Spectrum 8x8 font by Mike)
+* ![Thumby Auri 3x3 Font](../images/Auri3x3Font.png) (Community member Auri's teeeny tiny 3x3 font)
+* ![Thumby Tiny Circuit's 3x5 Font](../images/tc3x5Font.png) (Tiny Circuit's inbuilt 3x5 font)
+* ![Thumby Tiny Circuit's 5x7 Font](../images/tc5x7Font.png) (Tiny Circuit's inbuilt 5x7 font)
+* ![Thumby ZX 8x8 Font](../images/zx8x8Font.png) (ZX Spectrum 8x8 font by Mike)
 
 Don't forget to load it back onto your <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block that loads the font for your <img src="../../images/editor-blockly-set-font-with-sprite-block.png" alt="[set font with sprite]" style="height:2.0em"> block with the **EXPORT** button! And remember to update the font size details!
 
@@ -97,8 +100,10 @@ Don't forget to load it back onto your <img src="../../images/editor-blockly-spr
 
 You can see both switching the default fonts, and working with custom fonts in the TinyCalc program from the Arcade. The full set of blocks can be seen below.
 
+<center>
 ![Thumby TinyCalc blocks](../images/editor-blockly-tiny-calc-blocks.png)
 ![Thumby TinyCalc](../images/editor-blockly-tiny-calc.png)
+</center>
 
 Try this yourself by downloading these [**blocks here**](../TinyCalc-blocks.py) and using **IMPORT FROM PC**!
 

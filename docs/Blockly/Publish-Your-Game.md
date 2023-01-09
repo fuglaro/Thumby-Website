@@ -32,7 +32,9 @@ You can set the path of the Blockly file easily using the menu that is above the
 
 * Set your Path to match the convention including your game name:
 
+<center>
 ![Thumby Blockly Set Path Dark Screenshot](../images/editor-blockly-set-path-dark.jpg)
+</center>
 
 ## Saving To Your Thumby
 
@@ -41,7 +43,9 @@ Now that you have your game named correctly, you are ready to save it to your Th
 * Make sure your Thumby is connected correctly, just like when you run FAST EXECUTE ([**see here**](../The-Basics/#testing-on-a-connected-thumby) for details).
 * Save your game to your Thumby from the menu above the Blockly work area: **FILE** -> **SAVE TO THUMBY**.
 
+<center>
 ![Thumby Blockly Save To Thumby Dark Screenshot](../images/editor-blockly-save-to-thumby-dark.jpg)
+</center>
 
 * Now disconnect your Thumby.
 * Turn it off, then on again.
@@ -94,7 +98,9 @@ To record a video, follow these steps:
 * Press the 🎥 button again to end the recording and automatically start downloading the video.
 * Find the video in your downloads, and play it! It should show up in your Downloads folder with a name like `emulator_video.webm`.
 
+<center>
 ![Thumby Blockly Screen Record Dark Screenshot](../images/editor-blockly-screen-rec-dark.jpg)
+</center>
 
 ### Sharing With The Community
 
