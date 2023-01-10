@@ -44,7 +44,7 @@ Now let's display it on screen. First, we need to draw it to the next frame, the
 ![Thumby blockly title stage1](../images/editor-blockly-title1.png)
 </center>
 
-Sweet!... Wait... Where did that picture come from? All Sprites come with a default pciture already loaded. That is what you are seeing there.
+Sweet!... Wait... Where did that picture come from? All Sprites come with a default picture already loaded. That is what you are seeing there.
 
 ---
 
@@ -119,7 +119,7 @@ Nice!
 ![Thumby blockly sprite inverted running](../images/editor-blockly-sprite-inverted-running.png)
 </center>
 
-Title screens look best when they fill the whole screen and where they have been customised for the game. Let's do both next.
+Title screens look best when they fill the whole screen and where they have been customized for the game. Let's do both next.
 
 ---
 

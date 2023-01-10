@@ -92,7 +92,7 @@ The **OPEN PYTHON** button will launch a new editor tab with MicroPython text co
 
 **⚠ Note**: *If you make changes to the MicroPython code, those changes won't be made back in your blocks. It only goes one way!*
 
-Try re-opening the MicroPython code when you make changes to your blocks to see what happenes!
+Try re-opening the MicroPython code when you make changes to your blocks to see what happens!
 
 ---
 
@@ -100,7 +100,7 @@ Try re-opening the MicroPython code when you make changes to your blocks to see 
 
 If you build a game, what better thing to do than to let someone play it and see what you made!
 
-There are a number of ways of sharing your work, including recording a demo video, sending friends the code to try themselves, getting feedback from the Thumby community ([**TInyCircuits Discord**](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord")), to upload your game to the Thumby [**Arcade**](https://arcade.thumby.us/)! If you get it on the [**Arcade**](https://arcade.thumby.us/), you can even share it with friends with the [**Online Emulator**](https://code.thumby.us/play.html)!
+There are a number of ways of sharing your work, including recording a demo video, sending friends the code to try themselves, getting feedback from the Thumby community ([**TInyCircuits Discord**](https://discord.gg/vzf3wQXVvm "Link to join the TinyCircuits Discord")), to upload your game to the Thumby [**Arcade**](https://arcade.thumby.us/)! If you get it on the [**Arcade**](https://arcade.thumby.us/), you can even share it with friends with the [**Online Emulator**](https://code.thumby.us/play.html)!
 
 ---
 
@@ -127,7 +127,7 @@ To record a video, follow these steps:
 
 ### Sharing With The Community
 
-Now that you have a  MicroPython file, and a demo video, you might want to head over to the **#thumby** [**TInyCircuits Discord**](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord") community and post them both! We love seeing what everyone makes!
+Now that you have a  MicroPython file, and a demo video, you might want to head over to the **#thumby** [**TInyCircuits Discord**](https://discord.gg/vzf3wQXVvm "Link to join the TinyCircuits Discord") community and post them both! We love seeing what everyone makes!
 
 To download the MicroPython file just use **FILE** -> **EXPORT TO PC**, found in the menu at the top of the MicroPython text area after you have used the **OPEN PYTHON** button to open the Python.
 

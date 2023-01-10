@@ -14,7 +14,7 @@ This tutorial will get you stared with visual block programming in the Thumby Co
 ![Thumby blockly selection screenshot](../images/editor-blockly-selection-dark.jpg)
 </center>
 
-* You should now have an editor with some example blocks shown. Don't wory if you missed this, you can still open a new one with UTILITIES -> WIDGETS -> + BLOCKLY EDITOR:
+* You should now have an editor with some example blocks shown. Don't worry if you missed this, you can still open a new one with UTILITIES -> WIDGETS -> + BLOCKLY EDITOR:
 
 <center>
 ![Thumby hello blockly screenshot](../images/editor-hello-blockly-dark.jpg)
@@ -24,7 +24,7 @@ This tutorial will get you stared with visual block programming in the Thumby Co
 
 ### Running in the Emulator
 
-Now that you have the example program open, lets try running it in the Emulator! The emulator is the picture of a Thumby in the corner. That can actually run the Thumby games!
+Now that you have the example program open, let's try running it in the Emulator! The emulator is the picture of a Thumby in the corner. That can actually run the Thumby games!
 
 <center>
 ![Thumby emulator dark screenshot](../images/editor-emulator-dark.jpg)
@@ -88,13 +88,13 @@ If you have a game running in the Emulator, you can stop the emulation with the 
 
 ## Getting Started with Blockly
 
-Now that we are set up with the basics, lets get started programming with blocks!
+Now that we are set up with the basics, let's get started programming with blocks!
 
 ---
 
 ### Blockly Workspace
 
-In Blockly, you piece togther logic using blocks. There are a bunch of different kinds of blocks that you can use that each do differnt things and behave in differnt ways. Some blocks connect together one after the other, and some blocks go inside other blocks. You don't need to remember the ways each kind of block is allowed to connect together as it is all automatic! All you need to do is drag the blocks around and they will automatically connect to where they are allowed to go. You can detach them by dragging them off and then putting them somewhere else. Go ahead and dray some of the blocks around. Don't worry about breaking the logic, we are going to clear it all away soon anyway!
+In Blockly, you piece together logic using blocks. There are a bunch of different kinds of blocks that you can use that each do different things and behave in different ways. Some blocks connect together one after the other, and some blocks go inside other blocks. You don't need to remember the ways each kind of block is allowed to connect together as it is all automatic! All you need to do is drag the blocks around and they will automatically connect to where they are allowed to go. You can detach them by dragging them off and then putting them somewhere else. Go ahead and dray some of the blocks around. Don't worry about breaking the logic, we are going to clear it all away soon anyway!
 
 This area where all the blocks are located and able to be dragged around and connected together is called the *workspace* and is the area which makes the logic for your game.
 
@@ -130,7 +130,7 @@ Nice! Now we are ready to start adding our own blocks!
 
 To add blocks to the workspace, we need to get the blocks from somewhere! In Blockly, all the blocks are neatly organized inside the *toolbox*.
 
-**Links:** *If you would like to learn more about some of the blocks in Blockly, there is great interactive tutorial here:* [**Learn Block Coding**](https://learnblockcoding.com/) *which explains all about the blocks in the toolbox categories Logic, Loops, Maths, Text, Lists, Variables, and Functions. There are also some fun interactive tutorials here:* [**Blockly Games**](https://blockly.games/turtle) *which lets you get familiar with connecting blocks together with some different blocks that do some fun things.*
+**Links:** *If you would like to learn more about some of the blocks in Blockly, there is great interactive tutorial here:* [**Learn Block Coding**](https://learnblockcoding.com/) *which explains all about the blocks in the toolbox categories Logic, Loops, Maths, Text, Lists, Variables, and Functions. There are also some fun interactive tutorials here:* [**Blockly Games**](https://blockly.games/turtle) *which let's you get familiar with connecting blocks together with some different blocks that do some fun things.*
 
 You can see the toolbox here:
 
@@ -141,7 +141,7 @@ You can see the toolbox here:
 
 All the blocks in the toolbox are organized into categories. Each category contains blocks that do similar kinds of things. You can click on each category to see all the different blocks they contain!
 
-* Try cliking on the **Text** category in the *toolbox*:
+* Try clicking on the **Text** category in the *toolbox*:
 
 <center>
 ![Thumby blockly toolbox text category screenshot](../images/editor-blockly-toolbox-text-dark.jpg)
@@ -149,7 +149,7 @@ All the blocks in the toolbox are organized into categories. Each category conta
 
 You can see that it has opened out a toolbox panel showing all the blocks about *text* that you can use. Each block has a tooltip that helps describe what the block does.
 
-* Leave your mouse pointer over the <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block until the tooltop shows up:
+* Leave your mouse pointer over the <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[print to debug shell]" style="height:2.0em"> block until the tooltip shows up:
 
 <center>
 ![Thumby blockly toolbox tooltip screenshot](../images/editor-blockly-toolbox-tooltip-dark.jpg)
@@ -175,7 +175,7 @@ The <img src="../../images/editor-blockly-print-to-debug-shell-block.png" alt="[
 ![Thumby blockly abc plugging screenshot](../images/editor-blockly-abc-plugging-dark.jpg)
 </center>
 
-Now lets run your program and see what it does!
+Now let's run your program and see what it does!
 
 * Click the **START** button on the emulator just like you did before with the default program.
 
@@ -187,7 +187,7 @@ Unfortunately, nothing is going to show up on the Thumby emulator itself (that's
 
 These two blocks are now working together to show text in the debug Shell! This kind of block connection adds a block that *is something* to a block that *does something*. Here, we have connected a block that *is abc text* to a block that *does a print of something to the debug shell*, so both blocks together *does a print of the abc text to the debug shell*.
 
-These debug prints can be really helpful for helping figure out what your program is doing. Its not really making the Thumby do anything, but we will get to that soon. For now, lets make it print something better than "abc".
+These debug prints can be really helpful for helping figure out what your program is doing. Its not really making the Thumby do anything, but we will get to that soon. For now, let's make it print something better than "abc".
 
 ---
 
@@ -236,7 +236,7 @@ Once again, we need to connect a block that *is something* so that the <img src=
 
 We finally made the Thumby do something! Nice!
 
-Connecting blocks like this underneath each other makes a *do semething* block run *after* another *do something* block. In Blockly, blocks run one after another from top to bottom. Both our blocks seemed to run at the same time because they ran so fast! What actually happend is "blocks are running!" was printed to the debug shell, and then, after that, "Thumby says: Hello Blockly!" was printed to the Thumby display.
+Connecting blocks like this underneath each other makes a *do something* block run *after* another *do something* block. In Blockly, blocks run one after another from top to bottom. Both our blocks seemed to run at the same time because they ran so fast! What actually happened is "blocks are running!" was printed to the debug shell, and then, after that, "Thumby says: Hello Blockly!" was printed to the Thumby display.
 
 ---
 
@@ -321,7 +321,7 @@ If you would like to see the message for longer, try snapping a <img src="../../
 ![Thumby Print And Wait With Screen](../images/editor-blockly-print-and-wait-wscreen.jpg)
 </center>
 
-**Hint**: *The* **STOP** *button on the emulator works for FAST EXECUTE too!*
+**Hint**: *If you want to stop the Thumby, you can use the* **DISCONNECT THUMBY** *button up top, and then reconnect with the* **CONNECT THUMBY** *button again.*
 
 ---
 
@@ -333,9 +333,9 @@ Any code written in the Code Editor is saved to your local web storage, so refre
 
 **⚠ Note**: *Please avoid the few ways you could lose your work unless you have saved:*
 
-* **DONT**: Hard reset the page (UTILITIES -> HARD RESET PAGE)
-* **DONT**: Clear your local browser storage by deleting the browser cache.
-* **DONT**: Close the Blockly editor tab (instead of the whole browser tab) without saving.
+* **DON'T**: Hard reset the page (UTILITIES -> HARD RESET PAGE)
+* **DON'T**: Clear your local browser storage by deleting the browser cache.
+* **DON'T**: Close the Blockly editor tab (instead of the whole browser tab) without saving.
 
 ---
 
@@ -357,7 +357,7 @@ Most of the Code Editor interface works the same for MicroPython and Blockly, so
 
 ---
 
-If you get stuck, you can always ask for some help from the Thumby Discord community channel found here: **[TinyCircuits Discord](https://discord.gg/vzf3wQXVvm "Link to join the tinycircuits Discord")**.
+If you get stuck, you can always ask for some help from the Thumby Discord community channel found here: **[TinyCircuits Discord](https://discord.gg/vzf3wQXVvm "Link to join the TinyCircuits Discord")**.
 
 ---
 

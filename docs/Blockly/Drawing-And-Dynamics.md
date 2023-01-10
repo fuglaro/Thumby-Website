@@ -14,7 +14,7 @@ TODO TODO TODO
 
 ---
 
-### Flipbook Animations
+### Flip-Book Animations
 (up/down walker)
 - animating sprites
 
