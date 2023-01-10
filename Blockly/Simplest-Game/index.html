@@ -1315,7 +1315,7 @@
 </ul>
 <hr />
 <h2 id="the-game-loop">The Game Loop</h2>
-<p>Most games are built with a set of repeating instructions which keep repeating continously until the game ends. These repeating instructions follow these main steps:</p>
+<p>Most games are built with a set of repeating instructions which keep repeating continuously until the game ends. These repeating instructions follow these main steps:</p>
 <ul>
 <li>Move things around.</li>
 <li>Draw a picture of the moved things.</li>
@@ -1337,7 +1337,7 @@
 <img alt="Thumby blockly speed buzzer stage1" src="../../images/editor-blockly-sb1.png" />
 </center></p>
 <p>This sets up a game loop that will keep repeating forever (or until you click <strong>STOP</strong>, or turn off the Thumby). This loop now needs some blocks inside, so that it has something to do each time it loops.</p>
-<p>We are going to want to makes some things, move them around, and then draw and display each frame. First, lets draw and show something, and then worry about moving it around afterwards. Let's show a character of text on screen.</p>
+<p>We are going to want to makes some things, move them around, and then draw and display each frame. First, let's draw and show something, and then worry about moving it around afterwards. Let's show a character of text on screen.</p>
 <hr />
 <h2 id="drawing-and-then-updating-the-display">Drawing and then Updating the Display</h2>
 <ul>
@@ -1350,7 +1350,7 @@
 <p><center>
 <img alt="Thumby blockly speed buzzer stage2" src="../../images/editor-blockly-sb2.png" />
 </center></p>
-<p>All this is doing, is repeatedly drawing the "^" character to the top left position of the frame, then actually showing the frame on the display, and then clearing the next frame to get ready to repeat the whole process again. It may look like that little hat symbol is just sitting there doing nothing, but its being redrawn many times per second, and it's ready to be moved!</p>
+<p>All this is doing, is repeatedly drawing the "^" character to the top left position of the frame, then actually showing the frame on the display, and then clearing the next frame to get ready to repeat the whole process again. It may look like that little hat symbol is just sitting there doing nothing, but it is being redrawn many times per second, and it's ready to be moved!</p>
 <hr />
 <h2 id="moving-things-around">Moving Things Around</h2>
 <p>Let's try to make it move down.</p>
@@ -1361,7 +1361,7 @@
 <p><center>
 <img alt="Thumby blockly speed buzzer stage2-1" src="../../images/editor-blockly-sb2-1.png" />
 </center></p>
-<p>Sadly, that just moved its initial position downwards. We really want to animate it. For that we need to change a position value on the <img src="../../images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block on each cycle of the repeat loop. We need to increase one of those numbers every frame. Let's see if we can make it animate moving horisontally by changing that x position value. We want to replace that unchanging "0" with something that <em>varies</em> every frame. Fortunately, we can use a <strong>Variable</strong> for that. <em>Variables</em> act like numbers or text, but they can be changed!</p>
+<p>Sadly, that just moved its initial position downwards. We really want to animate it. For that we need to change a position value on the <img src="../../images/editor-blockly-draw-text-hat-block.png" alt="[draw text]" style="height:3.6em"> block on each cycle of the repeat loop. We need to increase one of those numbers every frame. Let's see if we can make it animate moving horizontally by changing that x position value. We want to replace that unchanging "0" with something that <em>varies</em> every frame. Fortunately, we can use a <strong>Variable</strong> for that. <em>Variables</em> act like numbers or text, but they can be changed!</p>
 <hr />
 <p>We need to create a variable and give it a name.</p>
 <ul>
@@ -1393,7 +1393,7 @@
 <p>If you run this now, and if you watch very closely, you might briefly see that hat character speed along and disappear off screen to the right. That's just going to keep going, further and further offscreen as the "counter" variable increases to infinity.</p>
 <hr />
 <p>Let's try slowing things down so we can see it clearly.</p>
-<p>Previously, I talked about games running at different <em>frames per second</em>, but what is our current game running at? Well, we haven't set it, so its running as fast as the frames can display! This is just too fast! Let's set a frame rate with the <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block. Let's slow it waaaaaay down by setting it to run a only 1 frame every second.</p>
+<p>Previously, I talked about games running at different <em>frames per second</em>, but what is our current game running at? Well, we haven't set it, so it's running as fast as the frames can display! This is just too fast! Let's set a frame rate with the <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block. Let's slow it way down by setting it to run a only 1 frame every second.</p>
 <ul>
 <li>Grab a new <img src="../../images/editor-blockly-setFPS-block.png" alt="[set FPS]" style="height:2.0em"> block from inside the <strong>Graphics</strong> category, and place it above the <img src="../../images/editor-blockly-repeat-while-block.png" alt="[repeat while]" style="height:3.6em"> block (not inside).</li>
 <li>Change the FPS value from "30" to "1".</li>
@@ -1410,7 +1410,7 @@
 </center></p>
 <p>Now things are moving!</p>
 <hr />
-<p>We've got all the basics for a decent little game loop! We've got some setup logic, a main game loop, with things being moved, frames being drawn, and then the drawn frame being sent to the display! It's just a shame that the "^" symbol eventually disappears permanently offscreen. Let's make it loop back around to the other side, but first let's speed things back up. We could increase the FPS value, but lets try making the "^" symbol move in larger steps instead.</p>
+<p>We've got all the basics for a decent little game loop! We've got some setup logic, a main game loop, with things being moved, frames being drawn, and then the drawn frame being sent to the display! It's just a shame that the "^" symbol eventually disappears permanently offscreen. Let's make it loop back around to the other side, but first let's speed things back up. We could increase the FPS value, but let's try making the "^" symbol move in larger steps instead.</p>
 <ul>
 <li>Change the increment value from "1" to "5" in your <img src="../../images/editor-blockly-change-by-block.png" alt="[change by]" style="height:2.0em"> block.</li>
 </ul>
@@ -1464,7 +1464,7 @@
 </center></p>
 <hr />
 <h2 id="random-numbers">Random Numbers</h2>
-<p>Some games take advantage of random numbers to make things different each time you play them. Some games are different each time because of how the player chooses different options each time they play, like in chess, but sometimes its nice to add a little bit of chance! You can also use random numbers to draw things in more interesting ways.</p>
+<p>Some games take advantage of random numbers to make things different each time you play them. Some games are different each time because of how the player chooses different options each time they play, like in chess, but sometimes it's nice to add a little bit of chance! You can also use random numbers to draw things in more interesting ways.</p>
 <p>That "X" symbol is looking a little bit dull. Let's make it dance! It currently sits there at x position 65, but it would be nice if it randomly moved about across positions 64 to 66.</p>
 <ul>
 <li>Take a <img src="../../images/editor-blockly-random-num-block.png" alt="random integer (from to)" style="height:1.6em"> block from the <strong>Maths</strong> category, and plug it into the x position plug on the block that draws the "X", replacing the "65".</li>
@@ -1479,13 +1479,13 @@
 <h2 id="button-actions">Button Actions</h2>
 <p>We've made a fun little animation, but there isn't any player interaction. It would be really nice if pressing a button does something! Let's try to make the game speed up every time the player presses one of the red 🔴 buttons.</p>
 <p>Take a look in the <strong>Buttons</strong> category of the toolbox. In it, you can see two collections of blocks, with each collection of blocks having a block for each button. Each button has a "held" block (<img src="../../images/editor-blockly-buttonA-held-block.png" alt="buttonA held" style="height:1.2em">) and also a "hit block" (<img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">). Both of these blocks act as <em>condition</em> blocks, and give a value of <strong>true</strong> whenever something happens with the buttons.</p>
-<p>The <em>condition</em> behaviour of the <em>held</em> blocks are slightly different to the <em>hit</em> blocks:</p>
+<p>The <em>condition</em> behavior of the <em>held</em> blocks are slightly different to the <em>hit</em> blocks:</p>
 <ul>
 <li><strong>held</strong> button blocks are true <strong>for the entire time</strong> a button is held down.</li>
 <li><strong>hit</strong> button blocks are true <strong>only once</strong> each time a button is pressed, even if the button is held down for a long time.</li>
 </ul>
 <p>The difference is important because a button can be held down while multiple game loops cycle through. Actually, when games run at high frame rates, that is normally always the case!</p>
-<p>Let's make the game speed up each time one of the 🔴 buttons is pressed, so lets use a (<img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">) "hit block"!</p>
+<p>Let's make the game speed up each time one of the 🔴 buttons is pressed, so let's use a (<img src="../../images/editor-blockly-buttonA-hit-block.png" alt="buttonA hit" style="height:1.2em">) "hit block"!</p>
 <p>Once again, we want to <em>do something</em> if a <em>condition</em> is true, so:</p>
 <ul>
 <li>Grab another <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the bottom of your game loop.</li>
@@ -1503,7 +1503,7 @@
 </center></p>
 <p>Wow, that's fast!</p>
 <hr />
-<p>Let's change it so that the game speeds up <em>gradually</em> every time the button is pressed. We want to increase the FPS value by 1 every time the button is pressed, similarly to how we incresed the "counter". Unfortunately, there is no increment block for the FPS, so we are going to have to do the maths ourselves.</p>
+<p>Let's change it so that the game speeds up <em>gradually</em> every time the button is pressed. We want to increase the FPS value by 1 every time the button is pressed, similarly to how we increased the "counter". Unfortunately, there is no increment block for the FPS, so we are going to have to do the maths ourselves.</p>
 <p>We want to retrieve the current FPS value, add 1 to it, then set that as the new FPS value. The <img src="../../images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block retrieves the current FPS value, and can be used anywhere where a number block is allowed to be placed, and the <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block allow you to do basic maths like addition, subtraction, and multiplication. We can also place a <img src="../../images/editor-blockly-getFPS-block.png" alt="[get FPS]" style="height:1.6em"> block inside a <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block, giving a value of 1 more than the current FPS value!</p>
 <ul>
 <li>Grab a new <img src="../../images/editor-blockly-1plus1-block.png" alt="[1 + 1]" style="height:1.6em"> block from the <strong>Maths</strong> category, and place it in the value plug of the <img src="../../images/editor-blockly-setFPS-block.png" alt="set FPS" style="height:2.0em"> block, replacing the "30".</li>
@@ -1517,7 +1517,7 @@
 <hr />
 <h2 id="making-a-challenge">Making a Challenge!</h2>
 <p>This looks pretty cool, but it could be a lot more <strong>fun</strong>. Games are most fun where there is some kind of challenge! Games usually have some kind of <em>goal</em> that takes effort or skill to achieve.</p>
-<p>Let's make the <em>goal</em> be making the "^" symbol move as fast as possible, but let's make the <em>challange</em> that it only goes faster when the button is hit exactly when the "^" symbol is underneath the "X" symbol, and if the button is hit at any other time, it goes back to its original slow speed!</p>
+<p>Let's make the <em>goal</em> be making the "^" symbol move as fast as possible, but let's make the <em>challenge</em> that it only goes faster when the button is hit exactly when the "^" symbol is underneath the "X" symbol, and if the button is hit at any other time, it goes back to its original slow speed!</p>
 <p>To do this, we can leave it always increasing the speed when the button is hit, but if the button is hit when it is in the wrong position, we reset the FPS back to 1 frame per second:</p>
 <ul>
 <li>Grab another <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block and place it inside the "do" mouth that activates when a button is hit, just below where you increase the FPS.</li>
@@ -1547,7 +1547,7 @@
 <p>Have a play and try to get the "^" symbol to go as fast as you can without missing the "X"!</p>
 <hr />
 <h2 id="adding-sounds">Adding Sounds</h2>
-<p>Sounds are a great way to make your game have a more intersting experience. Little beeps can go a long way! They can also be a part of how the game works.</p>
+<p>Sounds are a great way to make your game have a more interesting experience. Little beeps can go a long way! They can also be a part of how the game works.</p>
 <p>It would be really nice to have a quick little beep every time the "^" symbol moves, and have the beeping go faster as it moves faster. That could help players get into the rhythm of this game!</p>
 <p>It's would also be nicer if you immediately knew when you missed the "X", rather than only knowing after seeing the "^" slow down. A long beep that stops the game for a bit would help with that.</p>
 <p>Take a quick look in the <em>Audio</em> category of the toolbox. There are two main blocks that make sounds. One will trigger a sound playing in the background while continuing the game loop, and the other will pause the game loop until the sound finishes playing.</p>
