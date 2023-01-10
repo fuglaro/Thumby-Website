@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#saving-high-scores" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -969,10 +974,83 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Saving High Scores
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Saving High Scores
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#save-data-blocks" class="md-nav__link">
+    Save Data Blocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Save Data Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-they-work" class="md-nav__link">
+    How They Work
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-run" class="md-nav__link">
+    First Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-run" class="md-nav__link">
+    Second Run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1136,6 +1214,63 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#save-data-blocks" class="md-nav__link">
+    Save Data Blocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Save Data Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-they-work" class="md-nav__link">
+    How They Work
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-run" class="md-nav__link">
+    First Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-run" class="md-nav__link">
+    Second Run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1151,7 +1286,53 @@
 
 
 
-<p>TODO --  High Scores and Saved Games</p>
+<h1 id="saving-high-scores">Saving High Scores</h1>
+<p>In this tutorial we will show you how to save persistent data on your Thumby, so you can store information like high scores and save games for the next time you play.</p>
+<hr />
+<p>You may have noticed that whenever you restart a game, all the variables and data is reset to their original values. It can be useful to be able to save data that persists even after you restart the Thumby device.</p>
+<p>Take a look at the <strong>Saves</strong> category in the Blockly toolbox. In there, you will find blocks that help you save data for things like high scores and save games.</p>
+<hr />
+<h2 id="save-data-blocks">Save Data Blocks</h2>
+<p>Here are some of the blocks you can use:</p>
+<ul>
+<li><img src="../../images/editor-blockly-is-save-set-block.png" alt="[is save set]" style="height:1.6em"> - A conditional which checks if there was a previous data save.</li>
+<li><img src="../../images/editor-blockly-get-save-block.png" alt="[get save]" style="height:1.6em"> - Retrieve the previous data save.</li>
+<li><img src="../../images/editor-blockly-save-block.png" alt="[save]" style="height:2.0em"> - Save some data.</li>
+</ul>
+<hr />
+<h3 id="how-they-work">How They Work</h3>
+<p>You will notice that all these blocks default to saving a "<em>high score</em>" save. This "<em>high score</em>" is the name of what you are saving, and "<em>high score</em>" is just the example! You can have lots of different kinds of save data by changing "<em>high score</em>" to any save name you want!</p>
+<hr />
+<p>Data that you save with the <img src="../../images/editor-blockly-save-block.png" alt="[save]" style="height:2.0em"> block will be retrievable by any <img src="../../images/editor-blockly-get-save-block.png" alt="[get save]" style="height:1.6em"> block with a matching save name. It will still be there even after the game restarts!</p>
+<p><strong>⚠ Note</strong>: <em>Save data won't persist after a restart when running in the Emulator. Save data only persists after restart when running on a real Thumby device, like with FAST EXECUTE.</em></p>
+<hr />
+<p>When a game runs, and it wants to retrieve some kind of save game data, it needs to know whether the save data even exists. If it's running for the first time, there won't be any saved data! The <img src="../../images/editor-blockly-is-save-set-block.png" alt="[is save set]" style="height:1.6em"> block is helpful for checking if saved data exists.</p>
+<p>Here is a group of blocks which will retrieve some saved data, but if it doesn't exist, it will give a default value of 0:</p>
+<p><center>
+<img alt="Thumby blockly safe get save blocks" src="../../images/editor-blockly-safe-get-save-blocks.png" />
+</center></p>
+<hr />
+<h2 id="example">Example</h2>
+<p>Here is an example set of blocks which will first retrieve any saved "high score", and print it to the display. Then it will update it to 99, wait for a second, then display it again:</p>
+<p><center>
+<img alt="Thumby blockly high score blocks" src="../../images/editor-blockly-high-score-blocks.png" />
+</center></p>
+<p>It doesn't check if the saved data exists the second time that it gets the saved data, because it just saved that data, so it must exist!</p>
+<hr />
+<h3 id="first-run">First Run</h3>
+<p>The first time that you run it, you will see the default 0 value for one second...</p>
+<p><center>
+<img alt="Thumby blockly zero screen" src="../../images/editor-blockly-zero-screen.png" />
+</center></p>
+<p>... and then the saved 99 "high score" data.</p>
+<p><center>
+<img alt="Thumby blockly 99 screen" src="../../images/editor-blockly-99-screen.png" />
+</center></p>
+<h3 id="second-run">Second Run</h3>
+<p>The second time that you run it (if you are running it on a real Thumby device), you will see the saved 99 "high score" data right from the start!</p>
+<p><center>
+<img alt="Thumby blockly 99 screen" src="../../images/editor-blockly-99-screen.png" />
+</center></p>
 <hr />
 <p><a href="../Publish-Your-Game/"><strong>Next Tutorial: Publish Your Game</strong></a></p>
 
