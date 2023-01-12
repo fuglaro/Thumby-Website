@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#animating-sprites" class="md-skip">
+        <a href="#drawing-and-dynamics" class="md-skip">
           Skip to content
         </a>
       
@@ -946,6 +946,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Drawing and Dynamics
@@ -962,12 +964,76 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-game-loop-with-functions" class="md-nav__link">
+    A Game Loop with Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-with-shapes" class="md-nav__link">
+    Drawing With Shapes
+  </a>
+  
+    <nav class="md-nav" aria-label="Drawing With Shapes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-proportions" class="md-nav__link">
+    Changing Proportions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rectangles" class="md-nav__link">
+    Rectangles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filled-rectangles" class="md-nav__link">
+    Filled Rectangles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-in-random-steps" class="md-nav__link">
+    Moving in Random Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-speed" class="md-nav__link">
+    Changing Speed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#animating-sprites" class="md-nav__link">
@@ -978,8 +1044,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#movement-and-orientation" class="md-nav__link">
-    Movement and Orientation
+  <a href="#sprite-movement-and-orientation" class="md-nav__link">
+    Sprite Movement and Orientation
   </a>
   
 </li>
@@ -996,31 +1062,44 @@
     Switching Frames
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drawing-shapes" class="md-nav__link">
-    Drawing Shapes
-  </a>
-  
-    <nav class="md-nav" aria-label="Drawing Shapes">
+    <nav class="md-nav" aria-label="Switching Frames">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
-    Lines
+  <a href="#controller-movement" class="md-nav__link">
+    Controller Movement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprite-transparency" class="md-nav__link">
+    Sprite Transparency
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprite Transparency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transparency-by-key-color" class="md-nav__link">
+    Transparency By Key Color
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rectangles-and-squares" class="md-nav__link">
-    Rectangles and Squares
+  <a href="#transparency-by-mask" class="md-nav__link">
+    Transparency By Mask
   </a>
   
 </li>
@@ -1031,8 +1110,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#drawing-and-checking-pixels" class="md-nav__link">
-    Drawing and Checking Pixels
+  <a href="#working-with-pixels" class="md-nav__link">
+    Working with Pixels
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Pixels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawing-pixels" class="md-nav__link">
+    Drawing Pixels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision-detection-with-pixels" class="md-nav__link">
+    Collision Detection with Pixels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-combined" class="md-nav__link">
+    All Combined
   </a>
   
 </li>
@@ -1231,12 +1337,76 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-game-loop-with-functions" class="md-nav__link">
+    A Game Loop with Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-with-shapes" class="md-nav__link">
+    Drawing With Shapes
+  </a>
+  
+    <nav class="md-nav" aria-label="Drawing With Shapes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-proportions" class="md-nav__link">
+    Changing Proportions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rectangles" class="md-nav__link">
+    Rectangles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filled-rectangles" class="md-nav__link">
+    Filled Rectangles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-in-random-steps" class="md-nav__link">
+    Moving in Random Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-speed" class="md-nav__link">
+    Changing Speed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#animating-sprites" class="md-nav__link">
@@ -1247,8 +1417,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#movement-and-orientation" class="md-nav__link">
-    Movement and Orientation
+  <a href="#sprite-movement-and-orientation" class="md-nav__link">
+    Sprite Movement and Orientation
   </a>
   
 </li>
@@ -1265,31 +1435,44 @@
     Switching Frames
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drawing-shapes" class="md-nav__link">
-    Drawing Shapes
-  </a>
-  
-    <nav class="md-nav" aria-label="Drawing Shapes">
+    <nav class="md-nav" aria-label="Switching Frames">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
-    Lines
+  <a href="#controller-movement" class="md-nav__link">
+    Controller Movement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprite-transparency" class="md-nav__link">
+    Sprite Transparency
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprite Transparency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transparency-by-key-color" class="md-nav__link">
+    Transparency By Key Color
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rectangles-and-squares" class="md-nav__link">
-    Rectangles and Squares
+  <a href="#transparency-by-mask" class="md-nav__link">
+    Transparency By Mask
   </a>
   
 </li>
@@ -1300,8 +1483,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#drawing-and-checking-pixels" class="md-nav__link">
-    Drawing and Checking Pixels
+  <a href="#working-with-pixels" class="md-nav__link">
+    Working with Pixels
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Pixels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawing-pixels" class="md-nav__link">
+    Drawing Pixels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision-detection-with-pixels" class="md-nav__link">
+    Collision Detection with Pixels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-combined" class="md-nav__link">
+    All Combined
   </a>
   
 </li>
@@ -1322,42 +1532,521 @@
 
 
 
-  <h1>Drawing and Dynamics</h1>
-
-<p>TODO TODO TODO</p>
+<h1 id="drawing-and-dynamics">Drawing and Dynamics</h1>
+<p>This tutorial will introduce you to the different ways that you can draw and animate sprites and shapes. It will also show you how you can do some basic interactions between players, monsters, projectiles, and the game area.</p>
+<p>In the process it will combine all these techniques together to provide an example of a bigger game, along with a way to keep all the blocks nicely organized.</p>
+<p>Let's get started!</p>
+<hr />
+<h2 id="a-game-loop-with-functions">A Game Loop with Functions</h2>
+<p>We are going to put a lot in this game, and if we don't keep all the blocks nicely organized, they will start to get really hard to work with!</p>
+<p>We are going to use functions to help organize this game!</p>
+<p>Functions allow you to collect up a whole bunch of blocks, then run them all from somewhere else. There are two blocks that work together for this. The <img src="../../images/editor-blockly-function-block.png" alt="[function]" style="height:3.6em"> block lets you collect up lots of blocks in its mouth, then placing the <img src="../../images/editor-blockly-run-function-block.png" alt="[run function]" style="height:2.0em"> block somewhere else, will run all those blocks in that location! Check them out in the <strong>Functions</strong> category in the toolbox.</p>
+<p>The "<strong>do something</strong>" name is just an example. You can name it whatever you want, and have as many different functions as you want!</p>
+<p><strong>Hint:</strong> <em>You can use functions to run the same set of blocks in multiple locations by using multiple</em> <img src="../../images/editor-blockly-run-function-block.png" alt="[run function]" style="height:2.0em"> <em>blocks.</em></p>
+<p>Now we know what functions are, let's see how they can be used in a game loop.</p>
+<hr />
+<p>Start off by making a simple game loop. Set it to 60 FPS, set up sending to the display, and add a <em>counter</em> variable that increases by 1 each frame:</p>
+<p><center>
+<img alt="Thumby blockly counted loop blocks" src="../../images/editor-blockly-counted-loop-blocks.png" />
+</center></p>
+<p>Later in this tutorial, we will be adding 7 different things to render animate, move about, and check interactions. It's going to get really messy!</p>
+<p>For each game thing we add, we can wrap up all the blocks in a <em>function</em>, then just run those blocks wherever we want.</p>
+<hr />
+<p>Here is some example blocks that show you how you can use functions on a game loop to group blocks that set something up, and also to group blocks that do something in the game loop.</p>
+<p><strong>You don't need to do this step in your game loop, this is just to give you an example!</strong></p>
+<p><center>
+<img alt="Thumby blockly example function loop blocks" src="../../images/editor-blockly-example-function-loop-blocks.png" />
+<img alt="Thumby blockly example function loop output dark" src="../../images/editor-blockly-example-function-loop-output-dark.jpg" />
+</center></p>
+<p>Now that we know a way we can add things in a nice and organized way, let's get started!</p>
+<hr />
+<h2 id="drawing-with-shapes">Drawing With Shapes</h2>
+<p>The <strong>Graphics</strong> category in the toolbox has some blocks that help you draw shapes. You can draw lines, outlines of rectangles (and squares), and also solid rectangles (and squares)!</p>
+<hr />
+<h3 id="lines">Lines</h3>
+<p><center>
+<img alt="Editor blockly draw line block" src="../../images/editor-blockly-draw-line-block.png" />
+</center></p>
+<p>The block above will draw a line between two locations on the screen, by being given the x and y position of both locations.</p>
+<hr />
+<ul>
+<li>First, make a "<strong>do line</strong>" function.</li>
+<li>Make it draw two horizontal lines from the middle of both ends of the screen.</li>
+<li>Put "<strong>do line</strong>" inside your game loop.</li>
+</ul>
+<p><center>
+<img alt="Editor blockly geo blitz stage1 blocks" src="../../images/editor-blockly-geo-blits-stg1-blocks.png" />
+<img alt="Editor blockly geo blitz stage1 screen" src="../../images/editor-blockly-geo-blits-stg1-screen.png" />
+</center></p>
+<hr />
+<h3 id="changing-proportions">Changing Proportions</h3>
+<p>Now let's get ready to be able to easily change the width of the lines.</p>
+<ul>
+<li>Create a new variable called "<strong>lineWidth</strong>".</li>
+<li>Make a "<strong>setup line</strong>" function and add it before your game loop starts.</li>
+<li>Set "<strong>lineWidth</strong>" to "20" inside the "<strong>setup line</strong>" function.</li>
+</ul>
+<p><center>
+<img alt="Editor blockly geo blitz stage1 blocks" src="../../images/editor-blockly-geo-blits-stg2-blocks.png" />
+</center></p>
+<hr />
+<p>Next, let's make the lines respect the "<strong>lineWidth</strong>" variable, and also make the lines move! The update to "<strong>lineWidth</strong>" won't actually change anything, but it will allow us to make it shrink later in the tutorial!</p>
+<p>To animate the lines, we will use some maths to make the y position of the end of each line move vertically across the screen, and, when it reaches the end of the screen, make it wrap around to the other side. We will make the first line scan downwards, and the second line scan upwards. We can use the "<strong>counter</strong>" variable to drive the animation, and we can divide it by 10 to slow it down.</p>
+<ul>
+<li>Update your "<strong>do line</strong>" function so that it respects "<strong>lineWidth</strong>", and animates the lines:</li>
+</ul>
+<p><center>
+<img alt="Editor blockly geo blitz stage3 blocks" src="../../images/editor-blockly-geo-blits-stg3-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg3-gif.gif" alt="[Thumby blockly geo blits stage3 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<p>Try changing "<strong>lineWidth</strong>" and see what happens!</p>
+<hr />
+<h3 id="rectangles">Rectangles</h3>
+<p><center>
+<img alt="Editor blockly draw rectangle block" src="../../images/editor-blockly-draw-rectangle-block.png" />
+</center></p>
+<p>The block above will draw the outline of a rectangle (or square) with it's top left corner starting at a given x and y location. This rectangle will be drawn with a width an height from the specified width and height.</p>
+<hr />
+<p>Let's use a rectangle to draw a border around the screen!</p>
+<ul>
+<li>Make a "<strong>do border</strong>" function and add it inside your game loop after "<strong>do line</strong>".</li>
+<li>Make the "<strong>do border</strong>" function draw a rectangle around the whole screen.</li>
+</ul>
+<p><center>
+<img alt="Editor blockly geo blitz stage4 blocks" src="../../images/editor-blockly-geo-blits-stg4-blocks.png" />
+<img alt="Editor blockly geo blitz stage4 screen" src="../../images/editor-blockly-geo-blits-stg4-screen.png" />
+</center></p>
+<p>Neat!</p>
+<hr />
+<h3 id="filled-rectangles">Filled Rectangles</h3>
+<p>The <img src="../../images/editor-blockly-draw-rectangle-block.png" alt="[draw rectangle]" style="height:8em"> block can also draw a solid (filled) rectangle, rather than just an outline! All you need to do is change the "<strong>rectangle</strong>" dropdown to "<strong>filled rectangle</strong>".</p>
+<hr />
+<p>Let's use a filled rectangle to draw a box that randomly flips around the screen.</p>
+<p>First, let's make a box, and set it up so that it can move:</p>
+<ul>
+<li>Make a "<strong>setup box</strong>" function, and add it before your game loop starts.</li>
+<li>Inside "<strong>setup box</strong>", make a new "<strong>boxX</strong>" variable set to 30, and a new "<strong>boxY</strong>" variable set to 0.</li>
+<li>Make a "<strong>do box</strong>" function, and add it inside your game loop, after "<strong>do border</strong>".</li>
+<li>Inside "<strong>do box</strong>" draw a <strong>filled rectangle</strong> starting at the x and y position given by the variables "<strong>boxX</strong>" and "<strong>boxY</strong>", and with width 6 and height 4.</li>
+</ul>
+<p><center>
+<img alt="Editor blockly geo blitz stage5 blocks" src="../../images/editor-blockly-geo-blits-stg5-blocks.png" />
+<img alt="Editor blockly geo blitz stage5 screen" src="../../images/editor-blockly-geo-blits-stg5-screen.png" />
+</center></p>
+<hr />
+<h3 id="moving-in-random-steps">Moving in Random Steps</h3>
+<p>Next, let's move the box about randomly!</p>
+<p>We are going to make the box shift in different directions. First we use a random number between 0 and 1 to decide the direction, horizontally (1) or vertically (0). Based off that, we will move the box in the chosen direction by shifting either "<strong>boxX</strong>" or "<strong>boxY</strong>" the width or height in either direction, or not at all.</p>
+<p>To do this, we will use a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block, which gives you to mouths for blocks. The "do" mouth runs all the blocks when the condition is true, but we also have the "else" mouth, which will run blocks when the condition is <strong>not</strong> true.</p>
+<p>To make a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block, make a <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block, and then use the settings <img src="../../images/editor-blockly-block-settings-button.png" alt="[block's settings]" style="height:2.0em"> button to transform its shape.</p>
+<p>We then make sure that both "<strong>boxX</strong>" and "<strong>boxY</strong>" are constrained so that the whole box fits in the screen.</p>
+<ul>
+<li>Make a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block inside the bottom of your "<strong>do box</strong>" function.</li>
+<li>Make the conditional be checking if a random number from "0" to "1" is "1".</li>
+<li>Inside the "do" mouth, change "<strong>boxX</strong>" by a random integer from "-1" to "1" multiplied by "6".</li>
+<li>Inside the "else" mouth, change "<strong>boxY</strong>" by a random integer from "-1" to "1" multiplied by "4".</li>
+<li>At the bottom of the "<strong>do box</strong>" function, set both "<strong>boxX</strong>" and "<strong>boxY</strong>" to themselves constrained so that the box stays within the screen area.</li>
+</ul>
+<p><center>
+<img alt="Editor blockly geo blitz stage6 blocks" src="../../images/editor-blockly-geo-blits-stg6-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg6-gif.gif" alt="[Thumby blockly geo blits stage6 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<p>Look and that box dance! That's fast!</p>
+<hr />
+<h3 id="changing-speed">Changing Speed</h3>
+<p>Maybe that's too fast...</p>
+<p>Lets slow it down!</p>
+<p>Because the "<strong>do box</strong>" function is run on every frame of the game loop, the box moves on every frame too! It looks good how the box moves in steps and we aren't going to shorten the distance the box moves each frame, instead we are going reduce how <em>often</em> the box moves.</p>
+<p>We need to draw the rectangle on every frame, but we are going to make it so that the box only moves every 20th frame.</p>
+<hr />
+<p>To do this, we are going to use a <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block from the <strong>Functions</strong> category. Usually, when a function runs, it runs <strong>all</strong> blocks from top to bottom. The <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block lets you leave the function half way down, if a particular condition is true. Don't worry about how this block has two plugs inside it, when you add it to your "<strong>do box</strong>" function, the second plug will automatically disappear!</p>
+<hr />
+<p>Let's make the "<strong>do box</strong>" bail out before it moves the block, if it is anything other than every 20th frame:</p>
+<ul>
+<li>Add a <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block right after where it draws the rectangle.</li>
+<li>Make condition be true when the remainder of dividing the "<strong>counter</strong>" by 20 results in anything other than 20.</li>
+</ul>
+<p><center>
+<img alt="Editor blockly geo blitz stage7 blocks" src="../../images/editor-blockly-geo-blits-stg7-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg7-gif.gif" alt="[Thumby blockly geo blits stage7 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<p>Now that's a more sensible speed!</p>
 <hr />
 <h2 id="animating-sprites">Animating Sprites</h2>
 <hr />
-<h3 id="movement-and-orientation">Movement and Orientation</h3>
-<p>(DVD arrow)
-- mirror/flip sprites
-- move sprites</p>
+<h3 id="sprite-movement-and-orientation">Sprite Movement and Orientation</h3>
+<p>Shapes aren't the only things that can be moved! Sprites can be moved around the screen, and can also have their pictures mirrored and flipped!</p>
+<p>Take a look in the <strong>Sprites</strong> category of the toolbox. In it, you will find the following blocks which allow you to move and reorient Sprites:</p>
+<ul>
+<li><img src="../../images/editor-blockly-move-x-to-block.png" alt="[move x to]" style="height:2.0em"> - move to a new horizontal position.</li>
+<li><img src="../../images/editor-blockly-move-y-to-block.png" alt="[move y to]" style="height:2.0em"> - move to a new vertical position.</li>
+<li><img src="../../images/editor-blockly-move-x-by-block.png" alt="[move x by]" style="height:2.0em"> - shift left (negative) or right (positive).</li>
+<li><img src="../../images/editor-blockly-move-y-by-block.png" alt="[move y by]" style="height:2.0em"> - shift up (negative) or down (positive).</li>
+<li><img src="../../images/editor-blockly-flip-block.png" alt="[flip]" style="height:2.0em"> - flip the image upside down.</li>
+<li><img src="../../images/editor-blockly-mirror-block.png" alt="[mirror]" style="height:2.0em"> - mirror the image left to right.</li>
+<li><img src="../../images/editor-blockly-get-position-block.png" alt="[get position]" style="height:1.6em"> - get the current x or y position.</li>
+<li><img src="../../images/editor-blockly-get-flipped-block.png" alt="[get flipped]" style="height:1.6em"> - get whether the Sprite was flipped (or mirrored) from its original orientation.</li>
+</ul>
+<hr />
+<p>Let's use this to add a "<strong>kite</strong>" Sprite to our game, which bounces around the screen and always points in the direction its moving:</p>
+<ul>
+<li>Download this image to use for the Sprite:
+<center>
+<img src="../../images/kiteSprite8x8.png" style="width:25%;border:1px solid black" alt="Kite Sprite pointing up left (8x8)">
+<br>(Kite Sprite Pointing Up/Left 8x8)
+</center></li>
+<li>Make a "<strong>setup kite</strong>" function and a "<strong>do kite</strong>" function".</li>
+<li>Add "<strong>setup kite</strong>" to run before your game loop, and add "<strong>do kite</strong>" to run inside your game loop just after "<strong>do box</strong>".</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage8 part1 blocks" src="../../images/editor-blockly-geo-blits-stg8-blocks.png" />
+</center></p>
+<hr />
+<ul>
+<li>Create a new variable "<strong>kiteDirectionX</strong>", (this will have a value of -1 for left, and 1 for right).</li>
+<li>Create a new variable "<strong>kiteDirectionY</strong>", (this will have a value of -1 for up, and 1 for down). This will combine with "<strong>kiteDirectionX</strong>" to create diagonal movement.</li>
+<li>Inside the "<strong>setup kite</strong>" function, do the following:<ul>
+<li>Create a new "<strong>kite</strong>" Sprite, and load the downloaded kite picture.</li>
+<li>Move "<strong>kite</strong>" to a starting x position of "64".</li>
+<li>Move "<strong>kite</strong>" to a starting y position of "32".</li>
+<li>Set "<strong>kiteDirectionX</strong>" to a starting value of "-1".</li>
+<li>Set "<strong>kiteDirectionY</strong>" to a starting value of "-1".</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage8 part2 blocks" src="../../images/editor-blockly-geo-blits-stg8p2-blocks.png" />
+</center></p>
+<hr />
+<ul>
+<li>Inside the "<strong>do kite</strong>" function, do the following:<ul>
+<li>Draw the "<strong>kite</strong>" Sprite!</li>
+<li>Bail out of the function early if the counter is not divisible by "4" (this slows down the kite to a quarter of full speed).</li>
+<li>Move the x position of "<strong>kite</strong>" by the value of "<strong>kiteDirectionX</strong>".</li>
+<li>Move the y position of "<strong>kite</strong>" by the value of "<strong>kiteDirectionY</strong>".</li>
+<li>Check if <strong>kite</strong> has gone off screen to the left and, if it has, change the "<strong>kiteDirectionX</strong>" to "1", then mirror the image of "<strong>kite</strong>".</li>
+<li>Check if <strong>kite</strong> has gone off screen to the right and, if it has, change the "<strong>kiteDirectionX</strong>" to "-1", then mirror the image of "<strong>kite</strong>".</li>
+<li>Check if <strong>kite</strong> has gone off screen at the top and, if it has, change the "<strong>kiteDirectionY</strong>" to "1", then flip the image of "<strong>kite</strong>".</li>
+<li>Check if <strong>kite</strong> has gone off screen at the bottom and, if it has, change the "<strong>kiteDirectionY</strong>" to "-1", then flip the image of "<strong>kite</strong>".</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:</p>
+<p><center>
+<img alt="Editor blockly geo blits stage8 part3 blocks" src="../../images/editor-blockly-geo-blits-stg8p3-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg8-gif.gif" alt="[Thumby blockly geo blits stage8 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<p>Now you know how to move Sprites around the screen and also how to flip and mirror the image!</p>
 <hr />
 <h3 id="flip-book-animations">Flip-Book Animations</h3>
-<p>(up/down walker)
-- animating sprites</p>
+<p>Sprites can also be animated like a gif!</p>
+<p>Animated Sprites have multiple frames inside that be switched. This can be used to make animations with a flip-booking effect.</p>
+<hr />
+<p>To create an animated Sprite, you can use the Bitmap Builder, but instead of drawing one picture, you draw all the different frames of an animation, one after another. Animated Sprites can be any size, but the frames of an animated Sprite must all be the same size, </p>
+<p>Here is an example of an animated Sprite which makes feet go back and forth like they are walking:</p>
+<p><center>
+<img alt="Editor bitmap builder animated sprite dark screenshot" src="../../images/editor-bitmap-builder-anim-sprite-dark.jpg" />
+</center></p>
+<p>The red boxes are just to help show each different frame in this animated Sprite. You won't see the red lines in the Bitmap Builder itself.</p>
+<hr />
+<p>When you load an animated sprite into your workspace, you must you the <img src="../../images/editor-blockly-load-anim-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, instead of the <img src="../../images/editor-blockly-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, and you must specify the exact number of frames you have in the animated sprite.</p>
+<p>Here is our example loaded with its "8" frames set correctly:
+<img src="../../images/editor-blockly-loaded-anim-sprite-block.png" alt="[loaded anim sprite]" style="height:2.4em"></p>
+<p>If you set this correctly, you will have a Sprite that initially draws the first frame, and which has a width and height of <strong>one frame</strong> of the animation, rather than all the frames in the line:</p>
+<p><center>
+<img alt="Editor blockly loaded anim sprite screen" src="../../images/editor-blockly-loaded-anim-sprite-screen.png" />
+</center></p>
+<p>Once you have an animated Sprite loaded, you can then switch which frame it draws! Use the <img src="../../images/editor-blockly-set-frame-number-block.png" alt="[set frame number]" style="height:2.4em"> block to switch which frame is drawn. Frame numbers start at 0, and numbers higher than the frame count will wrap around.</p>
+<p>To actually play the animation in your animated Sprite, you can just increase the frame number by 1 on each cycle of your game loop.</p>
+<p>Here is an example of our animated Sprite being animated:</p>
+<p><strong>You don't need to do this step in your game loop, this is just to give you an example!</strong></p>
+<p><center>
+<img alt="Editor blockly animated sprite example blocks" src="../../images/editor-blockly-anim-sprite-example-blocks.png" />
+<img src="../../images/editor-blockly-anim-sprite-example-gif.gif" alt="[animated sprite example gif]" style="width:50%;border:1px solid black">
+</center></p>
+<hr />
+<p>Now let's add this animated sprite as a <strong>walker</strong> Sprite to our game!</p>
+<ul>
+<li>Download this image to use for the Sprite:
+<center>
+<img src="../../images/walkerSprite4x8-8.png" style="width:25%;border:1px solid black" alt="Animated Walking Sprite 4x8 (8 frames)">
+<br>(Animated Walking 4x8 Sprite with 8 frames)
+</center></li>
+<li>Make a "<strong>setup walker</strong>" function and a "<strong>do walker</strong>" function".</li>
+<li>Add "<strong>setup walker</strong>" to run before your game loop, and add "<strong>do walker</strong>" to run inside your game loop just after "<strong>do kite</strong>".</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage9 part1 blocks" src="../../images/editor-blockly-geo-blits-stg9-blocks.png" />
+</center></p>
+<hr />
+<ul>
+<li>Inside the "<strong>setup walker</strong>" function, do the following:<ul>
+<li>Create a new "<strong>walker</strong>" Sprite with a <img src="../../images/editor-blockly-load-anim-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, and load the downloaded walker animation onto it.</li>
+<li>Update the frames count to "8".</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage9 part2 blocks" src="../../images/editor-blockly-geo-blits-stg9p2-blocks.png" />
+</center></p>
+<hr />
+<p>Let's make the "<strong>walker</strong>" Sprite walk up the screen from the bottom, and when goes off the top of the screen, make it wrap around to the bottom, starting at a new random horizontal position.</p>
+<ul>
+<li>Inside the "<strong>do walker</strong>" function, do the following:<ul>
+<li>Draw the "<strong>walker</strong>" Sprite!</li>
+<li>Bail out of the function early if the counter is not divisible by "4" (this slows down the walker to a quarter of full speed).</li>
+<li>Increase the "<strong>walker</strong>" frame number by 1, by using a <img src="../../images/editor-blockly-get-frame-number-block.png" alt="[get frame number]" style="height:2.0em"> block (from the <strong>Sprites</strong> category) to get the current frame number from "<strong>walker</strong>", then adding 1 to it before setting it back as the new frame number.</li>
+<li>Move the y position of "<strong>walker</strong>" by -1 (upwards).</li>
+<li>Check if the "<strong>walker</strong>" has gone entirely off the top of the screen and, if it has, move it back to a y position of 47 (entirely off the screen at the bottom) and also give it a new random horizontal position.</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage9 part3 blocks" src="../../images/editor-blockly-geo-blits-stg9p3-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg9-gif.gif" alt="[Thumby blockly geo blits stage9 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<p>Nice!</p>
 <hr />
 <h3 id="switching-frames">Switching Frames</h3>
-<p>(player)
-- switching sprite frames</p>
+<p>Animated Sprites can do more than just flip-book animations like a gif does, frame-by-frame. You can also control switching frames in other interesting ways.</p>
 <hr />
-<h2 id="drawing-shapes">Drawing Shapes</h2>
+<p>It's about time we added a player character to this game! In the process, we can show how you can use animated Sprites in other ways!</p>
+<p>We are going to make a movable bird that the player can control but which stays within the screen area. The ship will be able to move in any direction, but it will only be able to face left or right. We can use a <img src="../../images/editor-blockly-mirror-block.png" alt="[mirror]" style="height:2.0em"> block to mirror a sprite to look in the other direction.</p>
+<p>Let's also make the bird open a mouth at the front whenever either 🔴 button is pressed.</p>
+<p>We can us Animated Sprites for that, and have the first frame be the bird normally, and have the second frame be the bird with it's mouth open. Then we just need to change to the second frame whenever either 🔴 button is pressed!</p>
 <hr />
-<h3 id="lines">Lines</h3>
+<p>Let's get started!</p>
 <ul>
-<li>draw Lines (horizontal wiper (slightly off vertical line)</li>
+<li>Download this image to use for the Sprite:
+<center>
+<img src="../../images/birdSprite8x7-2.png" style="width:25%;border:1px solid black" alt="Bird Sprite 8x7 (2 frames)">
+<br>(Bird 8x7 Sprite with 2 frames)
+</center></li>
+<li>Make a "<strong>setup bird</strong>" function and a "<strong>do bird</strong>" function".</li>
+<li>
+<p>Add "<strong>setup bird</strong>" to run before your game loop, and add "<strong>do bird</strong>" to run inside your game loop just after "<strong>do walker</strong>".
+It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage10 part1 blocks" src="../../images/editor-blockly-geo-blits-stg10-blocks.png" />
+</center></p>
+</li>
+<li>
+<p>Inside the "<strong>setup bird</strong>" function, do the following:</p>
+<ul>
+<li>Create a new "<strong>bird</strong>" Sprite with a <img src="../../images/editor-blockly-load-anim-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, and load the downloaded bird animation onto it.</li>
+<li>Update the frames count to "2".</li>
+<li>Move the x position of the "<strong>bird</strong>" to a starting position of "32".</li>
+<li>Move the y position of the "<strong>bird</strong>" to a starting position of "18".</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage10 part2 blocks" src="../../images/editor-blockly-geo-blits-stg10-pt2-blocks.png" />
+</center></p>
+<hr />
+<p>Next let's draw the "<strong>bird</strong>" Sprite and make it open its mouth whenever either  🔴 button is pressed:</p>
+<ul>
+<li>Inside the "<strong>do bird</strong>" function, do the following:<ul>
+<li>Draw the "<strong>bird</strong>" Sprite!</li>
+<li>Set the frame of the "<strong>bird</strong>" Sprite to be "1" if button A or B is held, and "0" otherwise.</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage10 part3 blocks" src="../../images/editor-blockly-geo-blits-stg10p3-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg10p3-gif.gif" alt="[Thumby blockly geo blits stage10 part3 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<hr />
+<h4 id="controller-movement">Controller Movement</h4>
+<p>Finally, let's make the "<strong>bird</strong>" Sprite move with the direction controls, making sure to mirror the bird as it faces left or right:</p>
+<ul>
+<li>Add the following to the inside of the "<strong>do bird</strong>" function:<ul>
+<li>Bail out of the function early if the counter <strong>is</strong> divisible by "3" (this slows down the bird to two thirds of full speed).</li>
+<li>If up is held, move y by "-1".</li>
+<li>If down is held, move y by "1".</li>
+<li>If left is held, move x by "-1".</li>
+<li>If left is held, move x by "-1", and also, if the "<strong>bird</strong>" is currently mirrored, mirror it back.</li>
+<li>If right is held, move x by "1", and also, if the "<strong>bird</strong>" is not currently mirrored, mirror it.</li>
+<li>Constrain the y position to within the screen vertically.</li>
+<li>Constrain the x position to within the screen horizontally.</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage10 part4 blocks" src="../../images/editor-blockly-geo-blits-stg10p4-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg10p4-gif.gif" alt="[Thumby blockly geo blits stage10 part4 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<hr />
+<h2 id="sprite-transparency">Sprite Transparency</h2>
+<p>You may have noticed in the last video above, that all the Sprites didn't have any transparency, making their whole rectangle draw black over anything underneath. Transparency is when you can see through parts of a picture. You can see that the bird, kite, and walker don't have transparency the most when they go over the border.</p>
+<p>There are two ways to make transparency in Sprites. One is by selecting either black or white to be the transparent color. The second way allows you to draw white, black, and also transparent pixels. To paint those transparent pixels, you use a second Spite, with white being the pixels of the first Sprite to draw, and black being the pixels to leave transparently. This second Sprite is called a <em>Sprite Mask</em>.</p>
+<hr />
+<h3 id="transparency-by-key-color">Transparency By Key Color</h3>
+<p>First let's give both the kite and walker transparency by setting black to be their transparency color. We can do this by using a <img src="../../images/editor-blockly-set-transparency-block.png" alt="[set transparency]" style="height:2.0em"> block:</p>
+<ul>
+<li>
+<p>Inside your "<strong>setup walker</strong>" function, also set the transparency of the "<strong>walker</strong>" Sprite to "black":
+<center>
+<img alt="Editor blockly geo blits stage11 part1 blocks" src="../../images/editor-blockly-geo-blits-stg11p1-blocks.png" />
+</center></p>
+</li>
+<li>
+<p>Inside your "<strong>setup kite</strong>" function, also set the transparency of the "<strong>kite</strong>" Sprite to "black":
+<center>
+<img alt="Editor blockly geo blits stage11 part2 blocks" src="../../images/editor-blockly-geo-blits-stg11p2-blocks.png" />
+</center></p>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img src="../../images/editor-blockly-geo-blits-stg11-gif.gif" alt="[Thumby blockly geo blits stage11 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<p>Better!</p>
+<hr />
+<h3 id="transparency-by-mask">Transparency By Mask</h3>
+<p>For the "<strong>bird</strong>" Sprite, it would be nice if it had a thin black border around it make it easier to see if its edges are over something like the border. We don't want the full Sprite rectangle, just a thin border. So we want white, black, and also transparent pixels.</p>
+<p>For this, we will use a Sprite Mask.</p>
+<p>A Sprite Mask controls the drawing of another Sprite by having white pixels indicate that the same pixel in the other Sprite should be drawn.</p>
+<p>So we are going to need a Sprite Mask for the bird. This will be similar to the "<strong>bird</strong>" Sprite but with the eye filled in white and extra pixels around it also filled white, so they get drawn. To match with the bird, this Sprite will also have 2 frames.</p>
+<hr />
+<p>First, let's get the Sprite Mask loaded and ready for drawing:</p>
+<ul>
+<li>Download this image to use for the Sprite:
+<center>
+<img src="../../images/birdMaskSprite8x7-2.png" style="width:25%;border:1px solid black" alt="Bird Sprite Mask 8x7 (2 frames)">
+<br>(Bird Mask 8x7 Sprite with 2 frames)
+</center></li>
+<li>Inside your "<strong>setup bird</strong>" function, also do the following:<ul>
+<li>Load the downloaded Sprite as a new Sprite called "<strong>birdMask</strong>".</li>
+<li>Update the frames count to "2":
+<center>
+<img alt="Editor blockly geo blits stage12 part1 blocks" src="../../images/editor-blockly-geo-blits-stg12p1-blocks.png" />
+</center></li>
+</ul>
+</li>
 </ul>
 <hr />
-<h3 id="rectangles-and-squares">Rectangles and Squares</h3>
-<p>(box flipping that moves randomly
-- draw Rectangle
-- draw Rectangle Filled</p>
-<hr />
-<h2 id="drawing-and-checking-pixels">Drawing and Checking Pixels</h2>
+<p>Next, let's apply the "<strong>birdMask</strong>" Mask while drawing the "<strong>bird</strong>" Sprite. We can do this by using a <img src="../../images/editor-blockly-draw-sprite-with-mask-block.png" alt="[draw with mask]" style="height:2.0em"> block from the <strong>Sprites</strong> category.</p>
 <ul>
-<li>get pixel</li>
-<li>set pixel</li>
+<li>Replace the <img src="../../images/editor-blockly-draw-sprite-block.png" alt="[draw]" style="height:2.0em"> block inside the "<strong>do bird</strong>" function with a <img src="../../images/editor-blockly-draw-sprite-with-mask-block.png" alt="[draw with mask]" style="height:2.0em"> block.</li>
+<li>Ensure the drawn Sprite is still set to "<strong>bird</strong>".</li>
+<li>Set "<strong>birdMask</strong>" as the mask Sprite to apply.</li>
 </ul>
+<p>We must also remember to change the frame of the "<strong>birdMask</strong>" Sprite, just like we are with the "<strong>bird</strong>" Sprite. We can do that by simply setting the "<strong>birdMask</strong>" frame number to be whatever the frame number is for the "<strong>bird</strong>" Sprite.</p>
+<p>You can see both changes here:
+<center>
+<img alt="Editor blockly geo blits stage12 part2 blocks" src="../../images/editor-blockly-geo-blits-stg12p2-blocks.png" />
+</center></p>
+<p>It should look like this:
+<center>
+<img src="../../images/editor-blockly-geo-blits-stg12-gif.gif" alt="[Thumby blockly geo blits stage12 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<p>We now have Sprites with both kinds of transparency in our game!</p>
+<p>Pretty!</p>
+<hr />
+<h2 id="working-with-pixels">Working with Pixels</h2>
+<hr />
+<h3 id="drawing-pixels">Drawing Pixels</h3>
+<p>You can also draw individual pixels, one at a time!</p>
+<p>The <img src="../../images/editor-blockly-draw-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block from the <strong>Graphics</strong> category, will draw a pixel at the given x and y position.</p>
+<hr />
+<p>Let's draw a pixel to make a bullet that the bird can shoot!</p>
+<p>The bullet will be able to shoot in either a left or right direction, depending on which way the bird is facing when it shoots. It should shoot out at the mouth position of the bird. It won't actually hit anything yet, but we can get start drawing it!</p>
+<ul>
+<li>Make a "<strong>setup bullet</strong>" function and a "<strong>do bullet</strong>" function".</li>
+<li>Add "<strong>setup bullet</strong>" to run before your game loop, and add "<strong>do bullet</strong>" to run inside your game loop just after "<strong>do bird</strong>".</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage13 part1 blocks" src="../../images/editor-blockly-geo-blits-stg13p1-blocks.png" />
+</center></p>
+<hr />
+<ul>
+<li>Create a new variable "<strong>bulletDirection</strong>", (this will have a value of -1 for left, and 1 for right).</li>
+<li>Create a two ne variables for the bullet position, "<strong>bulletX</strong>" and "<strong>bulletY</strong>" (these will start off screen).</li>
+<li>Inside the "<strong>setup bullet</strong>" function, do the following:<ul>
+<li>Set "<strong>bulletDirection</strong>" to a starting value of "1".</li>
+<li>Set "<strong>bulletX</strong>" to a starting value of "-99".</li>
+<li>Set "<strong>bulletY</strong>" to a starting value of "-99".</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage13 part2 blocks" src="../../images/editor-blockly-geo-blits-stg13p2-blocks.png" />
+</center></p>
+<hr />
+<ul>
+<li>Inside your "<strong>do bullet</strong>" function, do the following:<ul>
+<li>Use a <img src="../../images/editor-blockly-draw-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block to draw a pixel with x and y positions being the values of the "<strong>bulletX</strong>" and "<strong>bulletY</strong>" variables.</li>
+<li>Move the bullet by changing the the "<strong>bulletX</strong>" variable by the "<strong>bulletDirection</strong>" value.</li>
+<li>If button A or B is hit, launch the bullet by doing the following:<ul>
+<li>Set the "<strong>bulletDirection</strong>" to "1" if the "<strong>bird</strong>" is mirrored, otherwise "-1".</li>
+<li>Set "<strong>bulletX</strong>" to the x position of the "<strong>bird</strong>".</li>
+<li>Set "<strong>bulletY</strong>' to the y position of the "<strong>bird</strong>", plus 3 (to come out of the mouth).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>It should look like this:
+<center>
+<img alt="Editor blockly geo blits stage13 part3 blocks" src="../../images/editor-blockly-geo-blits-stg13p3-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg13-gif.gif" alt="[Thumby blockly geo blits stage13 gif]" style="width:50%;border:1px solid black">
+</center></p>
+<hr />
+<h3 id="collision-detection-with-pixels">Collision Detection with Pixels</h3>
+<p>Now we just need to do some interactions like making the bullet hit things!</p>
+<p>For this we can use the <img src="../../images/editor-blockly-draw-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block. Which checks a given x and y location, and results in true for white, and false for black. We can use this to check if a drawn location on the screen is white or black.</p>
+<p>We can detect if a bullet hits something by checking if its location is already white, before it is drawn!</p>
+<hr />
+<p>Let's make the goal of this game be killing the lines on either side of the screen. If the bullet collides with either line, we can shrink the lines, and if the lines disappear, the player wins!</p>
+<ul>
+<li>In your game loop, immediately after "<strong>do line</strong>" draws the lines, use a <img src="../../images/editor-blockly-draw-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block to check if the bullet position is white (they must have been drawn by the lines). If it is, change the "<strong>lineWidth</strong>" variable by "-1".</li>
+<li>Also check if the "<strong>lineWidth</strong>" is "0" and, if it is, display "YOU WIN!", wait "3" seconds, and the reset:
+<center>
+<img alt="Editor blockly geo blits stage14 part1 blocks" src="../../images/editor-blockly-geo-blits-stg14p1-blocks.png" />
+</center></li>
+</ul>
+<hr />
+<p>Next let's make it so the bullet disappears if it hits anything except the bird:</p>
+<ul>
+<li>In your game loop, just before the bird is drawn by "<strong>do bird</strong>", check if the bullet pixel is already draw and, if it is, set "<strong>bulletY</strong>" to "-99", so it moves off screen:
+<center>
+<img alt="Editor blockly geo blits stage14 part2 blocks" src="../../images/editor-blockly-geo-blits-stg14p2-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg14p2-gif.gif" alt="[Thumby blockly geo blits stage14 part2 gif]" style="width:50%;border:1px solid black">
+</center></li>
+</ul>
+<hr />
+<p>Now let's make the challenge of this game be avoiding all the shapes!</p>
+<p>Before we draw the bird, we can check if the center pixel of the "<strong>bird</strong>" is already drawn, and if it is, we can GAME OVER!</p>
+<ul>
+<li>In your game loop, just before the bird is drawn by "<strong>do bird</strong>", check if the pixel at the center of the bird is already draw and, if it is, display "GAME OVER!", wait "3" seconds, and the reset:
+<center>
+<img alt="Editor blockly geo blits stage14 part3 blocks" src="../../images/editor-blockly-geo-blits-stg14p3-blocks.png" />
+<img src="../../images/editor-blockly-geo-blits-stg14p3-gif.gif" alt="[Thumby blockly geo blits stage14 part3 gif]" style="width:50%;border:1px solid black">
+</center></li>
+</ul>
+<hr />
+<h2 id="all-combined">All Combined</h2>
+<p>Here are all the blocks for all of these things combined together:</p>
+<p><img alt="Editor blockly geo blits gameLoop blocks" src="../../images/editor-blockly-geo-blits-all-gameLoop-blocks.png" />
+<img alt="Editor blockly geo blits line blocks" src="../../images/editor-blockly-geo-blits-all-line-blocks.png" />
+<img alt="Editor blockly geo blits border blocks" src="../../images/editor-blockly-geo-blits-all-border-blocks.png" />
+<img alt="Editor blockly geo blits box blocks" src="../../images/editor-blockly-geo-blits-all-box-blocks.png" />
+<img alt="Editor blockly geo blits kite blocks" src="../../images/editor-blockly-geo-blits-all-kite-blocks.png" />
+<img alt="Editor blockly geo blits walker blocks" src="../../images/editor-blockly-geo-blits-all-walker-blocks.png" />
+<img alt="Editor blockly geo blits bird blocks" src="../../images/editor-blockly-geo-blits-all-bird-blocks.png" />
+<img alt="Editor blockly geo blits bullet blocks" src="../../images/editor-blockly-geo-blits-all-bullet-blocks.png" /></p>
+<p>You can download all these <a href="../GeoBlitz-blocks.py"><strong>blocks here</strong></a>.</p>
 <hr />
 <p><a href="../Working-With-Fonts/"><strong>Next Tutorial: Working with Fonts</strong></a></p>
 
