@@ -157,7 +157,11 @@ To zoom in and out of the picture, use the **⊕** and **⊖** buttons.
 
 You can use the **IMAGE** button to open files from your computer. They will be automatically converted to black and white. The image file you open must not be larger than 144 wide and 80 high. Most image file formats will work.
 
-* Try downloading the image to your computer and loading into the Bitmap Builder with the **IMAGE** button. Download this image:![Thumby speed buzzer title screen](../images/speed-buzzer-title-screen.png)
+* Try downloading the image to your computer and loading into the Bitmap Builder with the **IMAGE** button. Download this image:
+<center>
+![Thumby speed buzzer title screen](../images/speed-buzzer-title-screen.png)
+<br>(Speed Buzzer Title Sprite 72x40)
+</center>
 
 * Now update the Sprite in your workspace with **EXPORT** and then run it with **START** to see what happens!
 

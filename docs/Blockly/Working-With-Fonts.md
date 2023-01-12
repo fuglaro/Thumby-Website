@@ -102,10 +102,19 @@ You can actually use fonts to draw pictures or icons! Just make a custom font wi
 
 Here are some example fonts you can download then open in the Bitmap Builder with the **IMAGE** button, so you can then customise it:
 
-* ![Thumby Auri 3x3 Font](../images/Auri3x3Font.png) (Community member Auri's teeeny tiny 3x3 font)
-* ![Thumby Tiny Circuit's 3x5 Font](../images/tc3x5Font.png) (Tiny Circuit's inbuilt 3x5 font)
-* ![Thumby Tiny Circuit's 5x7 Font](../images/tc5x7Font.png) (Tiny Circuit's inbuilt 5x7 font)
-* ![Thumby ZX 8x8 Font](../images/zx8x8Font.png) (ZX Spectrum 8x8 font by Mike)
+<center>
+![Thumby Auri 3x3 Font](../images/Auri3x3Font.png)
+<br>(Community member Auri's teeeny tiny 3x3 font)
+
+![Thumby Tiny Circuit's 3x5 Font](../images/tc3x5Font.png)
+<br>(Tiny Circuit's inbuilt 3x5 font)
+
+![Thumby Tiny Circuit's 5x7 Font](../images/tc5x7Font.png)
+<br>(Tiny Circuit's inbuilt 5x7 font)
+
+![Thumby ZX 8x8 Font](../images/zx8x8Font.png)
+<br>(ZX Spectrum 8x8 font by Mike)
+</center>
 
 Don't forget to load it back onto your <img src="../../images/editor-blockly-sprite-block.png" alt="[load sprite]" style="height:2.4em"> block that loads the font for your <img src="../../images/editor-blockly-set-font-with-sprite-block.png" alt="[set font with sprite]" style="height:2.0em"> block with the **EXPORT** button! And remember to update the font size details!
 

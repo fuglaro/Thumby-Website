@@ -45,7 +45,7 @@ Now that you have the example program open, let's try running it in the Emulator
 * Give it a moment, and it should load up a lovely *Hello Thumby* message, with a Thumby image moving back and forth!
 
 <center>
-![Thumby hello thumby gif](../images/editor-hello-thumby-gif.gif)
+<img src="../../images/editor-hello-thumby-gif.gif" alt="Thumby hello thumby gif" style="width:50%;border:1px solid black">
 </center>
 
 This will just keep playing forever.
@@ -69,7 +69,8 @@ The example program has some basic button actions. Make sure the Emulator is sel
 Go ahead and tap away and see it wiggle about!
 
 <center>
-![Thumby hello thumby wiggle gif](../images/editor-hello-thumby-wiggle-gif.gif)
+<img src="../../images/editor-hello-thumby-wiggle-gif.gif" alt="Thumby hello thumby wiggle gif" style="width:50%;border:1px solid black">
+![]()
 </center>
 
 ---
