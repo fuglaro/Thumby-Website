@@ -1330,7 +1330,7 @@
 <hr />
 <h3 id="update-display">Update Display</h3>
 <p><code>thumby.display.update()</code> | updates screen at frames-per-second (FPS) specified by </p>
-<p><code>thumby.display.setFPS(...)</code>. This function will block updates to maintain the set FPS setting. Default framerate 0 (non-limited). Returns <code>None</code></p>
+<p><code>thumby.display.setFPS(...)</code>. This function will block updates to maintain the set FPS setting. Default frame rate 0 (non-limited). Returns <code>None</code></p>
 <hr />
 <h3 id="frame-per-second-fps">Frame Per Second (FPS)</h3>
 <p><code>thumby.display.setFPS(FPS)</code> | sets the max <code>FPS</code> used by <code>thumby.display.update()</code>. Returns None, all parameters required.</p>
@@ -1356,10 +1356,11 @@
 <ul>
 <li><code>color</code><ul>
 <li>type: int</li>
-<li>values: 0 or 1 (nothing/black or white)</li>
+<li>values: 0 or 1 -- where 0 is black or an unlit pixel, and 1 is white or a lit pixel</li>
 </ul>
 </li>
 </ul>
+<p><strong><em>Note: where</em></strong> <code>color</code> <strong><em>is mentioned in the Thumby API docs,</em></strong> <code>color</code> <strong><em>refers to 0 being a black (unlit) pixel, and the value 1 refers to a white (lit) pixel.</em></strong></p>
 <h4 id="fill-screen-example">Fill Screen Example</h4>
 <p>Using this example, the hardware or emulator display will alternate between a white or black screen every second.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">thumby</span>

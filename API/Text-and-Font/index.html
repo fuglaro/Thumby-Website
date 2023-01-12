@@ -1247,67 +1247,51 @@
 
 
 <h1 id="text-font">Text &amp; Font</h1>
-<p>The Thumby screen is small at its 0.42" size, but you can still add perfectly readable text for game dialog, menus, rules, etc - you just won't be able to comfortably fit novels of text. </p>
+<p>The Thumby screen is small at its 0.42" size, but you can still add perfectly readable text for game dialog, menus, rules, etc - you just won't be able to comfortably fit novels of text.</p>
 <hr />
 <h3 id="printing-text">Printing Text</h3>
 <p>Text is important for communication, scores, and displaying the title of a game.</p>
 <p><code>thumby.display.drawText(string, x, y, color)</code> | draws <code>string</code> in <code>color</code> at <code>x</code> and <code>y</code> with font specified by <code>thumby.display.setFont(...)</code>. Returns None, all parameters required.</p>
 <ul>
-<li><code>string</code><ul>
+<li><code>string</code></li>
 <li>type: str</li>
 <li>values: 128 ASCII characters</li>
-</ul>
-</li>
-<li><code>x</code><ul>
+<li><code>x</code></li>
 <li>type: int</li>
 <li>values: 0 (left) ~ 71 (right)</li>
-</ul>
-</li>
-<li><code>y</code><ul>
+<li><code>y</code></li>
 <li>type: int</li>
 <li>values: 0 (top) ~ 39 (bottom)</li>
-</ul>
-</li>
-<li><code>color</code><ul>
+<li><code>color</code></li>
 <li>type: int</li>
-<li>values: 0 or 1</li>
-</ul>
-</li>
+<li>values: 0 or 1 -- where 0 is black or an unlit pixel, and 1 is white or a lit pixel</li>
 </ul>
 <hr />
 <h2 id="setting-font">Setting Font</h2>
-<p>You can use any font you would like with the Thumby. The default font on the Thumby is 5x7, but there is also an 8x8 font included with the Thumby software under the lib/ folder. </p>
+<p>You can use any font you would like with the Thumby. The default font on the Thumby is 5×7, but there are also 8×8 and 3×5 fonts included with the Thumby software under the lib/ folder.</p>
 <p><code>thumby.display.setFont(fontFilePath, width, height, space)</code> | sets the <code>fontFilePath</code> pointing to binary font file with character <code>width</code>, <code>height</code>, and <code>space</code> between characters for use by <code>thumby.display.drawText(...)</code>. Returns None, all parameters required.</p>
 <ul>
-<li><code>fontFilePath</code><ul>
+<li><code>fontFilePath</code></li>
 <li>type: string</li>
 <li>values: 128 ASCII character string up to 256 characters long ('/' separated)</li>
-</ul>
-</li>
-<li><code>width</code>:<ul>
+<li><code>width</code>:</li>
 <li>type: int</li>
 <li>values: 0 ~ integer max</li>
-</ul>
-</li>
-<li><code>height</code>:<ul>
+<li><code>height</code>:</li>
 <li>type: int</li>
 <li>values: 0 ~ integer max</li>
-</ul>
-</li>
-<li><code>space</code>:<ul>
+<li><code>space</code>:</li>
 <li>type: int</li>
 <li>values: 0 ~ integer max</li>
-</ul>
-</li>
 </ul>
 <hr />
 <h3 id="combined-example">Combined Example</h3>
-<p>This example uses both the drawText() and setFont() functions to show the appearance of the different sized fonts: </p>
+<p>This example uses both the drawText() and setFont() functions to show the appearance of the different sized fonts:</p>
 <p><center>
 <img alt="scrolling background" src="/images/text-and-font.gif" />
 </center>
 <center>
-<em>5x7 and 8x8 font text swapping back and forth on display</em>
+<em>5×7, 8×8, and 3×5 font text swapping back and forth on display</em>
 </center></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">thumby</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -1319,10 +1303,15 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">drawText</span><span class="p">(</span><span class="s2">&quot;Font5x7&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="s2">&quot;/lib/font8x8.bin&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">drawText</span><span class="p">(</span><span class="s2">&quot;Font8x8&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="s2">&quot;/lib/font3x5.bin&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">drawText</span><span class="p">(</span><span class="s2">&quot;Font3x5&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </code></pre></div>
 
 

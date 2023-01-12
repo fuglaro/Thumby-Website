@@ -1426,15 +1426,15 @@
 </ul>
 <hr />
 <h2 id="game-design-basics">Game Design Basics</h2>
-<p>The Thumby screen is a monochrome OLED with 72x40 drawable pixels. With this in mind, complex game graphics like those seen in modern games are not very possible with the limitations of the screen. Creating smaller game sprites and limiting text are some of the strategies that make simple games on Thumby work best. The Thumby API font implements a 5x7 character size, which leads to around 12 displayable characters per row, and 5 per column. So a story game with a lot of text may not be right type of game for the Thumby's screen size. </p>
+<p>The Thumby screen is a monochrome OLED with 72×40 drawable pixels. With this in mind, complex game graphics like those seen in modern games are not very possible with the limitations of the screen. Creating smaller game sprites and limiting text are some of the strategies that make simple games on Thumby work best. The Thumby API font implements a 5×7 character size, which leads to around 12 displayable characters per row, and 5 per column. So a story game with a lot of text may not be right type of game for the Thumby's screen size. </p>
 <h3 id="conceptualizing-and-visualizing-your-game">Conceptualizing and Visualizing Your Game</h3>
 <p>Steps:</p>
 <ol>
 <li>Create sample art of what gameplay might look like (if possible) - this will help you get started with creating game elements in the right size that you will need later on - keep in mind that the actual thumby screen is only 0.42" </li>
-<li>Visualize a 72x40 grid for your game when you start creating sample sprites or art - you can use the bitmap builder available from the Thumby Code Editor to start drafting up some static images of gameplay. </li>
+<li>Visualize a 72×40 grid for your game when you start creating sample sprites or art - you can use the bitmap builder available from the Thumby Code Editor to start drafting up some static images of gameplay. </li>
 </ol>
-<p><center><img alt="Thumby Code Editor bitmap builder of 72x40" src="https://cdn.shopify.com/s/files/1/1125/2198/files/image_1_af351171-657d-43c0-a525-28c3f2766846.png?v=1640597713" /></center>
-<center><em>Thumby Code Editor bitmap builder of 72x40</em></center></p>
+<p><center><img alt="Thumby Code Editor bitmap builder of 72×40" src="https://cdn.shopify.com/s/files/1/1125/2198/files/image_1_af351171-657d-43c0-a525-28c3f2766846.png?v=1640597713" /></center>
+<center><em>Thumby Code Editor bitmap builder of 72×40</em></center></p>
 <p>You can make the bitmap builder full screen, zoom in, and draw up some bitmap ideas to help visualize the size and possibilities. Keep in mind that you will eventually want each bitmap, or game element by itself, rather than as a part of a full screen bitmap to keep your game efficient.</p>
 <h3 id="teaching-players-how-to-play-your-game-optional">Teaching Players How to Play Your Game (Optional)</h3>
 <p>Most games start with a tutorial to teach the player basic functions and actions the player can make to both play and (hopefully) win the game. Simple games like Snake, Tetris, or Flappy Birds might need no explanation at all given their popularity, but you will need to make that decision for your own individual game.</p>
@@ -1610,7 +1610,7 @@
 <a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </code></pre></div>
 <p>At this point, you have a moving Game Paddle that can bounce the Ball, the Ball can bounce against all the bounds of the game screen except the bottom of the screen which triggers the "Game Over" screen.</p>
-<p>The code is getting pretty long, so let's just add the remaining components separately! You can comfortably fit around 3 rows of 10 bricks on the screen with the brick size 6x3. So we need to display all the bricks and make them able to store the data of being collided or not per each of the 30 bricks. I chose to implement this with a <strong>Brick class</strong> that holds a collision variable, and a function that will delete, or move the <strong>Brick</strong> off the screen when collision is detected.</p>
+<p>The code is getting pretty long, so let's just add the remaining components separately! You can comfortably fit around 3 rows of 10 bricks on the screen with the brick size 6×3. So we need to display all the bricks and make them able to store the data of being collided or not per each of the 30 bricks. I chose to implement this with a <strong>Brick class</strong> that holds a collision variable, and a function that will delete, or move the <strong>Brick</strong> off the screen when collision is detected.</p>
 <p>With <strong>Bricks</strong> added to the game, we can keep score of how many are broken to Win the game! We can also add some more functionality to the Game Over menu to restart the game, or take the user back to the main Thumby menu using <em>thumby.reset()</em>. These components:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="c1"># NOTE: library imports, ball, and pad variables should be here</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>

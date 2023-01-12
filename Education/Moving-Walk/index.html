@@ -1221,7 +1221,7 @@
 
 
 <h1 id="walk-animation">Walk Animation</h1>
-<p>A walk cycle animation consists of a few or several different frames of the movements involved in walking. For a 2-legged human, there may be 2 frames of the right leg moving forward as the left leg moves further back. With different sprites that may have more legs or none at all, you may have to get creative with a walking animation! </p>
+<p>A walk cycle animation consists of a few or several different frames of the movements involved in walking. For a 2-legged human, there may be 2 frames of the right leg moving forward as the left leg moves further back. With different sprites that may have more legs or none at all, you may have to get creative with a walking animation!</p>
 <p>Here's an example of a simple cat walking:</p>
 <p><center>
 <img alt="Walking cat" src="/images/walking-cat.gif" />
@@ -1258,7 +1258,7 @@
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="moving-background">Moving Background</h2>
-<p>With just the walking animation, it doesn't look like the cat is actually walking anywhere. With a moving, or scrolling, background we can add more movement to the scene. Here's a scrolling background:</p>
+<p>With just the walking animation, it doesn't look like the cat is actually walking anywhere. With a moving, or scrolling, background we can add more movement to the scene. Here's a scrolling background that uses two full length screen Sprites (Thumby's screen is 72 pixels wide) that are displayed next to each other to look like one long background:</p>
 <p><center>
 <img alt="scrolling background" src="/images/scrolling-background.gif" />
 </center>
@@ -1284,7 +1284,7 @@
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">bgSpr</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">bg2Spr</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">72</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># Set the FPS </span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># Set the FPS</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">setFPS</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="c1"># Used to keep track of loops and timing when the backgrounds should scroll</span>
@@ -1353,7 +1353,7 @@
 <a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="c1"># Set the FPS (without this call, the default fps is 30)</span>
 <a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="n">thumby</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">setFPS</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
 <a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="c1"># You can set the FPS lower, or you can alter the timing of the animations </span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="c1"># You can set the FPS lower, or you can alter the timing of the animations</span>
 <a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="c1"># and movement using simple counters and the modulo operator</span>
 <a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="n">scrollCtr</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="n">catSprCtr</span> <span class="o">=</span> <span class="mi">0</span>

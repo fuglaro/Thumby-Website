@@ -1209,60 +1209,40 @@
 <h1 id="draw-rectangles">Draw Rectangles</h1>
 <p><code>thumby.display.drawFilledRectangle(x, y, w, h, color)</code> | creates filled rectangle with <code>color</code> at <code>x</code> and <code>y</code> with dimensions <code>w</code> (width) and <code>h</code> (height). Returns None, all parameters required.</p>
 <ul>
-<li><code>x</code><ul>
+<li><code>x</code></li>
 <li>type: int</li>
 <li>values: 0 (left) ~ 71 (right)</li>
-</ul>
-</li>
-<li><code>y</code><ul>
+<li><code>y</code></li>
 <li>type: int</li>
 <li>values: 0 (top) ~ 39 (bottom)</li>
-</ul>
-</li>
-<li><code>w</code><ul>
+<li><code>w</code></li>
 <li>type: int</li>
 <li>values: 0 ~ 71</li>
-</ul>
-</li>
-<li><code>h</code><ul>
+<li><code>h</code></li>
 <li>type: int</li>
 <li>values: 0 ~ 39</li>
-</ul>
-</li>
-<li><code>color</code><ul>
+<li><code>color</code></li>
 <li>type: int</li>
 <li>values: 0 or 1</li>
-</ul>
-</li>
 </ul>
 <hr />
 <p><code>thumby.display.drawRectangle(x, y, w, h, color)</code> | creates 1px thick outline rectangle with <code>color</code> at <code>x</code> and <code>y</code> with dimensions <code>w</code> (width) and <code>h</code> (height) (thickness not variable). Returns None, all parameters required.</p>
 <ul>
-<li><code>x</code><ul>
+<li><code>x</code></li>
 <li>type: int</li>
 <li>values: 0 (left) ~ 71 (right)</li>
-</ul>
-</li>
-<li><code>y</code><ul>
+<li><code>y</code></li>
 <li>type: int</li>
 <li>values: 0 (top) ~ 39 (bottom)</li>
-</ul>
-</li>
-<li><code>w</code><ul>
+<li><code>w</code></li>
 <li>type: int</li>
 <li>values: 0 ~ 71</li>
-</ul>
-</li>
-<li><code>h</code><ul>
+<li><code>h</code></li>
 <li>type: int</li>
 <li>values: 0 ~ 39</li>
-</ul>
-</li>
-<li><code>color</code><ul>
+<li><code>color</code></li>
 <li>type: int</li>
-<li>values: 0 or 1</li>
-</ul>
-</li>
+<li>values: 0 or 1 -- where 0 is black or an unlit pixel, and 1 is white or a lit pixel</li>
 </ul>
 <hr />
 <h3 id="rectangles-example-filled-and-not-filled">Rectangles Example: Filled and not Filled</h3>
@@ -1271,7 +1251,7 @@
 <img alt="Bouncing ball" src="/images/rectangles-example.jpg" />
 </center>
 <center>
-<em>Three rectangles - outer edge rectangle only visible in dark mode</em>
+<em>Three rectangles - outer edge rectangle only visible when using this website's dark mode</em>
 </center></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">thumby</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
