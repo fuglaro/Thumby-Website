@@ -31,9 +31,9 @@ Start off by making a simple game loop. Set it to 60 FPS, set up sending to the 
 ![Thumby blockly counted loop blocks](../images/editor-blockly-counted-loop-blocks.png)
 </center>
 
-Later in this tutorial, we will be adding 7 different things to render animate, move about, and check interactions. It's going to get really messy!
+Later in this tutorial, we will be adding many different things to render, animate, move about, and check interactions for. If we are not careful, it's going to get really messy!
 
-For each game thing we add, we can wrap up all the blocks in a *function*, then just run those blocks wherever we want.
+For each game "thing" we add, we can wrap up all the blocks for it in a *function*, then just run those blocks wherever we want.
 
 ---
 
@@ -52,7 +52,7 @@ Now that we know a way we can add things in a nice and organized way, let's get 
 
 ## Drawing With Shapes
 
-The **Graphics** category in the toolbox has some blocks that help you draw shapes. You can draw lines, outlines of rectangles (and squares), and also solid rectangles (and squares)!
+The **Graphics** category in the toolbox has some blocks that help you draw shapes. You can draw lines, outlines of rectangles and squares, and also solid rectangles and squares!
 
 ---
 
@@ -93,7 +93,7 @@ Now let's get ready to be able to easily change the width of the lines.
 
 Next, let's make the lines respect the "**lineWidth**" variable, and also make the lines move! The update to "**lineWidth**" won't actually change anything, but it will allow us to make it shrink later in the tutorial!
 
-To animate the lines, we will use some maths to make the y position of the end of each line move vertically across the screen, and, when it reaches the end of the screen, make it wrap around to the other side. We will make the first line scan downwards, and the second line scan upwards. We can use the "**counter**" variable to drive the animation, and we can divide it by 10 to slow it down.
+To animate the lines, we will use some maths to make the y position of the end of each line move vertically across the screen, and then, when it reaches the end of the screen, make it wrap around to the other side. We will make the first line scan downwards, and the second line scan upwards. We can use the "**counter**" variable to drive the animation, and we can divide it by 10 to slow it down.
 
 * Update your "**do line**" function so that it respects "**lineWidth**", and animates the lines:
 
@@ -112,7 +112,7 @@ Try changing "**lineWidth**" and see what happens!
 ![Editor blockly draw rectangle block](../images/editor-blockly-draw-rectangle-block.png)
 </center>
 
-The block above will draw the outline of a rectangle (or square) with it's top left corner starting at a given x and y location. This rectangle will be drawn with a width an height from the specified width and height.
+The block above will draw the outline of a rectangle (or square) with it's top left corner starting at a given x and y location. The rectangle will be drawn with the given width and height.
 
 ---
 
@@ -158,16 +158,20 @@ Next, let's move the box about randomly!
 
 We are going to make the box shift in different directions. First we use a random number between 0 and 1 to decide the direction, horizontally (1) or vertically (0). Based off that, we will move the box in the chosen direction by shifting either "**boxX**" or "**boxY**" the width or height in either direction, or not at all.
 
-To do this, we will use a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block, which gives you to mouths for blocks. The "do" mouth runs all the blocks when the condition is true, but we also have the "else" mouth, which will run blocks when the condition is **not** true.
+---
 
-To make a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block, make a <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block, and then use the settings <img src="../../images/editor-blockly-block-settings-button.png" alt="[block's settings]" style="height:2.0em"> button to transform its shape.
+To do this, we will use a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block, which gives you two mouths for blocks. The "do" mouth runs all the blocks when the condition is true, but we also have the "else" mouth, which will run blocks when the condition is **not** true.
 
-We then make sure that both "**boxX**" and "**boxY**" are constrained so that the whole box fits in the screen.
+To make a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block, first make a <img src="../../images/editor-blockly-if-block.png" alt="[if do]" style="height:3.6em"> block, and then use the settings <img src="../../images/editor-blockly-block-settings-button.png" alt="[block's settings]" style="height:2.0em"> button to transform its shape.
+
+---
+
+We will also need to make sure that both "**boxX**" and "**boxY**" are constrained so that the whole box fits in the screen.
 
 * Make a <img src="../../images/editor-blockly-if-else-block.png" alt="[if do else]" style="height:5em"> block inside the bottom of your "**do box**" function.
-* Make the conditional be checking if a random number from "0" to "1" is "1".
-* Inside the "do" mouth, change "**boxX**" by a random integer from "-1" to "1" multiplied by "6".
-* Inside the "else" mouth, change "**boxY**" by a random integer from "-1" to "1" multiplied by "4".
+* Add a conditional which checks if a random number from "0" to "1" is "1".
+* Inside the "do" mouth, change "**boxX**" by a random integer from "-1" to "1", multiplied by "6".
+* Inside the "else" mouth, change "**boxY**" by a random integer from "-1" to "1", multiplied by "4".
 * At the bottom of the "**do box**" function, set both "**boxX**" and "**boxY**" to themselves constrained so that the box stays within the screen area.
 
 <center>
@@ -185,20 +189,20 @@ Maybe that's too fast...
 
 Lets slow it down!
 
-Because the "**do box**" function is run on every frame of the game loop, the box moves on every frame too! It looks good how the box moves in steps and we aren't going to shorten the distance the box moves each frame, instead we are going reduce how *often* the box moves.
+Because the "**do box**" function is run on every frame of the game loop, the box moves on every frame too! It's nice how the box moves in steps, so we aren't going to shorten the distance the box moves each frame, instead we are going reduce how *often* the box moves.
 
-We need to draw the rectangle on every frame, but we are going to make it so that the box only moves every 20th frame.
+We still need to draw the rectangle on every frame, but we are going to make it so that the box only moves every 20th frame.
 
 ---
 
-To do this, we are going to use a <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block from the **Functions** category. Usually, when a function runs, it runs **all** blocks from top to bottom. The <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block lets you leave the function half way down, if a particular condition is true. Don't worry about how this block has two plugs inside it, when you add it to your "**do box**" function, the second plug will automatically disappear!
+To do this, we are going to use a <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block from the **Functions** category. Usually, when a function runs, it runs **all** blocks, from top to bottom. The <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block lets you leave the function half way down, if a particular condition is true. Don't worry about how this block has two plugs inside it, when you add it to your "**do box**" function, the second plug will automatically disappear!
 
 ---
 
 Let's make the "**do box**" bail out before it moves the block, if it is anything other than every 20th frame:
 
 * Add a <img src="../../images/editor-blockly-if-return-block.png" alt="[if return]" style="height:2.0em"> block right after where it draws the rectangle.
-* Make condition be true when the remainder of dividing the "**counter**" by 20 results in anything other than 20.
+* Make the condition be true when the remainder of dividing the "**counter**" by 20 results in anything other than "0".
 
 <center>
 ![Editor blockly geo blitz stage7 blocks](../images/editor-blockly-geo-blits-stg7-blocks.png)
@@ -211,26 +215,28 @@ Now that's a more sensible speed!
 
 ## Animating Sprites
 
+Let's make Sprites move too!
+
 ---
 
 ### Sprite Movement and Orientation
 
-Shapes aren't the only things that can be moved! Sprites can be moved around the screen, and can also have their pictures mirrored and flipped!
+Shapes aren't the only things that can be moved! Sprites can also be moved around the screen, and can even have their pictures mirrored and flipped!
 
 Take a look in the **Sprites** category of the toolbox. In it, you will find the following blocks which allow you to move and reorient Sprites:
 
-* <img src="../../images/editor-blockly-move-x-to-block.png" alt="[move x to]" style="height:2.0em"> - move to a new horizontal position.
-* <img src="../../images/editor-blockly-move-y-to-block.png" alt="[move y to]" style="height:2.0em"> - move to a new vertical position.
-* <img src="../../images/editor-blockly-move-x-by-block.png" alt="[move x by]" style="height:2.0em"> - shift left (negative) or right (positive).
-* <img src="../../images/editor-blockly-move-y-by-block.png" alt="[move y by]" style="height:2.0em"> - shift up (negative) or down (positive).
-* <img src="../../images/editor-blockly-flip-block.png" alt="[flip]" style="height:2.0em"> - flip the image upside down.
-* <img src="../../images/editor-blockly-mirror-block.png" alt="[mirror]" style="height:2.0em"> - mirror the image left to right.
+* <img src="../../images/editor-blockly-move-x-to-block.png" alt="[move x to]" style="height:2.0em"> - move the Sprite to a new horizontal position.
+* <img src="../../images/editor-blockly-move-y-to-block.png" alt="[move y to]" style="height:2.0em"> - move the Sprite to a new vertical position.
+* <img src="../../images/editor-blockly-move-x-by-block.png" alt="[move x by]" style="height:2.0em"> - shift the Sprite left (negative) or right (positive).
+* <img src="../../images/editor-blockly-move-y-by-block.png" alt="[move y by]" style="height:2.0em"> - shift the Sprite up (negative) or down (positive).
+* <img src="../../images/editor-blockly-flip-block.png" alt="[flip]" style="height:2.0em"> - flip the Sprite's image upside down.
+* <img src="../../images/editor-blockly-mirror-block.png" alt="[mirror]" style="height:2.0em"> - mirror the Sprite's image left to right.
 * <img src="../../images/editor-blockly-get-position-block.png" alt="[get position]" style="height:1.6em"> - get the current x or y position.
 * <img src="../../images/editor-blockly-get-flipped-block.png" alt="[get flipped]" style="height:1.6em"> - get whether the Sprite was flipped (or mirrored) from its original orientation.
 
 ---
 
-Let's use this to add a "**kite**" Sprite to our game, which bounces around the screen and always points in the direction its moving:
+Let's use this to add a "**kite**" Sprite to our game, which bounces around the screen and always points in the direction it's moving:
 
 * Download this image to use for the Sprite:
 <center>
@@ -288,7 +294,7 @@ Now you know how to move Sprites around the screen and also how to flip and mirr
 
 Sprites can also be animated like a gif!
 
-Animated Sprites have multiple frames inside that be switched. This can be used to make animations with a flip-booking effect.
+Animated Sprites have multiple frames inside that be switched. This can be used to make animations with a flip-book effect.
 
 ---
 
@@ -304,7 +310,7 @@ The red boxes are just to help show each different frame in this animated Sprite
 
 ---
 
-When you load an animated sprite into your workspace, you must you the <img src="../../images/editor-blockly-load-anim-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, instead of the <img src="../../images/editor-blockly-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, and you must specify the exact number of frames you have in the animated sprite.
+When you load an animated sprite into your workspace, you must you the <img src="../../images/editor-blockly-load-anim-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, instead of the <img src="../../images/editor-blockly-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, and you must specify the number of frames you have in the animated sprite.
 
 Here is our example loaded with its "8" frames set correctly:
 <img src="../../images/editor-blockly-loaded-anim-sprite-block.png" alt="[loaded anim sprite]" style="height:2.4em">
@@ -381,17 +387,17 @@ Nice!
 
 ### Switching Frames
 
-Animated Sprites can do more than just flip-book animations like a gif does, frame-by-frame. You can also control switching frames in other interesting ways.
+Animated Sprites can do more than just flip-book animations like a gif does, frame-by-frame. You can also control switching frames in other interesting ways!
 
 ---
 
-It's about time we added a player character to this game! In the process, we can show how you can use animated Sprites in other ways!
+It's about time we added a player character to this game! In the process, we can show how you can use animated Sprites in a different way.
 
-We are going to make a movable bird that the player can control but which stays within the screen area. The ship will be able to move in any direction, but it will only be able to face left or right. We can use a <img src="../../images/editor-blockly-mirror-block.png" alt="[mirror]" style="height:2.0em"> block to mirror a sprite to look in the other direction.
+We are going to make a movable bird that the player can control but which stays within the screen area. The bird will be able to move in any direction, but it will only be able to face left or right. We can use a <img src="../../images/editor-blockly-mirror-block.png" alt="[mirror]" style="height:2.0em"> block to mirror a sprite to look in the other direction.
 
 Let's also make the bird open a mouth at the front whenever either 🔴 button is pressed.
 
-We can us Animated Sprites for that, and have the first frame be the bird normally, and have the second frame be the bird with it's mouth open. Then we just need to change to the second frame whenever either 🔴 button is pressed!
+We can use Animated Sprites for that, and have the first frame be the bird normally, and have the second frame be the bird with it's mouth open. Then we just need to change to the second frame whenever either 🔴 button is pressed!
 
 ---
 
@@ -411,7 +417,7 @@ It should look like this:
 
 * Inside the "**setup bird**" function, do the following:
     * Create a new "**bird**" Sprite with a <img src="../../images/editor-blockly-load-anim-sprite-block.png" alt="[load anim sprite]" style="height:2.4em"> block, and load the downloaded bird animation onto it.
-    * Update the frames count to "2".
+    * Make sure the frames count is set to "2".
     * Move the x position of the "**bird**" to a starting position of "32".
     * Move the y position of the "**bird**" to a starting position of "18".
 
@@ -444,7 +450,6 @@ Finally, let's make the "**bird**" Sprite move with the direction controls, maki
     * Bail out of the function early if the counter **is** divisible by "3" (this slows down the bird to two thirds of full speed).
     * If up is held, move y by "-1".
     * If down is held, move y by "1".
-    * If left is held, move x by "-1".
     * If left is held, move x by "-1", and also, if the "**bird**" is currently mirrored, mirror it back.
     * If right is held, move x by "1", and also, if the "**bird**" is not currently mirrored, mirror it.
     * Constrain the y position to within the screen vertically.
@@ -460,15 +465,19 @@ It should look like this:
 
 ## Sprite Transparency
 
-You may have noticed in the last video above, that all the Sprites didn't have any transparency, making their whole rectangle draw black over anything underneath. Transparency is when you can see through parts of a picture. You can see that the bird, kite, and walker don't have transparency the most when they go over the border.
+You may have noticed in the last video above, that all the Sprites didn't have any transparency, making their whole rectangle draw black over anything underneath. Transparency is when you can see through parts of a picture. You can see that the bird, kite, and walker don't have transparency when they go over the border.
 
-There are two ways to make transparency in Sprites. One is by selecting either black or white to be the transparent color. The second way allows you to draw white, black, and also transparent pixels. To paint those transparent pixels, you use a second Spite, with white being the pixels of the first Sprite to draw, and black being the pixels to leave transparently. This second Sprite is called a *Sprite Mask*.
+There are two ways to make transparency in Sprites.
+
+One way is by selecting either black or white to be the transparent color.
+
+The second way allows you to draw white, black, and also transparent pixels. To paint those transparent pixels, you use a second Spite, with white being the pixels of the first Sprite to draw, and black being the pixels to leave transparent. This second Sprite is called a *Sprite Mask*.
 
 ---
 
-### Transparency By Key Color
+### Transparency By Color
 
-First let's give both the kite and walker transparency by setting black to be their transparency color. We can do this by using a <img src="../../images/editor-blockly-set-transparency-block.png" alt="[set transparency]" style="height:2.0em"> block:
+First let's give both the kite and the walker some transparency by setting "black" to be their transparency color. We can do this by using a <img src="../../images/editor-blockly-set-transparency-block.png" alt="[set transparency]" style="height:2.0em"> block:
 
 * Inside your "**setup walker**" function, also set the transparency of the "**walker**" Sprite to "black":
 <center>
@@ -491,11 +500,11 @@ Better!
 
 ### Transparency By Mask
 
-For the "**bird**" Sprite, it would be nice if it had a thin black border around it make it easier to see if its edges are over something like the border. We don't want the full Sprite rectangle, just a thin border. So we want white, black, and also transparent pixels.
+For the "**bird**" Sprite, it would be nice if it had a thin black border around it to make it easier to see if its edges are over something like the border. We don't want the full Sprite rectangle, just a thin border. So we want white, black, and also transparent pixels.
 
 For this, we will use a Sprite Mask.
 
-A Sprite Mask controls the drawing of another Sprite by having white pixels indicate that the same pixel in the other Sprite should be drawn.
+A Sprite Mask controls the drawing of another Sprite by having white pixels indicate that the same pixel in the main Sprite should be drawn.
 
 So we are going to need a Sprite Mask for the bird. This will be similar to the "**bird**" Sprite but with the eye filled in white and extra pixels around it also filled white, so they get drawn. To match with the bird, this Sprite will also have 2 frames.
 
@@ -510,14 +519,14 @@ First, let's get the Sprite Mask loaded and ready for drawing:
 </center>
 * Inside your "**setup bird**" function, also do the following:
     * Load the downloaded Sprite as a new Sprite called "**birdMask**".
-    * Update the frames count to "2":
+    * Make sure the frames count is set to "2":
 <center>
 ![Editor blockly geo blits stage12 part1 blocks](../images/editor-blockly-geo-blits-stg12p1-blocks.png)
 </center>
 
 ---
 
-Next, let's apply the "**birdMask**" Mask while drawing the "**bird**" Sprite. We can do this by using a <img src="../../images/editor-blockly-draw-sprite-with-mask-block.png" alt="[draw with mask]" style="height:2.0em"> block from the **Sprites** category.
+Next, let's apply the "**birdMask**" as the Mask when drawing the "**bird**" Sprite. We can do this by using a <img src="../../images/editor-blockly-draw-sprite-with-mask-block.png" alt="[draw with mask]" style="height:2.0em"> block from the **Sprites** category.
 
 * Replace the <img src="../../images/editor-blockly-draw-sprite-block.png" alt="[draw]" style="height:2.0em"> block inside the "**do bird**" function with a <img src="../../images/editor-blockly-draw-sprite-with-mask-block.png" alt="[draw with mask]" style="height:2.0em"> block.
 * Ensure the drawn Sprite is still set to "**bird**".
@@ -542,6 +551,8 @@ Pretty!
 ---
 
 ## Working with Pixels
+
+Let's see what we can do with individual pixels!
 
 ---
 
@@ -568,7 +579,7 @@ It should look like this:
 ---
 
 * Create a new variable "**bulletDirection**", (this will have a value of -1 for left, and 1 for right).
-* Create a two ne variables for the bullet position, "**bulletX**" and "**bulletY**" (these will start off screen).
+* Create two new variables for the bullet position, "**bulletX**" and "**bulletY**" (these will start off screen).
 * Inside the "**setup bullet**" function, do the following:
     * Set "**bulletDirection**" to a starting value of "1".
     * Set "**bulletX**" to a starting value of "-99".
@@ -595,13 +606,15 @@ It should look like this:
 <img src="../../images/editor-blockly-geo-blits-stg13-gif.gif" alt="[Thumby blockly geo blits stage13 gif]" style="width:50%;border:1px solid black">
 </center>
 
+Pew! Pew!
+
 ---
 
 ### Collision Detection with Pixels
 
 Now we just need to do some interactions like making the bullet hit things!
 
-For this we can use the <img src="../../images/editor-blockly-draw-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block. Which checks a given x and y location, and results in true for white, and false for black. We can use this to check if a drawn location on the screen is white or black.
+For this we can use the <img src="../../images/editor-blockly-get-drawn-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block from the **Graphics** category. Which checks a given x and y position, and gives **true** for "white", and **false** for "black". We can use this to check if a drawn location on the screen is white or black.
 
 We can detect if a bullet hits something by checking if its location is already white, before it is drawn!
 
@@ -609,7 +622,7 @@ We can detect if a bullet hits something by checking if its location is already 
 
 Let's make the goal of this game be killing the lines on either side of the screen. If the bullet collides with either line, we can shrink the lines, and if the lines disappear, the player wins!
 
-* In your game loop, immediately after "**do line**" draws the lines, use a <img src="../../images/editor-blockly-draw-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block to check if the bullet position is white (they must have been drawn by the lines). If it is, change the "**lineWidth**" variable by "-1".
+* In your game loop, immediately after "**do line**" draws the lines, use a <img src="../../images/editor-blockly-get-drawn-pixel-block.png" alt="[draw pixel]" style="height:3.6em"> block to check if the bullet position is white (this means they must have been drawn by the lines). If it is, change the "**lineWidth**" variable by "-1" to shorten them.
 * Also check if the "**lineWidth**" is "0" and, if it is, display "YOU WIN!", wait "3" seconds, and the reset:
 <center>
 ![Editor blockly geo blits stage14 part1 blocks](../images/editor-blockly-geo-blits-stg14p1-blocks.png)
